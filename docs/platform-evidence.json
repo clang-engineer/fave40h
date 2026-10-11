@@ -1,0 +1,28 @@
+[
+  {
+    "firmware": "VIA",
+    "uf2_sha256": "a545e1a6bafc4eedec9ffa676d9e7245254ef1a7a185c98986928c9c06ec9d22",
+    "pll_register": "0x4413010",
+    "clock_dividers_register": "0x38881000",
+    "pll": {"m":16,"n":192,"p":4,"q":4,"source":"HSE"},
+    "inferred_hse_hz":16000000,"inferred_sysclk_hz":48000000,"oscillator_measured":false,
+    "timer_clock_constant_hz":48000000,"software_heap_end":"0x20020000",
+    "mcu_candidate":"STM32F411","physical_mcu_verified":false,
+    "supported_flash_descriptors_bytes":[131072,262144,393216,524288],"physical_flash_capacity":null,
+    "stock_storage":{"logical_bytes":1024,"backing_bytes":2048,"first_sector":3,"start":"0x800c000","erase_sector_bytes":16384,"sector_end_exclusive":"0x8010000"},
+    "raw_keymap_bytes":{"four_layers":384,"six_layers":576,"increase":192},"flash_ready":false
+  },
+  {
+    "firmware": "Vial",
+    "uf2_sha256": "d5e680fa2507534b63b316a3e67a5d7457af4bdfa65189f464d4e1b029692431",
+    "pll_register": "0x4413010",
+    "clock_dividers_register": "0x38881000",
+    "pll": {"m":16,"n":192,"p":4,"q":4,"source":"HSE"},
+    "inferred_hse_hz":16000000,"inferred_sysclk_hz":48000000,"oscillator_measured":false,
+    "timer_clock_constant_hz":48000000,"software_heap_end":"0x20020000",
+    "mcu_candidate":"STM32F411","physical_mcu_verified":false,
+    "supported_flash_descriptors_bytes":[131072,262144,393216,524288],"physical_flash_capacity":null,
+    "stock_storage":{"logical_bytes":4096,"backing_bytes":8192,"first_sector":3,"start":"0x800c000","erase_sector_bytes":16384,"sector_end_exclusive":"0x8010000"},
+    "raw_keymap_bytes":{"four_layers":384,"six_layers":576,"increase":192},"flash_ready":false
+  }
+]

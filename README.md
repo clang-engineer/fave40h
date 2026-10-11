@@ -1,12 +1,18 @@
 # FAVE40H QMK / Vial reconstruction
 
-Unofficial reconstruction for the LJTuring FAVE40H hot-swap keyboard. Goal: a maintainable source port with **six editable Vial layers** instead of four.
+Unofficial source reconstruction for the LJTuring FAVE40H hot-swap keyboard. Goal: **six editable Vial layers** and a maintainable source port.
 
-> **Not a working firmware port yet.** No reconstructed UF2 has been built or tested on a keyboard. Keep the original manufacturer firmware; do not flash an incomplete port.
+> **ARM compilation passed; hardware use is NOT validated.** This is a compile/inspection target, not ready-to-flash replacement firmware. Settings use RAM only, bootloader callbacks are unimplemented, and RGB/vendor extensions are absent. Keep the original firmware and do not flash this target.
 
 ## Current result
 
-The matrix pin order and scan direction have now been recovered from **both** stock VIA and Vial binaries, using instruction-level inspection and cross-checking initialization against the scan loop:
+The `default` and `vial` targets both compiled and linked successfully in [GitHub Actions](https://github.com/clang-engineer/fave40h-qmk/actions/runs/38119072326). Their ELF address-range checks and 576-byte (6 x 4 x 12 x 2) keymap checks passed. The Vial BIN was 38400 bytes. This is actual QMK/ARM compilation, not just a Python or C syntax test.
+
+The source now includes a 42-key layout, six complete example keymaps, a Vial definition, clock settings, a guarded build profile, and a custom linker map. Read [inspection build](docs/inspection-build.md) for the exact revision, results, commands, and restrictions.
+
+## Reconstructed hardware evidence
+
+From instruction-level inspection of **both** original VIA and Vial images:
 
 ```c
 #define MATRIX_ROW_PINS { A5, A6, A3, A4 }
@@ -14,21 +20,22 @@ The matrix pin order and scan direction have now been recovered from **both** st
 #define DIODE_DIRECTION ROW2COL
 ```
 
-This configuration is in `keyboards/fave40h/config.h`. It is based on static firmware evidence, not electrical measurements or a successful firmware build.
+[Matrix recovery](docs/matrix-recovery.md) explains the scan and initialization cross-checks. [Platform recovery](docs/platform-recovery.md) records the clock settings and stock flash-backed storage. STM32F411 and 16 MHz HSE are evidence-based build assumptions, not measured chip/oscillator identity.
 
-Read [matrix recovery](docs/matrix-recovery.md) for the code paths, addresses, limitations, and primary-source references; [generated evidence](docs/matrix-evidence.json) contains the exact firmware hashes. Older investigation notes are historical; see the updated [analysis correction](docs/analysis-correction.md).
+In particular, stock Vial uses a 4096-byte logical settings buffer with 8192-byte backing inside flash sector 3 at `0x0800C000`. The new inspection source deliberately does not use that persistent backend. Raw keymap growth is only 192 bytes, but compatibility of the complete old/new settings formats still requires work.
 
 ## Reproduce
 
 ```sh
 python3 tools/recover_matrix.py '/path/to/fave40h (2).zip'
+python3 tools/recover_platform.py '/path/to/fave40h (2).zip'
 FAVE40H_STOCK_ZIP='/path/to/fave40h (2).zip' python3 -m unittest discover -s tests -v
 ```
 
-**15 host-side tests passed locally** with the owner's original ZIP. Without that ZIP, the three manufacturer-dependent tests are skipped. The tool can also extract the embedded Vial definition locally with `--vial-json output.json`.
+The original ZIP is not in this public repository; stock-dependent tests skip when it is absent. Compile commands and the automated ARM build are in [inspection-build.md](docs/inspection-build.md). **Compilation is not permission or a recommendation to flash.**
 
 ## Remaining work
 
-Verify the exact MCU/clock/bootloader/linker target and persistent-storage allocation, implement the default keymap and required custom/RGB functions, then compile and inspect the result before any device test. The six-layer setting exists, but the project is still not buildable as a complete QMK keyboard.
+Verify physical silicon and reliable recovery, reproduce board/USB initialization, implement persistent storage and migration without erasing bootloader/settings, then validate six-layer behavior on the actual keyboard. Vendor RGB/custom functions are a separate compatibility task. The source is a new implementation, not an exact recovery of the manufacturer's original code.
 
-Manufacturer UF2/BIN images are not redistributed. The public tree contains reconstructed settings, analysis tools, tests, and documentation only.
+Older investigation notes are historical; follow the current reports above. Manufacturer UF2/BIN images and user-specific settings are not redistributed.

@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 KB=ROOT/'keyboards/fave40h'
 class SourcePortTests(unittest.TestCase):
     def setUp(self):
-        self.info=json.loads((KB/'info.json').read_text())
+        self.info=json.loads((KB/'keyboard.json').read_text())
         self.layers=json.loads((ROOT/'docs/example-keymap.json').read_text())['layers']
         self.physical={tuple(k['matrix']) for k in self.info['layouts']['LAYOUT']['layout']}
     def test_42_distinct_physical_keys(self):self.assertEqual(len(self.physical),42)
