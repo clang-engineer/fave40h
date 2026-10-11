@@ -1,15 +1,14 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
 #pragma once
-
-// Reconstructed from BOTH stock FAVE40H VIA and Vial instruction streams.
-// Logical row/column order, not MCU package pin numbers.
-// Evidence: docs/matrix-recovery.md. Not yet electrically validated.
+#ifndef FAVE40H_EXPERIMENTAL_BUILD
+#    error "Inspection build only: pass FAVE40H_EXPERIMENTAL_BUILD=yes. Do not flash."
+#endif
 #define MATRIX_ROWS 4
 #define MATRIX_COLS 12
 #define MATRIX_ROW_PINS { A5, A6, A3, A4 }
 #define MATRIX_COL_PINS { B12, B13, B14, B15, A8, B6, B5, B4, B3, A15, B7, B8 }
-
-// Firmware drives one column low, then reads four pulled-up row inputs.
 #define DIODE_DIRECTION ROW2COL
 
-// This header alone is NOT a firmware port. Do not assume MCU variant,
-// oscillator, bootloader/linker geometry, or EEPROM layout from these pins.
+// Deliberately RAM-only until hardware/recovery and storage migration are verified.
+#define TRANSIENT_EEPROM_SIZE 4096
+#define DEBOUNCE 5

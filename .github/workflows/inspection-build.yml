@@ -1,0 +1,51 @@
+name: Inspection build (NOT flashable validation)
+on:
+  push:
+    branches: [main]
+    paths: ['keyboards/**', 'tools/**', 'tests/**', '.github/workflows/inspection-build.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: fave40h-inspection-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  compile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Host-side source tests (not hardware)
+        run: python3 -m unittest discover -s tests -v
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: vial-kb/vial-qmk
+          ref: dd43959ae5c08d8a28d38a1acf7b04e86b14a344
+          path: qmk
+          persist-credentials: false
+      - name: Install toolchain and Python dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends gcc-arm-none-eabi binutils-arm-none-eabi libnewlib-arm-none-eabi python3-venv
+          python3 -m venv "$RUNNER_TEMP/qmk-venv"
+          "$RUNNER_TEMP/qmk-venv/bin/pip" install qmk -r qmk/requirements.txt
+          echo "$RUNNER_TEMP/qmk-venv/bin" >> "$GITHUB_PATH"
+          arm-none-eabi-gcc --version
+      - name: Prepare required upstream submodules and source overlay
+        run: |
+          git -C qmk submodule update --init --depth 1 lib/chibios lib/chibios-contrib lib/printf
+          test ! -e qmk/keyboards/fave40h
+          cp -R keyboards/fave40h qmk/keyboards/fave40h
+      - name: Compile default and six-layer Vial inspection targets
+        working-directory: qmk
+        run: |
+          make fave40h:default FAVE40H_EXPERIMENTAL_BUILD=yes -j2
+          make fave40h:vial FAVE40H_EXPERIMENTAL_BUILD=yes -j2
+      - name: Check linked addresses and 576-byte six-layer keymap
+        run: |
+          python3 tools/check_build.py qmk/.build/fave40h_default.elf
+          python3 tools/check_build.py qmk/.build/fave40h_vial.elf
+          echo 'Build checks only. No physical device validation. No firmware artifacts published.' >> "$GITHUB_STEP_SUMMARY"
+# Intentionally NO artifact upload, release, firmware flashing, secrets, or persistent EEPROM driver.
