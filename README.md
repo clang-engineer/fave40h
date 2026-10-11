@@ -1,29 +1,34 @@
 # FAVE40H QMK / Vial reconstruction
 
-Unofficial reverse-engineering project for the LJTuring FAVE40H hot-swap keyboard. **Goal:** replace the shipped four Vial layers with six editable layers and maintain a modifiable source tree.
+Unofficial reconstruction for the LJTuring FAVE40H hot-swap keyboard. Goal: a maintainable source port with **six editable Vial layers** instead of four.
 
-> [!WARNING]
-> This is an **incomplete, non-buildable scaffold**, not a working firmware port. Do not flash it. Keep the original manufacturer UF2 as a recovery reference.
+> **Not a working firmware port yet.** No reconstructed UF2 has been built or tested on a keyboard. Keep the original manufacturer firmware; do not flash an incomplete port.
 
-## Evidence
+## Current result
 
-- User-supplied FAVE40H VIA/Vial UF2 firmware files (not redistributed here).
-- Vendor VIA definition identifies `Fave40H_LJTuring`, USB VID `0x5123`, PID `0xA02D`, logical matrix `4 × 12`, and `1U Shift` layout option.
-- UF2 metadata indicates a target address of `0x08010000`; the MCU and bootloader have **not** been verified.
+The matrix pin order and scan direction have now been recovered from **both** stock VIA and Vial binaries, using instruction-level inspection and cross-checking initialization against the scan loop:
 
-## Source layout
+```c
+#define MATRIX_ROW_PINS { A5, A6, A3, A4 }
+#define MATRIX_COL_PINS { B12, B13, B14, B15, A8, B6, B5, B4, B3, A15, B7, B8 }
+#define DIODE_DIRECTION ROW2COL
+```
 
-- `keyboards/fave40h/keymaps/vial/` — six-layer setting and Vial/QMK placeholders.
-- `docs/hardware.md` — confirmed hardware information and open questions.
-- `docs/roadmap.md` — work required before building or flashing.
+This configuration is in `keyboards/fave40h/config.h`. It is based on static firmware evidence, not electrical measurements or a successful firmware build.
 
-## Outstanding blockers
+Read [matrix recovery](docs/matrix-recovery.md) for the code paths, addresses, limitations, and primary-source references; [generated evidence](docs/matrix-evidence.json) contains the exact firmware hashes. Older investigation notes are historical; see the updated [analysis correction](docs/analysis-correction.md).
 
-Identify MCU/bootloader, GPIO row/column mapping, diode direction, LED connections, storage layout, Vial UID, and custom keycode behavior. The vendor JSON describes UI layout and keycode labels; it does not provide these hardware connections or implementations.
+## Reproduce
 
-## Reference
+```sh
+python3 tools/recover_matrix.py '/path/to/fave40h (2).zip'
+FAVE40H_STOCK_ZIP='/path/to/fave40h (2).zip' python3 -m unittest discover -s tests -v
+```
 
-- [Vial-QMK](https://github.com/vial-kb/vial-qmk)
-- [QMK documentation](https://docs.qmk.fm/)
+**15 host-side tests passed locally** with the owner's original ZIP. Without that ZIP, the three manufacturer-dependent tests are skipped. The tool can also extract the embedded Vial definition locally with `--vial-json output.json`.
 
-No original proprietary firmware binaries are included in this public repository.
+## Remaining work
+
+Verify the exact MCU/clock/bootloader/linker target and persistent-storage allocation, implement the default keymap and required custom/RGB functions, then compile and inspect the result before any device test. The six-layer setting exists, but the project is still not buildable as a complete QMK keyboard.
+
+Manufacturer UF2/BIN images are not redistributed. The public tree contains reconstructed settings, analysis tools, tests, and documentation only.

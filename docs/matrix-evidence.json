@@ -1,0 +1,74 @@
+[
+  {
+    "firmware": "VIA",
+    "uf2_sha256": "a545e1a6bafc4eedec9ffa676d9e7245254ef1a7a185c98986928c9c06ec9d22",
+    "payload_sha256": "c853d3ebaf33c0f89ffe419e7b289c930a274431ad05bcc2920708938fa835bf",
+    "image_base": "0x8010000",
+    "payload_bytes": 47872,
+    "scan_entry": "0x801a5e4",
+    "rows_table": "0x801b3f0",
+    "cols_table": "0x801aee8",
+    "matrix_pins": {
+      "rows": [
+        "A5",
+        "A6",
+        "A3",
+        "A4"
+      ],
+      "cols": [
+        "B12",
+        "B13",
+        "B14",
+        "B15",
+        "A8",
+        "B6",
+        "B5",
+        "B4",
+        "B3",
+        "A15",
+        "B7",
+        "B8"
+      ]
+    },
+    "diode_direction": "ROW2COL",
+    "pressed_state": "row input low while selected column is driven low",
+    "evidence_level": "static firmware reconstruction; not electrically verified",
+    "flash_ready": false
+  },
+  {
+    "firmware": "Vial",
+    "uf2_sha256": "d5e680fa2507534b63b316a3e67a5d7457af4bdfa65189f464d4e1b029692431",
+    "payload_sha256": "9df2375a5dfc7d155c3320ea5df3f2cff6920686928ae6ff5c186de5bee453e4",
+    "image_base": "0x8010000",
+    "payload_bytes": 61952,
+    "scan_entry": "0x801d65c",
+    "rows_table": "0x801e5dc",
+    "cols_table": "0x801dd24",
+    "matrix_pins": {
+      "rows": [
+        "A5",
+        "A6",
+        "A3",
+        "A4"
+      ],
+      "cols": [
+        "B12",
+        "B13",
+        "B14",
+        "B15",
+        "A8",
+        "B6",
+        "B5",
+        "B4",
+        "B3",
+        "A15",
+        "B7",
+        "B8"
+      ]
+    },
+    "diode_direction": "ROW2COL",
+    "pressed_state": "row input low while selected column is driven low",
+    "evidence_level": "static firmware reconstruction; not electrically verified",
+    "flash_ready": false
+  }
+]
