@@ -39,3 +39,41 @@ The original ZIP is not in this public repository; stock-dependent tests skip wh
 Verify physical silicon and reliable recovery, reproduce board/USB initialization, implement persistent storage and migration without erasing bootloader/settings, then validate six-layer behavior on the actual keyboard. Vendor RGB/custom functions are a separate compatibility task. The source is a new implementation, not an exact recovery of the manufacturer's original code.
 
 Older investigation notes are historical; follow the current reports above. Manufacturer UF2/BIN images and user-specific settings are not redistributed.
+
+
+
+
+---
+
+FAve40H RGB LED 설정법
+VIA , VIAL펌웨어 모두 아래 토글키를 사용하여 RGB LED설정을 변경해주어야 합니다.
+
+VIA도 아래 토글키를 사용할 수 있습니다.
+
+VIAL은 아래 캡스락 RGB LED설정(인덱스 기능 및 색상 설정)을 할 수 없습니다.
+
+
+Fave40H rgb 토글키
+FN2(우측 스페이스봐)+좌쉽 >>스위치 rgb온/온오프
+FN2(우측 스페이스바)+좌컨 >>언더글로우 rgb온/오프
+FN2(우측 스페이스바)+캡스락 >> 전체 rgb led 온/오프
+
+RGB 모드 변경은 레이어 상에 RGB MODE+ - 를 지정하여 변경하시면 됩니다.
+
+
+캡스락 RGB LED 설정
+그리고 캡스락 RGB led 관련한 조정은,Web VIA에서 구성메뉴의 led controll 탭에 들어가시면 보실 수 있습니다. 
+
+기능 설명은 제가 올린 캡쳐화면을 참고하여 설명드리겠습니다.
+
+Switch - 꺼두면 캡스락 led를 따로 설정하지 않고 쓰겠다는 말이고 켜두면 개별 제어를 하겠다는 말입니다.
+
+Index - 여기서 지정하는 키의 스위치 led가 캡스락을 눌렀을때 지정한 색상으로 변하게 됩니다. 예를 들어 ESC키를 설정하면 캡스락을 눌렀을 때 ESC의 led가 변경되게 됩니다. 
+
+색상 - 말그대로 색상
+
+
+감사합니다. 
+
+
+
