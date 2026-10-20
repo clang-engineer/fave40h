@@ -1,0 +1,296 @@
+{
+    "name": "Fave40H_LJTuring",
+    "vendorId": "0x5123",
+    "productId": "0xA02D",
+    "keycodes": ["qmk_lighting"],
+    "customKeycodes": [
+        {
+            "name": "Del\nBksp",
+            "title": "Backspace normally, but Delete when Shift is pressed",
+            "shortName": "Del\nBksp"
+        }, {
+            "name": "LS\n{",
+            "title": "Left Shift when held, { when tapped",
+            "shortName": "LS\n{"
+        }, {
+            "name": "RS\n}",
+            "title": "Right Shift when held, } when tapped",
+            "shortName": "RS\n}"
+        }, {
+            "name": "LC\n{",
+            "title": "Left Ctrl when held, { when tapped",
+            "shortName": "LC\n{"
+        }, {
+            "name": "RC\n}",
+            "title": "Right Ctrl when held, } when tapped",
+            "shortName": "RC\n}"
+        }, {
+            "name": "LA\n{",
+            "title": "Left Alt when held, { when tapped",
+            "shortName": "LA\n{"
+        }, {
+            "name": "RA\n}",
+            "title": "Right Alt when held, } when tapped",
+            "shortName": "RA\n}"
+        }, {
+            "name": "LS\n<",
+            "title": "Left Shift when held, < when tapped",
+            "shortName": "LS\n<"
+        }, {
+            "name": "RS\n>",
+            "title": "Right Shift when held, > when tapped",
+            "shortName": "RS\n>"
+        }, {
+            "name": "LC\n<",
+            "title": "Left Ctrl when held, < when tapped",
+            "shortName": "LC\n<"
+        }, {
+            "name": "RC\n>",
+            "title": "Right Ctrl when held, > when tapped",
+            "shortName": "RC\n>"
+        }, {
+            "name": "LA\n<",
+            "title": "Left Alt when held, < when tapped",
+            "shortName": "LA\n<"
+        }, {
+            "name": "RA\n>",
+            "title": "Right Alt when held, > when tapped",
+            "shortName": "RA\n>"
+        }, {
+            "name": "LC\nCaps Lock",
+            "title": "Left Ctrl when held, Caps when tapped",
+            "shortName": "LC\nCaps Lock"
+        }, {
+            "name": "RC\nEnter",
+            "title": "Right Ctrl when held, Enter when tapped",
+            "shortName": "RC\nEnter"
+        }, {
+            "name": "Clear\nEEPROM",
+            "title": "Recovery the setting to default",
+            "shortName": "CLear\nEEPROM"
+        }, {
+            "name": "SwitchRGB\nToggle",
+            "title": "Toggle Switch RGB lighting on or off",
+            "shortName": "SwitchRGB\nToggle"
+        }, {
+            "name": "SwitchRGB\nON",
+            "title": "Turn on the underglow RGB loghting",
+            "shortName": "SwitchRGB\nON"
+        }, {
+            "name": "SwitchRGB\nOFF",
+            "title": "Turn off the underglow RGB loghting",
+            "shortName": "SwitchRGB\nOFF"
+        }, {
+            "name": "UnderglowRGB\nToggle",
+            "title": "Toggle Underglow RGB lighting on or off",
+            "shortName": "UnderglowRGB\nToggle"
+        }, {
+            "name": "UnderglowRGB\nON",
+            "title": "Turn on the underglow RGB loghting",
+            "shortName": "UnderglowRGB\nON"
+        }, {
+            "name": "UnderglowRGB\nOFF",
+            "title": "Turn off the underglow RGB loghting",
+            "shortName": "UnderglowRGB\nOFF"
+        }
+    ],
+    "menus": [
+        {
+            "label": "LED Control",
+            "content": [
+                {
+                    "label": "CapsLock LED",
+                    "content": [
+                        {
+                            "label": "Switch",
+                            "type": "toggle",
+                            "content": ["id_caps_indicator_toggle", 0, 1]
+                        }, {
+                            "showIf": "{id_caps_indicator_toggle} != 0",
+                            "label": "Index",
+                            "type": "dropdown",
+                            "content": ["id_caps_indicator_index", 0, 2],
+                            "options": [
+                                ["ESC", 0],
+                                ["Q", 1],
+                                ["W", 2],
+                                ["E", 3],
+                                ["R", 4],
+                                ["T", 5],
+                                ["Y", 6],
+                                ["U", 7],
+                                ["I", 8],
+                                ["O", 9],
+                                ["P", 10],
+                                ["Backspace", 11],
+                                ["Enter", 12],
+                                ["L", 13],
+                                ["K", 14],
+                                ["J", 15],
+                                ["H", 16],
+                                ["G", 17],
+                                ["F", 18],
+                                ["D", 19],
+                                ["S", 20],
+                                ["A", 21],
+                                ["CapsLock", 22],
+                                ["Left Shift", 23],
+                                ["Z", 24],
+                                ["X", 25],
+                                ["C", 26],
+                                ["V", 27],
+                                ["B", 28],
+                                ["N", 29],
+                                ["M", 30],
+                                [",<", 31],
+                                [".>", 32],
+                                ["Right Shift", 33],
+                                ["Right Ctrl", 34],
+                                ["Right Win", 35],
+                                ["Right Alt", 36],
+                                ["Right Space", 37],
+                                ["Left Space", 38],
+                                ["Left Alt", 39],
+                                ["Left Win", 40],
+                                ["Left Ctrl", 41]
+                            ]
+                        }, {
+                            "showIf": "{id_caps_indicator_toggle} != 0",
+                            "label": "Brightness",
+                            "type": "range",
+                            "options": [0, 255],
+                            "content": ["id_caps_indicator_brightness", 0, 3]
+                        }, {
+                            "showIf":"{id_caps_indicator_toggle} != 0",
+                            "label": "Color",
+                            "type": "color",
+                            "content": ["id_caps_indicator_color", 0, 4]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "matrix": {
+        "rows": 4,
+        "cols": 12
+    },
+    "layouts": {
+        "labels": [
+            "1U Shift"
+        ],
+        "keymap": [
+            [
+                {
+                "c": "#777777"
+                },
+                "0,0",
+                {
+                "c": "#cccccc"
+                },
+                "0,1",
+                "0,2",
+                "0,3",
+                "0,4",
+                "0,5",
+                "0,6",
+                "0,7",
+                "0,8",
+                "0,9",
+                "0,10",
+                {
+                "c": "#aaaaaa"
+                },
+                "0,11"
+            ],
+            [
+                {
+                "w": 1.25
+                },
+                "1,0",
+                {
+                "c": "#cccccc"
+                },
+                "1,1",
+                "1,2",
+                "1,3",
+                "1,4",
+                "1,5",
+                "1,6",
+                "1,7",
+                "1,8",
+                "1,9",
+                {
+                "c": "#777777",
+                "w": 1.75
+                },
+                "1,11"
+            ],
+            [
+                {
+                "c": "#aaaaaa",
+                "w": 1.75
+                },
+                "2,0",
+                {
+                "c": "#cccccc"
+                },
+                "2,2",
+                "2,3",
+                "2,4",
+                "2,5",
+                "2,6",
+                "2,7",
+                "2,8",
+                "2,9",
+                "2,10\n\n\n0,0",
+                {
+                "c": "#aaaaaa",
+                "w": 1.25
+                },
+                "2,11\n\n\n0,0",
+                {
+                "x": 0.25,
+                "c": "#cccccc",
+                "w": 1.25
+                },
+                "2,10\n\n\n0,1",
+                {
+                "c": "#aaaaaa"
+                },
+                "2,11\n\n\n0,1"
+            ],
+            [
+                {
+                "w": 1.25
+                },
+                "3,0",
+                "3,2",
+                {
+                "w": 1.25
+                },
+                "3,3",
+                {
+                "c": "#777777",
+                "w": 2.75
+                },
+                "3,4",
+                {
+                "w": 2.25
+                },
+                "3,8",
+                {
+                "c": "#aaaaaa",
+                "w": 1.25
+                },
+                "3,9",
+                "3,10",
+                {
+                "w": 1.25
+                },
+                "3,11"
+            ]
+        ]
+    }
+}
+

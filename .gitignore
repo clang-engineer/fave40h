@@ -4,3 +4,4 @@
 build/
 .qmk/
 __pycache__/
+.DS_Store
