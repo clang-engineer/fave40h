@@ -1,5 +1,13 @@
 # FAVE40H QMK / Vial reconstruction
 
+## Current goal: reconstruct the ORIGINAL Vial firmware
+
+The target is **`firmware/origin/FAve40H_VIAL.uf2`**, not the manufacturer's newer eight-layer version. See [original-only recovered source/data and remaining work](original-vial/README.md). This is partial recovery, not a complete or flash-ready firmware.
+
+The [eight-layer audit](docs/layer8-audit.md) is separate comparison material only.
+
+## Historical six-layer inspection port — not the current restoration target
+
 Unofficial source reconstruction for the LJTuring FAVE40H hot-swap keyboard. Goal: **six editable Vial layers** and a maintainable source port.
 
 > **ARM compilation passed; hardware use is NOT validated.** This is a compile/inspection target, not ready-to-flash replacement firmware. Settings use RAM only, bootloader callbacks are unimplemented, and RGB/vendor extensions are absent. Keep the original firmware and do not flash this target.
