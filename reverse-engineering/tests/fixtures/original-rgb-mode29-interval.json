@@ -1,0 +1,5128 @@
+{
+  "payload_sha256": "9df2375a5dfc7d155c3320ea5df3f2cff6920686928ae6ff5c186de5bee453e4",
+  "emulator": "Ghidra 12.1 P-code ARM:LE:32:Cortex",
+  "scope": "Original instructions, RAM-only routines/case slices; not full firmware or hardware emulation",
+  "rgb_mode29_interval": [
+    {
+      "speed": 0,
+      "now": 0,
+      "next_wait": 3000
+    },
+    {
+      "speed": 0,
+      "now": 1,
+      "next_wait": 3001
+    },
+    {
+      "speed": 0,
+      "now": 4294967040,
+      "next_wait": 2744
+    },
+    {
+      "speed": 0,
+      "now": 4294967295,
+      "next_wait": 2999
+    },
+    {
+      "speed": 1,
+      "now": 0,
+      "next_wait": 3000
+    },
+    {
+      "speed": 1,
+      "now": 1,
+      "next_wait": 3001
+    },
+    {
+      "speed": 1,
+      "now": 4294967040,
+      "next_wait": 2744
+    },
+    {
+      "speed": 1,
+      "now": 4294967295,
+      "next_wait": 2999
+    },
+    {
+      "speed": 2,
+      "now": 0,
+      "next_wait": 3000
+    },
+    {
+      "speed": 2,
+      "now": 1,
+      "next_wait": 3001
+    },
+    {
+      "speed": 2,
+      "now": 4294967040,
+      "next_wait": 2744
+    },
+    {
+      "speed": 2,
+      "now": 4294967295,
+      "next_wait": 2999
+    },
+    {
+      "speed": 3,
+      "now": 0,
+      "next_wait": 3000
+    },
+    {
+      "speed": 3,
+      "now": 1,
+      "next_wait": 3001
+    },
+    {
+      "speed": 3,
+      "now": 4294967040,
+      "next_wait": 2744
+    },
+    {
+      "speed": 3,
+      "now": 4294967295,
+      "next_wait": 2999
+    },
+    {
+      "speed": 4,
+      "now": 0,
+      "next_wait": 3000
+    },
+    {
+      "speed": 4,
+      "now": 1,
+      "next_wait": 3001
+    },
+    {
+      "speed": 4,
+      "now": 4294967040,
+      "next_wait": 2744
+    },
+    {
+      "speed": 4,
+      "now": 4294967295,
+      "next_wait": 2999
+    },
+    {
+      "speed": 5,
+      "now": 0,
+      "next_wait": 3000
+    },
+    {
+      "speed": 5,
+      "now": 1,
+      "next_wait": 3001
+    },
+    {
+      "speed": 5,
+      "now": 4294967040,
+      "next_wait": 2744
+    },
+    {
+      "speed": 5,
+      "now": 4294967295,
+      "next_wait": 2999
+    },
+    {
+      "speed": 6,
+      "now": 0,
+      "next_wait": 3000
+    },
+    {
+      "speed": 6,
+      "now": 1,
+      "next_wait": 3001
+    },
+    {
+      "speed": 6,
+      "now": 4294967040,
+      "next_wait": 2744
+    },
+    {
+      "speed": 6,
+      "now": 4294967295,
+      "next_wait": 2999
+    },
+    {
+      "speed": 7,
+      "now": 0,
+      "next_wait": 3000
+    },
+    {
+      "speed": 7,
+      "now": 1,
+      "next_wait": 3001
+    },
+    {
+      "speed": 7,
+      "now": 4294967040,
+      "next_wait": 2744
+    },
+    {
+      "speed": 7,
+      "now": 4294967295,
+      "next_wait": 2999
+    },
+    {
+      "speed": 8,
+      "now": 0,
+      "next_wait": 3000
+    },
+    {
+      "speed": 8,
+      "now": 1,
+      "next_wait": 3001
+    },
+    {
+      "speed": 8,
+      "now": 4294967040,
+      "next_wait": 2744
+    },
+    {
+      "speed": 8,
+      "now": 4294967295,
+      "next_wait": 2999
+    },
+    {
+      "speed": 9,
+      "now": 0,
+      "next_wait": 3000
+    },
+    {
+      "speed": 9,
+      "now": 1,
+      "next_wait": 3001
+    },
+    {
+      "speed": 9,
+      "now": 4294967040,
+      "next_wait": 2744
+    },
+    {
+      "speed": 9,
+      "now": 4294967295,
+      "next_wait": 2999
+    },
+    {
+      "speed": 10,
+      "now": 0,
+      "next_wait": 3000
+    },
+    {
+      "speed": 10,
+      "now": 1,
+      "next_wait": 3001
+    },
+    {
+      "speed": 10,
+      "now": 4294967040,
+      "next_wait": 2744
+    },
+    {
+      "speed": 10,
+      "now": 4294967295,
+      "next_wait": 2999
+    },
+    {
+      "speed": 11,
+      "now": 0,
+      "next_wait": 3000
+    },
+    {
+      "speed": 11,
+      "now": 1,
+      "next_wait": 3001
+    },
+    {
+      "speed": 11,
+      "now": 4294967040,
+      "next_wait": 2744
+    },
+    {
+      "speed": 11,
+      "now": 4294967295,
+      "next_wait": 2999
+    },
+    {
+      "speed": 12,
+      "now": 0,
+      "next_wait": 3000
+    },
+    {
+      "speed": 12,
+      "now": 1,
+      "next_wait": 3001
+    },
+    {
+      "speed": 12,
+      "now": 4294967040,
+      "next_wait": 2744
+    },
+    {
+      "speed": 12,
+      "now": 4294967295,
+      "next_wait": 2999
+    },
+    {
+      "speed": 13,
+      "now": 0,
+      "next_wait": 3000
+    },
+    {
+      "speed": 13,
+      "now": 1,
+      "next_wait": 3001
+    },
+    {
+      "speed": 13,
+      "now": 4294967040,
+      "next_wait": 2744
+    },
+    {
+      "speed": 13,
+      "now": 4294967295,
+      "next_wait": 2999
+    },
+    {
+      "speed": 14,
+      "now": 0,
+      "next_wait": 3000
+    },
+    {
+      "speed": 14,
+      "now": 1,
+      "next_wait": 3001
+    },
+    {
+      "speed": 14,
+      "now": 4294967040,
+      "next_wait": 2744
+    },
+    {
+      "speed": 14,
+      "now": 4294967295,
+      "next_wait": 2999
+    },
+    {
+      "speed": 15,
+      "now": 0,
+      "next_wait": 1500
+    },
+    {
+      "speed": 15,
+      "now": 1,
+      "next_wait": 1501
+    },
+    {
+      "speed": 15,
+      "now": 4294967040,
+      "next_wait": 1244
+    },
+    {
+      "speed": 15,
+      "now": 4294967295,
+      "next_wait": 1499
+    },
+    {
+      "speed": 16,
+      "now": 0,
+      "next_wait": 1500
+    },
+    {
+      "speed": 16,
+      "now": 1,
+      "next_wait": 1501
+    },
+    {
+      "speed": 16,
+      "now": 4294967040,
+      "next_wait": 1244
+    },
+    {
+      "speed": 16,
+      "now": 4294967295,
+      "next_wait": 1499
+    },
+    {
+      "speed": 17,
+      "now": 0,
+      "next_wait": 1500
+    },
+    {
+      "speed": 17,
+      "now": 1,
+      "next_wait": 1501
+    },
+    {
+      "speed": 17,
+      "now": 4294967040,
+      "next_wait": 1244
+    },
+    {
+      "speed": 17,
+      "now": 4294967295,
+      "next_wait": 1499
+    },
+    {
+      "speed": 18,
+      "now": 0,
+      "next_wait": 1500
+    },
+    {
+      "speed": 18,
+      "now": 1,
+      "next_wait": 1501
+    },
+    {
+      "speed": 18,
+      "now": 4294967040,
+      "next_wait": 1244
+    },
+    {
+      "speed": 18,
+      "now": 4294967295,
+      "next_wait": 1499
+    },
+    {
+      "speed": 19,
+      "now": 0,
+      "next_wait": 1500
+    },
+    {
+      "speed": 19,
+      "now": 1,
+      "next_wait": 1501
+    },
+    {
+      "speed": 19,
+      "now": 4294967040,
+      "next_wait": 1244
+    },
+    {
+      "speed": 19,
+      "now": 4294967295,
+      "next_wait": 1499
+    },
+    {
+      "speed": 20,
+      "now": 0,
+      "next_wait": 1500
+    },
+    {
+      "speed": 20,
+      "now": 1,
+      "next_wait": 1501
+    },
+    {
+      "speed": 20,
+      "now": 4294967040,
+      "next_wait": 1244
+    },
+    {
+      "speed": 20,
+      "now": 4294967295,
+      "next_wait": 1499
+    },
+    {
+      "speed": 21,
+      "now": 0,
+      "next_wait": 1500
+    },
+    {
+      "speed": 21,
+      "now": 1,
+      "next_wait": 1501
+    },
+    {
+      "speed": 21,
+      "now": 4294967040,
+      "next_wait": 1244
+    },
+    {
+      "speed": 21,
+      "now": 4294967295,
+      "next_wait": 1499
+    },
+    {
+      "speed": 22,
+      "now": 0,
+      "next_wait": 1500
+    },
+    {
+      "speed": 22,
+      "now": 1,
+      "next_wait": 1501
+    },
+    {
+      "speed": 22,
+      "now": 4294967040,
+      "next_wait": 1244
+    },
+    {
+      "speed": 22,
+      "now": 4294967295,
+      "next_wait": 1499
+    },
+    {
+      "speed": 23,
+      "now": 0,
+      "next_wait": 1500
+    },
+    {
+      "speed": 23,
+      "now": 1,
+      "next_wait": 1501
+    },
+    {
+      "speed": 23,
+      "now": 4294967040,
+      "next_wait": 1244
+    },
+    {
+      "speed": 23,
+      "now": 4294967295,
+      "next_wait": 1499
+    },
+    {
+      "speed": 24,
+      "now": 0,
+      "next_wait": 1500
+    },
+    {
+      "speed": 24,
+      "now": 1,
+      "next_wait": 1501
+    },
+    {
+      "speed": 24,
+      "now": 4294967040,
+      "next_wait": 1244
+    },
+    {
+      "speed": 24,
+      "now": 4294967295,
+      "next_wait": 1499
+    },
+    {
+      "speed": 25,
+      "now": 0,
+      "next_wait": 1500
+    },
+    {
+      "speed": 25,
+      "now": 1,
+      "next_wait": 1501
+    },
+    {
+      "speed": 25,
+      "now": 4294967040,
+      "next_wait": 1244
+    },
+    {
+      "speed": 25,
+      "now": 4294967295,
+      "next_wait": 1499
+    },
+    {
+      "speed": 26,
+      "now": 0,
+      "next_wait": 1500
+    },
+    {
+      "speed": 26,
+      "now": 1,
+      "next_wait": 1501
+    },
+    {
+      "speed": 26,
+      "now": 4294967040,
+      "next_wait": 1244
+    },
+    {
+      "speed": 26,
+      "now": 4294967295,
+      "next_wait": 1499
+    },
+    {
+      "speed": 27,
+      "now": 0,
+      "next_wait": 1500
+    },
+    {
+      "speed": 27,
+      "now": 1,
+      "next_wait": 1501
+    },
+    {
+      "speed": 27,
+      "now": 4294967040,
+      "next_wait": 1244
+    },
+    {
+      "speed": 27,
+      "now": 4294967295,
+      "next_wait": 1499
+    },
+    {
+      "speed": 28,
+      "now": 0,
+      "next_wait": 1500
+    },
+    {
+      "speed": 28,
+      "now": 1,
+      "next_wait": 1501
+    },
+    {
+      "speed": 28,
+      "now": 4294967040,
+      "next_wait": 1244
+    },
+    {
+      "speed": 28,
+      "now": 4294967295,
+      "next_wait": 1499
+    },
+    {
+      "speed": 29,
+      "now": 0,
+      "next_wait": 1500
+    },
+    {
+      "speed": 29,
+      "now": 1,
+      "next_wait": 1501
+    },
+    {
+      "speed": 29,
+      "now": 4294967040,
+      "next_wait": 1244
+    },
+    {
+      "speed": 29,
+      "now": 4294967295,
+      "next_wait": 1499
+    },
+    {
+      "speed": 30,
+      "now": 0,
+      "next_wait": 1000
+    },
+    {
+      "speed": 30,
+      "now": 1,
+      "next_wait": 1001
+    },
+    {
+      "speed": 30,
+      "now": 4294967040,
+      "next_wait": 744
+    },
+    {
+      "speed": 30,
+      "now": 4294967295,
+      "next_wait": 999
+    },
+    {
+      "speed": 31,
+      "now": 0,
+      "next_wait": 1000
+    },
+    {
+      "speed": 31,
+      "now": 1,
+      "next_wait": 1001
+    },
+    {
+      "speed": 31,
+      "now": 4294967040,
+      "next_wait": 744
+    },
+    {
+      "speed": 31,
+      "now": 4294967295,
+      "next_wait": 999
+    },
+    {
+      "speed": 32,
+      "now": 0,
+      "next_wait": 1000
+    },
+    {
+      "speed": 32,
+      "now": 1,
+      "next_wait": 1001
+    },
+    {
+      "speed": 32,
+      "now": 4294967040,
+      "next_wait": 744
+    },
+    {
+      "speed": 32,
+      "now": 4294967295,
+      "next_wait": 999
+    },
+    {
+      "speed": 33,
+      "now": 0,
+      "next_wait": 1000
+    },
+    {
+      "speed": 33,
+      "now": 1,
+      "next_wait": 1001
+    },
+    {
+      "speed": 33,
+      "now": 4294967040,
+      "next_wait": 744
+    },
+    {
+      "speed": 33,
+      "now": 4294967295,
+      "next_wait": 999
+    },
+    {
+      "speed": 34,
+      "now": 0,
+      "next_wait": 1000
+    },
+    {
+      "speed": 34,
+      "now": 1,
+      "next_wait": 1001
+    },
+    {
+      "speed": 34,
+      "now": 4294967040,
+      "next_wait": 744
+    },
+    {
+      "speed": 34,
+      "now": 4294967295,
+      "next_wait": 999
+    },
+    {
+      "speed": 35,
+      "now": 0,
+      "next_wait": 1000
+    },
+    {
+      "speed": 35,
+      "now": 1,
+      "next_wait": 1001
+    },
+    {
+      "speed": 35,
+      "now": 4294967040,
+      "next_wait": 744
+    },
+    {
+      "speed": 35,
+      "now": 4294967295,
+      "next_wait": 999
+    },
+    {
+      "speed": 36,
+      "now": 0,
+      "next_wait": 1000
+    },
+    {
+      "speed": 36,
+      "now": 1,
+      "next_wait": 1001
+    },
+    {
+      "speed": 36,
+      "now": 4294967040,
+      "next_wait": 744
+    },
+    {
+      "speed": 36,
+      "now": 4294967295,
+      "next_wait": 999
+    },
+    {
+      "speed": 37,
+      "now": 0,
+      "next_wait": 1000
+    },
+    {
+      "speed": 37,
+      "now": 1,
+      "next_wait": 1001
+    },
+    {
+      "speed": 37,
+      "now": 4294967040,
+      "next_wait": 744
+    },
+    {
+      "speed": 37,
+      "now": 4294967295,
+      "next_wait": 999
+    },
+    {
+      "speed": 38,
+      "now": 0,
+      "next_wait": 1000
+    },
+    {
+      "speed": 38,
+      "now": 1,
+      "next_wait": 1001
+    },
+    {
+      "speed": 38,
+      "now": 4294967040,
+      "next_wait": 744
+    },
+    {
+      "speed": 38,
+      "now": 4294967295,
+      "next_wait": 999
+    },
+    {
+      "speed": 39,
+      "now": 0,
+      "next_wait": 1000
+    },
+    {
+      "speed": 39,
+      "now": 1,
+      "next_wait": 1001
+    },
+    {
+      "speed": 39,
+      "now": 4294967040,
+      "next_wait": 744
+    },
+    {
+      "speed": 39,
+      "now": 4294967295,
+      "next_wait": 999
+    },
+    {
+      "speed": 40,
+      "now": 0,
+      "next_wait": 1000
+    },
+    {
+      "speed": 40,
+      "now": 1,
+      "next_wait": 1001
+    },
+    {
+      "speed": 40,
+      "now": 4294967040,
+      "next_wait": 744
+    },
+    {
+      "speed": 40,
+      "now": 4294967295,
+      "next_wait": 999
+    },
+    {
+      "speed": 41,
+      "now": 0,
+      "next_wait": 1000
+    },
+    {
+      "speed": 41,
+      "now": 1,
+      "next_wait": 1001
+    },
+    {
+      "speed": 41,
+      "now": 4294967040,
+      "next_wait": 744
+    },
+    {
+      "speed": 41,
+      "now": 4294967295,
+      "next_wait": 999
+    },
+    {
+      "speed": 42,
+      "now": 0,
+      "next_wait": 1000
+    },
+    {
+      "speed": 42,
+      "now": 1,
+      "next_wait": 1001
+    },
+    {
+      "speed": 42,
+      "now": 4294967040,
+      "next_wait": 744
+    },
+    {
+      "speed": 42,
+      "now": 4294967295,
+      "next_wait": 999
+    },
+    {
+      "speed": 43,
+      "now": 0,
+      "next_wait": 1000
+    },
+    {
+      "speed": 43,
+      "now": 1,
+      "next_wait": 1001
+    },
+    {
+      "speed": 43,
+      "now": 4294967040,
+      "next_wait": 744
+    },
+    {
+      "speed": 43,
+      "now": 4294967295,
+      "next_wait": 999
+    },
+    {
+      "speed": 44,
+      "now": 0,
+      "next_wait": 1000
+    },
+    {
+      "speed": 44,
+      "now": 1,
+      "next_wait": 1001
+    },
+    {
+      "speed": 44,
+      "now": 4294967040,
+      "next_wait": 744
+    },
+    {
+      "speed": 44,
+      "now": 4294967295,
+      "next_wait": 999
+    },
+    {
+      "speed": 45,
+      "now": 0,
+      "next_wait": 750
+    },
+    {
+      "speed": 45,
+      "now": 1,
+      "next_wait": 751
+    },
+    {
+      "speed": 45,
+      "now": 4294967040,
+      "next_wait": 494
+    },
+    {
+      "speed": 45,
+      "now": 4294967295,
+      "next_wait": 749
+    },
+    {
+      "speed": 46,
+      "now": 0,
+      "next_wait": 750
+    },
+    {
+      "speed": 46,
+      "now": 1,
+      "next_wait": 751
+    },
+    {
+      "speed": 46,
+      "now": 4294967040,
+      "next_wait": 494
+    },
+    {
+      "speed": 46,
+      "now": 4294967295,
+      "next_wait": 749
+    },
+    {
+      "speed": 47,
+      "now": 0,
+      "next_wait": 750
+    },
+    {
+      "speed": 47,
+      "now": 1,
+      "next_wait": 751
+    },
+    {
+      "speed": 47,
+      "now": 4294967040,
+      "next_wait": 494
+    },
+    {
+      "speed": 47,
+      "now": 4294967295,
+      "next_wait": 749
+    },
+    {
+      "speed": 48,
+      "now": 0,
+      "next_wait": 750
+    },
+    {
+      "speed": 48,
+      "now": 1,
+      "next_wait": 751
+    },
+    {
+      "speed": 48,
+      "now": 4294967040,
+      "next_wait": 494
+    },
+    {
+      "speed": 48,
+      "now": 4294967295,
+      "next_wait": 749
+    },
+    {
+      "speed": 49,
+      "now": 0,
+      "next_wait": 750
+    },
+    {
+      "speed": 49,
+      "now": 1,
+      "next_wait": 751
+    },
+    {
+      "speed": 49,
+      "now": 4294967040,
+      "next_wait": 494
+    },
+    {
+      "speed": 49,
+      "now": 4294967295,
+      "next_wait": 749
+    },
+    {
+      "speed": 50,
+      "now": 0,
+      "next_wait": 750
+    },
+    {
+      "speed": 50,
+      "now": 1,
+      "next_wait": 751
+    },
+    {
+      "speed": 50,
+      "now": 4294967040,
+      "next_wait": 494
+    },
+    {
+      "speed": 50,
+      "now": 4294967295,
+      "next_wait": 749
+    },
+    {
+      "speed": 51,
+      "now": 0,
+      "next_wait": 750
+    },
+    {
+      "speed": 51,
+      "now": 1,
+      "next_wait": 751
+    },
+    {
+      "speed": 51,
+      "now": 4294967040,
+      "next_wait": 494
+    },
+    {
+      "speed": 51,
+      "now": 4294967295,
+      "next_wait": 749
+    },
+    {
+      "speed": 52,
+      "now": 0,
+      "next_wait": 750
+    },
+    {
+      "speed": 52,
+      "now": 1,
+      "next_wait": 751
+    },
+    {
+      "speed": 52,
+      "now": 4294967040,
+      "next_wait": 494
+    },
+    {
+      "speed": 52,
+      "now": 4294967295,
+      "next_wait": 749
+    },
+    {
+      "speed": 53,
+      "now": 0,
+      "next_wait": 750
+    },
+    {
+      "speed": 53,
+      "now": 1,
+      "next_wait": 751
+    },
+    {
+      "speed": 53,
+      "now": 4294967040,
+      "next_wait": 494
+    },
+    {
+      "speed": 53,
+      "now": 4294967295,
+      "next_wait": 749
+    },
+    {
+      "speed": 54,
+      "now": 0,
+      "next_wait": 750
+    },
+    {
+      "speed": 54,
+      "now": 1,
+      "next_wait": 751
+    },
+    {
+      "speed": 54,
+      "now": 4294967040,
+      "next_wait": 494
+    },
+    {
+      "speed": 54,
+      "now": 4294967295,
+      "next_wait": 749
+    },
+    {
+      "speed": 55,
+      "now": 0,
+      "next_wait": 750
+    },
+    {
+      "speed": 55,
+      "now": 1,
+      "next_wait": 751
+    },
+    {
+      "speed": 55,
+      "now": 4294967040,
+      "next_wait": 494
+    },
+    {
+      "speed": 55,
+      "now": 4294967295,
+      "next_wait": 749
+    },
+    {
+      "speed": 56,
+      "now": 0,
+      "next_wait": 750
+    },
+    {
+      "speed": 56,
+      "now": 1,
+      "next_wait": 751
+    },
+    {
+      "speed": 56,
+      "now": 4294967040,
+      "next_wait": 494
+    },
+    {
+      "speed": 56,
+      "now": 4294967295,
+      "next_wait": 749
+    },
+    {
+      "speed": 57,
+      "now": 0,
+      "next_wait": 750
+    },
+    {
+      "speed": 57,
+      "now": 1,
+      "next_wait": 751
+    },
+    {
+      "speed": 57,
+      "now": 4294967040,
+      "next_wait": 494
+    },
+    {
+      "speed": 57,
+      "now": 4294967295,
+      "next_wait": 749
+    },
+    {
+      "speed": 58,
+      "now": 0,
+      "next_wait": 750
+    },
+    {
+      "speed": 58,
+      "now": 1,
+      "next_wait": 751
+    },
+    {
+      "speed": 58,
+      "now": 4294967040,
+      "next_wait": 494
+    },
+    {
+      "speed": 58,
+      "now": 4294967295,
+      "next_wait": 749
+    },
+    {
+      "speed": 59,
+      "now": 0,
+      "next_wait": 750
+    },
+    {
+      "speed": 59,
+      "now": 1,
+      "next_wait": 751
+    },
+    {
+      "speed": 59,
+      "now": 4294967040,
+      "next_wait": 494
+    },
+    {
+      "speed": 59,
+      "now": 4294967295,
+      "next_wait": 749
+    },
+    {
+      "speed": 60,
+      "now": 0,
+      "next_wait": 600
+    },
+    {
+      "speed": 60,
+      "now": 1,
+      "next_wait": 601
+    },
+    {
+      "speed": 60,
+      "now": 4294967040,
+      "next_wait": 344
+    },
+    {
+      "speed": 60,
+      "now": 4294967295,
+      "next_wait": 599
+    },
+    {
+      "speed": 61,
+      "now": 0,
+      "next_wait": 600
+    },
+    {
+      "speed": 61,
+      "now": 1,
+      "next_wait": 601
+    },
+    {
+      "speed": 61,
+      "now": 4294967040,
+      "next_wait": 344
+    },
+    {
+      "speed": 61,
+      "now": 4294967295,
+      "next_wait": 599
+    },
+    {
+      "speed": 62,
+      "now": 0,
+      "next_wait": 600
+    },
+    {
+      "speed": 62,
+      "now": 1,
+      "next_wait": 601
+    },
+    {
+      "speed": 62,
+      "now": 4294967040,
+      "next_wait": 344
+    },
+    {
+      "speed": 62,
+      "now": 4294967295,
+      "next_wait": 599
+    },
+    {
+      "speed": 63,
+      "now": 0,
+      "next_wait": 600
+    },
+    {
+      "speed": 63,
+      "now": 1,
+      "next_wait": 601
+    },
+    {
+      "speed": 63,
+      "now": 4294967040,
+      "next_wait": 344
+    },
+    {
+      "speed": 63,
+      "now": 4294967295,
+      "next_wait": 599
+    },
+    {
+      "speed": 64,
+      "now": 0,
+      "next_wait": 600
+    },
+    {
+      "speed": 64,
+      "now": 1,
+      "next_wait": 601
+    },
+    {
+      "speed": 64,
+      "now": 4294967040,
+      "next_wait": 344
+    },
+    {
+      "speed": 64,
+      "now": 4294967295,
+      "next_wait": 599
+    },
+    {
+      "speed": 65,
+      "now": 0,
+      "next_wait": 600
+    },
+    {
+      "speed": 65,
+      "now": 1,
+      "next_wait": 601
+    },
+    {
+      "speed": 65,
+      "now": 4294967040,
+      "next_wait": 344
+    },
+    {
+      "speed": 65,
+      "now": 4294967295,
+      "next_wait": 599
+    },
+    {
+      "speed": 66,
+      "now": 0,
+      "next_wait": 600
+    },
+    {
+      "speed": 66,
+      "now": 1,
+      "next_wait": 601
+    },
+    {
+      "speed": 66,
+      "now": 4294967040,
+      "next_wait": 344
+    },
+    {
+      "speed": 66,
+      "now": 4294967295,
+      "next_wait": 599
+    },
+    {
+      "speed": 67,
+      "now": 0,
+      "next_wait": 600
+    },
+    {
+      "speed": 67,
+      "now": 1,
+      "next_wait": 601
+    },
+    {
+      "speed": 67,
+      "now": 4294967040,
+      "next_wait": 344
+    },
+    {
+      "speed": 67,
+      "now": 4294967295,
+      "next_wait": 599
+    },
+    {
+      "speed": 68,
+      "now": 0,
+      "next_wait": 600
+    },
+    {
+      "speed": 68,
+      "now": 1,
+      "next_wait": 601
+    },
+    {
+      "speed": 68,
+      "now": 4294967040,
+      "next_wait": 344
+    },
+    {
+      "speed": 68,
+      "now": 4294967295,
+      "next_wait": 599
+    },
+    {
+      "speed": 69,
+      "now": 0,
+      "next_wait": 600
+    },
+    {
+      "speed": 69,
+      "now": 1,
+      "next_wait": 601
+    },
+    {
+      "speed": 69,
+      "now": 4294967040,
+      "next_wait": 344
+    },
+    {
+      "speed": 69,
+      "now": 4294967295,
+      "next_wait": 599
+    },
+    {
+      "speed": 70,
+      "now": 0,
+      "next_wait": 600
+    },
+    {
+      "speed": 70,
+      "now": 1,
+      "next_wait": 601
+    },
+    {
+      "speed": 70,
+      "now": 4294967040,
+      "next_wait": 344
+    },
+    {
+      "speed": 70,
+      "now": 4294967295,
+      "next_wait": 599
+    },
+    {
+      "speed": 71,
+      "now": 0,
+      "next_wait": 600
+    },
+    {
+      "speed": 71,
+      "now": 1,
+      "next_wait": 601
+    },
+    {
+      "speed": 71,
+      "now": 4294967040,
+      "next_wait": 344
+    },
+    {
+      "speed": 71,
+      "now": 4294967295,
+      "next_wait": 599
+    },
+    {
+      "speed": 72,
+      "now": 0,
+      "next_wait": 600
+    },
+    {
+      "speed": 72,
+      "now": 1,
+      "next_wait": 601
+    },
+    {
+      "speed": 72,
+      "now": 4294967040,
+      "next_wait": 344
+    },
+    {
+      "speed": 72,
+      "now": 4294967295,
+      "next_wait": 599
+    },
+    {
+      "speed": 73,
+      "now": 0,
+      "next_wait": 600
+    },
+    {
+      "speed": 73,
+      "now": 1,
+      "next_wait": 601
+    },
+    {
+      "speed": 73,
+      "now": 4294967040,
+      "next_wait": 344
+    },
+    {
+      "speed": 73,
+      "now": 4294967295,
+      "next_wait": 599
+    },
+    {
+      "speed": 74,
+      "now": 0,
+      "next_wait": 600
+    },
+    {
+      "speed": 74,
+      "now": 1,
+      "next_wait": 601
+    },
+    {
+      "speed": 74,
+      "now": 4294967040,
+      "next_wait": 344
+    },
+    {
+      "speed": 74,
+      "now": 4294967295,
+      "next_wait": 599
+    },
+    {
+      "speed": 75,
+      "now": 0,
+      "next_wait": 500
+    },
+    {
+      "speed": 75,
+      "now": 1,
+      "next_wait": 501
+    },
+    {
+      "speed": 75,
+      "now": 4294967040,
+      "next_wait": 244
+    },
+    {
+      "speed": 75,
+      "now": 4294967295,
+      "next_wait": 499
+    },
+    {
+      "speed": 76,
+      "now": 0,
+      "next_wait": 500
+    },
+    {
+      "speed": 76,
+      "now": 1,
+      "next_wait": 501
+    },
+    {
+      "speed": 76,
+      "now": 4294967040,
+      "next_wait": 244
+    },
+    {
+      "speed": 76,
+      "now": 4294967295,
+      "next_wait": 499
+    },
+    {
+      "speed": 77,
+      "now": 0,
+      "next_wait": 500
+    },
+    {
+      "speed": 77,
+      "now": 1,
+      "next_wait": 501
+    },
+    {
+      "speed": 77,
+      "now": 4294967040,
+      "next_wait": 244
+    },
+    {
+      "speed": 77,
+      "now": 4294967295,
+      "next_wait": 499
+    },
+    {
+      "speed": 78,
+      "now": 0,
+      "next_wait": 500
+    },
+    {
+      "speed": 78,
+      "now": 1,
+      "next_wait": 501
+    },
+    {
+      "speed": 78,
+      "now": 4294967040,
+      "next_wait": 244
+    },
+    {
+      "speed": 78,
+      "now": 4294967295,
+      "next_wait": 499
+    },
+    {
+      "speed": 79,
+      "now": 0,
+      "next_wait": 500
+    },
+    {
+      "speed": 79,
+      "now": 1,
+      "next_wait": 501
+    },
+    {
+      "speed": 79,
+      "now": 4294967040,
+      "next_wait": 244
+    },
+    {
+      "speed": 79,
+      "now": 4294967295,
+      "next_wait": 499
+    },
+    {
+      "speed": 80,
+      "now": 0,
+      "next_wait": 500
+    },
+    {
+      "speed": 80,
+      "now": 1,
+      "next_wait": 501
+    },
+    {
+      "speed": 80,
+      "now": 4294967040,
+      "next_wait": 244
+    },
+    {
+      "speed": 80,
+      "now": 4294967295,
+      "next_wait": 499
+    },
+    {
+      "speed": 81,
+      "now": 0,
+      "next_wait": 500
+    },
+    {
+      "speed": 81,
+      "now": 1,
+      "next_wait": 501
+    },
+    {
+      "speed": 81,
+      "now": 4294967040,
+      "next_wait": 244
+    },
+    {
+      "speed": 81,
+      "now": 4294967295,
+      "next_wait": 499
+    },
+    {
+      "speed": 82,
+      "now": 0,
+      "next_wait": 500
+    },
+    {
+      "speed": 82,
+      "now": 1,
+      "next_wait": 501
+    },
+    {
+      "speed": 82,
+      "now": 4294967040,
+      "next_wait": 244
+    },
+    {
+      "speed": 82,
+      "now": 4294967295,
+      "next_wait": 499
+    },
+    {
+      "speed": 83,
+      "now": 0,
+      "next_wait": 500
+    },
+    {
+      "speed": 83,
+      "now": 1,
+      "next_wait": 501
+    },
+    {
+      "speed": 83,
+      "now": 4294967040,
+      "next_wait": 244
+    },
+    {
+      "speed": 83,
+      "now": 4294967295,
+      "next_wait": 499
+    },
+    {
+      "speed": 84,
+      "now": 0,
+      "next_wait": 500
+    },
+    {
+      "speed": 84,
+      "now": 1,
+      "next_wait": 501
+    },
+    {
+      "speed": 84,
+      "now": 4294967040,
+      "next_wait": 244
+    },
+    {
+      "speed": 84,
+      "now": 4294967295,
+      "next_wait": 499
+    },
+    {
+      "speed": 85,
+      "now": 0,
+      "next_wait": 500
+    },
+    {
+      "speed": 85,
+      "now": 1,
+      "next_wait": 501
+    },
+    {
+      "speed": 85,
+      "now": 4294967040,
+      "next_wait": 244
+    },
+    {
+      "speed": 85,
+      "now": 4294967295,
+      "next_wait": 499
+    },
+    {
+      "speed": 86,
+      "now": 0,
+      "next_wait": 500
+    },
+    {
+      "speed": 86,
+      "now": 1,
+      "next_wait": 501
+    },
+    {
+      "speed": 86,
+      "now": 4294967040,
+      "next_wait": 244
+    },
+    {
+      "speed": 86,
+      "now": 4294967295,
+      "next_wait": 499
+    },
+    {
+      "speed": 87,
+      "now": 0,
+      "next_wait": 500
+    },
+    {
+      "speed": 87,
+      "now": 1,
+      "next_wait": 501
+    },
+    {
+      "speed": 87,
+      "now": 4294967040,
+      "next_wait": 244
+    },
+    {
+      "speed": 87,
+      "now": 4294967295,
+      "next_wait": 499
+    },
+    {
+      "speed": 88,
+      "now": 0,
+      "next_wait": 500
+    },
+    {
+      "speed": 88,
+      "now": 1,
+      "next_wait": 501
+    },
+    {
+      "speed": 88,
+      "now": 4294967040,
+      "next_wait": 244
+    },
+    {
+      "speed": 88,
+      "now": 4294967295,
+      "next_wait": 499
+    },
+    {
+      "speed": 89,
+      "now": 0,
+      "next_wait": 500
+    },
+    {
+      "speed": 89,
+      "now": 1,
+      "next_wait": 501
+    },
+    {
+      "speed": 89,
+      "now": 4294967040,
+      "next_wait": 244
+    },
+    {
+      "speed": 89,
+      "now": 4294967295,
+      "next_wait": 499
+    },
+    {
+      "speed": 90,
+      "now": 0,
+      "next_wait": 428
+    },
+    {
+      "speed": 90,
+      "now": 1,
+      "next_wait": 429
+    },
+    {
+      "speed": 90,
+      "now": 4294967040,
+      "next_wait": 172
+    },
+    {
+      "speed": 90,
+      "now": 4294967295,
+      "next_wait": 427
+    },
+    {
+      "speed": 91,
+      "now": 0,
+      "next_wait": 428
+    },
+    {
+      "speed": 91,
+      "now": 1,
+      "next_wait": 429
+    },
+    {
+      "speed": 91,
+      "now": 4294967040,
+      "next_wait": 172
+    },
+    {
+      "speed": 91,
+      "now": 4294967295,
+      "next_wait": 427
+    },
+    {
+      "speed": 92,
+      "now": 0,
+      "next_wait": 428
+    },
+    {
+      "speed": 92,
+      "now": 1,
+      "next_wait": 429
+    },
+    {
+      "speed": 92,
+      "now": 4294967040,
+      "next_wait": 172
+    },
+    {
+      "speed": 92,
+      "now": 4294967295,
+      "next_wait": 427
+    },
+    {
+      "speed": 93,
+      "now": 0,
+      "next_wait": 428
+    },
+    {
+      "speed": 93,
+      "now": 1,
+      "next_wait": 429
+    },
+    {
+      "speed": 93,
+      "now": 4294967040,
+      "next_wait": 172
+    },
+    {
+      "speed": 93,
+      "now": 4294967295,
+      "next_wait": 427
+    },
+    {
+      "speed": 94,
+      "now": 0,
+      "next_wait": 428
+    },
+    {
+      "speed": 94,
+      "now": 1,
+      "next_wait": 429
+    },
+    {
+      "speed": 94,
+      "now": 4294967040,
+      "next_wait": 172
+    },
+    {
+      "speed": 94,
+      "now": 4294967295,
+      "next_wait": 427
+    },
+    {
+      "speed": 95,
+      "now": 0,
+      "next_wait": 428
+    },
+    {
+      "speed": 95,
+      "now": 1,
+      "next_wait": 429
+    },
+    {
+      "speed": 95,
+      "now": 4294967040,
+      "next_wait": 172
+    },
+    {
+      "speed": 95,
+      "now": 4294967295,
+      "next_wait": 427
+    },
+    {
+      "speed": 96,
+      "now": 0,
+      "next_wait": 428
+    },
+    {
+      "speed": 96,
+      "now": 1,
+      "next_wait": 429
+    },
+    {
+      "speed": 96,
+      "now": 4294967040,
+      "next_wait": 172
+    },
+    {
+      "speed": 96,
+      "now": 4294967295,
+      "next_wait": 427
+    },
+    {
+      "speed": 97,
+      "now": 0,
+      "next_wait": 428
+    },
+    {
+      "speed": 97,
+      "now": 1,
+      "next_wait": 429
+    },
+    {
+      "speed": 97,
+      "now": 4294967040,
+      "next_wait": 172
+    },
+    {
+      "speed": 97,
+      "now": 4294967295,
+      "next_wait": 427
+    },
+    {
+      "speed": 98,
+      "now": 0,
+      "next_wait": 428
+    },
+    {
+      "speed": 98,
+      "now": 1,
+      "next_wait": 429
+    },
+    {
+      "speed": 98,
+      "now": 4294967040,
+      "next_wait": 172
+    },
+    {
+      "speed": 98,
+      "now": 4294967295,
+      "next_wait": 427
+    },
+    {
+      "speed": 99,
+      "now": 0,
+      "next_wait": 428
+    },
+    {
+      "speed": 99,
+      "now": 1,
+      "next_wait": 429
+    },
+    {
+      "speed": 99,
+      "now": 4294967040,
+      "next_wait": 172
+    },
+    {
+      "speed": 99,
+      "now": 4294967295,
+      "next_wait": 427
+    },
+    {
+      "speed": 100,
+      "now": 0,
+      "next_wait": 428
+    },
+    {
+      "speed": 100,
+      "now": 1,
+      "next_wait": 429
+    },
+    {
+      "speed": 100,
+      "now": 4294967040,
+      "next_wait": 172
+    },
+    {
+      "speed": 100,
+      "now": 4294967295,
+      "next_wait": 427
+    },
+    {
+      "speed": 101,
+      "now": 0,
+      "next_wait": 428
+    },
+    {
+      "speed": 101,
+      "now": 1,
+      "next_wait": 429
+    },
+    {
+      "speed": 101,
+      "now": 4294967040,
+      "next_wait": 172
+    },
+    {
+      "speed": 101,
+      "now": 4294967295,
+      "next_wait": 427
+    },
+    {
+      "speed": 102,
+      "now": 0,
+      "next_wait": 428
+    },
+    {
+      "speed": 102,
+      "now": 1,
+      "next_wait": 429
+    },
+    {
+      "speed": 102,
+      "now": 4294967040,
+      "next_wait": 172
+    },
+    {
+      "speed": 102,
+      "now": 4294967295,
+      "next_wait": 427
+    },
+    {
+      "speed": 103,
+      "now": 0,
+      "next_wait": 428
+    },
+    {
+      "speed": 103,
+      "now": 1,
+      "next_wait": 429
+    },
+    {
+      "speed": 103,
+      "now": 4294967040,
+      "next_wait": 172
+    },
+    {
+      "speed": 103,
+      "now": 4294967295,
+      "next_wait": 427
+    },
+    {
+      "speed": 104,
+      "now": 0,
+      "next_wait": 428
+    },
+    {
+      "speed": 104,
+      "now": 1,
+      "next_wait": 429
+    },
+    {
+      "speed": 104,
+      "now": 4294967040,
+      "next_wait": 172
+    },
+    {
+      "speed": 104,
+      "now": 4294967295,
+      "next_wait": 427
+    },
+    {
+      "speed": 105,
+      "now": 0,
+      "next_wait": 375
+    },
+    {
+      "speed": 105,
+      "now": 1,
+      "next_wait": 376
+    },
+    {
+      "speed": 105,
+      "now": 4294967040,
+      "next_wait": 119
+    },
+    {
+      "speed": 105,
+      "now": 4294967295,
+      "next_wait": 374
+    },
+    {
+      "speed": 106,
+      "now": 0,
+      "next_wait": 375
+    },
+    {
+      "speed": 106,
+      "now": 1,
+      "next_wait": 376
+    },
+    {
+      "speed": 106,
+      "now": 4294967040,
+      "next_wait": 119
+    },
+    {
+      "speed": 106,
+      "now": 4294967295,
+      "next_wait": 374
+    },
+    {
+      "speed": 107,
+      "now": 0,
+      "next_wait": 375
+    },
+    {
+      "speed": 107,
+      "now": 1,
+      "next_wait": 376
+    },
+    {
+      "speed": 107,
+      "now": 4294967040,
+      "next_wait": 119
+    },
+    {
+      "speed": 107,
+      "now": 4294967295,
+      "next_wait": 374
+    },
+    {
+      "speed": 108,
+      "now": 0,
+      "next_wait": 375
+    },
+    {
+      "speed": 108,
+      "now": 1,
+      "next_wait": 376
+    },
+    {
+      "speed": 108,
+      "now": 4294967040,
+      "next_wait": 119
+    },
+    {
+      "speed": 108,
+      "now": 4294967295,
+      "next_wait": 374
+    },
+    {
+      "speed": 109,
+      "now": 0,
+      "next_wait": 375
+    },
+    {
+      "speed": 109,
+      "now": 1,
+      "next_wait": 376
+    },
+    {
+      "speed": 109,
+      "now": 4294967040,
+      "next_wait": 119
+    },
+    {
+      "speed": 109,
+      "now": 4294967295,
+      "next_wait": 374
+    },
+    {
+      "speed": 110,
+      "now": 0,
+      "next_wait": 375
+    },
+    {
+      "speed": 110,
+      "now": 1,
+      "next_wait": 376
+    },
+    {
+      "speed": 110,
+      "now": 4294967040,
+      "next_wait": 119
+    },
+    {
+      "speed": 110,
+      "now": 4294967295,
+      "next_wait": 374
+    },
+    {
+      "speed": 111,
+      "now": 0,
+      "next_wait": 375
+    },
+    {
+      "speed": 111,
+      "now": 1,
+      "next_wait": 376
+    },
+    {
+      "speed": 111,
+      "now": 4294967040,
+      "next_wait": 119
+    },
+    {
+      "speed": 111,
+      "now": 4294967295,
+      "next_wait": 374
+    },
+    {
+      "speed": 112,
+      "now": 0,
+      "next_wait": 375
+    },
+    {
+      "speed": 112,
+      "now": 1,
+      "next_wait": 376
+    },
+    {
+      "speed": 112,
+      "now": 4294967040,
+      "next_wait": 119
+    },
+    {
+      "speed": 112,
+      "now": 4294967295,
+      "next_wait": 374
+    },
+    {
+      "speed": 113,
+      "now": 0,
+      "next_wait": 375
+    },
+    {
+      "speed": 113,
+      "now": 1,
+      "next_wait": 376
+    },
+    {
+      "speed": 113,
+      "now": 4294967040,
+      "next_wait": 119
+    },
+    {
+      "speed": 113,
+      "now": 4294967295,
+      "next_wait": 374
+    },
+    {
+      "speed": 114,
+      "now": 0,
+      "next_wait": 375
+    },
+    {
+      "speed": 114,
+      "now": 1,
+      "next_wait": 376
+    },
+    {
+      "speed": 114,
+      "now": 4294967040,
+      "next_wait": 119
+    },
+    {
+      "speed": 114,
+      "now": 4294967295,
+      "next_wait": 374
+    },
+    {
+      "speed": 115,
+      "now": 0,
+      "next_wait": 375
+    },
+    {
+      "speed": 115,
+      "now": 1,
+      "next_wait": 376
+    },
+    {
+      "speed": 115,
+      "now": 4294967040,
+      "next_wait": 119
+    },
+    {
+      "speed": 115,
+      "now": 4294967295,
+      "next_wait": 374
+    },
+    {
+      "speed": 116,
+      "now": 0,
+      "next_wait": 375
+    },
+    {
+      "speed": 116,
+      "now": 1,
+      "next_wait": 376
+    },
+    {
+      "speed": 116,
+      "now": 4294967040,
+      "next_wait": 119
+    },
+    {
+      "speed": 116,
+      "now": 4294967295,
+      "next_wait": 374
+    },
+    {
+      "speed": 117,
+      "now": 0,
+      "next_wait": 375
+    },
+    {
+      "speed": 117,
+      "now": 1,
+      "next_wait": 376
+    },
+    {
+      "speed": 117,
+      "now": 4294967040,
+      "next_wait": 119
+    },
+    {
+      "speed": 117,
+      "now": 4294967295,
+      "next_wait": 374
+    },
+    {
+      "speed": 118,
+      "now": 0,
+      "next_wait": 375
+    },
+    {
+      "speed": 118,
+      "now": 1,
+      "next_wait": 376
+    },
+    {
+      "speed": 118,
+      "now": 4294967040,
+      "next_wait": 119
+    },
+    {
+      "speed": 118,
+      "now": 4294967295,
+      "next_wait": 374
+    },
+    {
+      "speed": 119,
+      "now": 0,
+      "next_wait": 375
+    },
+    {
+      "speed": 119,
+      "now": 1,
+      "next_wait": 376
+    },
+    {
+      "speed": 119,
+      "now": 4294967040,
+      "next_wait": 119
+    },
+    {
+      "speed": 119,
+      "now": 4294967295,
+      "next_wait": 374
+    },
+    {
+      "speed": 120,
+      "now": 0,
+      "next_wait": 333
+    },
+    {
+      "speed": 120,
+      "now": 1,
+      "next_wait": 334
+    },
+    {
+      "speed": 120,
+      "now": 4294967040,
+      "next_wait": 77
+    },
+    {
+      "speed": 120,
+      "now": 4294967295,
+      "next_wait": 332
+    },
+    {
+      "speed": 121,
+      "now": 0,
+      "next_wait": 333
+    },
+    {
+      "speed": 121,
+      "now": 1,
+      "next_wait": 334
+    },
+    {
+      "speed": 121,
+      "now": 4294967040,
+      "next_wait": 77
+    },
+    {
+      "speed": 121,
+      "now": 4294967295,
+      "next_wait": 332
+    },
+    {
+      "speed": 122,
+      "now": 0,
+      "next_wait": 333
+    },
+    {
+      "speed": 122,
+      "now": 1,
+      "next_wait": 334
+    },
+    {
+      "speed": 122,
+      "now": 4294967040,
+      "next_wait": 77
+    },
+    {
+      "speed": 122,
+      "now": 4294967295,
+      "next_wait": 332
+    },
+    {
+      "speed": 123,
+      "now": 0,
+      "next_wait": 333
+    },
+    {
+      "speed": 123,
+      "now": 1,
+      "next_wait": 334
+    },
+    {
+      "speed": 123,
+      "now": 4294967040,
+      "next_wait": 77
+    },
+    {
+      "speed": 123,
+      "now": 4294967295,
+      "next_wait": 332
+    },
+    {
+      "speed": 124,
+      "now": 0,
+      "next_wait": 333
+    },
+    {
+      "speed": 124,
+      "now": 1,
+      "next_wait": 334
+    },
+    {
+      "speed": 124,
+      "now": 4294967040,
+      "next_wait": 77
+    },
+    {
+      "speed": 124,
+      "now": 4294967295,
+      "next_wait": 332
+    },
+    {
+      "speed": 125,
+      "now": 0,
+      "next_wait": 333
+    },
+    {
+      "speed": 125,
+      "now": 1,
+      "next_wait": 334
+    },
+    {
+      "speed": 125,
+      "now": 4294967040,
+      "next_wait": 77
+    },
+    {
+      "speed": 125,
+      "now": 4294967295,
+      "next_wait": 332
+    },
+    {
+      "speed": 126,
+      "now": 0,
+      "next_wait": 333
+    },
+    {
+      "speed": 126,
+      "now": 1,
+      "next_wait": 334
+    },
+    {
+      "speed": 126,
+      "now": 4294967040,
+      "next_wait": 77
+    },
+    {
+      "speed": 126,
+      "now": 4294967295,
+      "next_wait": 332
+    },
+    {
+      "speed": 127,
+      "now": 0,
+      "next_wait": 333
+    },
+    {
+      "speed": 127,
+      "now": 1,
+      "next_wait": 334
+    },
+    {
+      "speed": 127,
+      "now": 4294967040,
+      "next_wait": 77
+    },
+    {
+      "speed": 127,
+      "now": 4294967295,
+      "next_wait": 332
+    },
+    {
+      "speed": 128,
+      "now": 0,
+      "next_wait": 333
+    },
+    {
+      "speed": 128,
+      "now": 1,
+      "next_wait": 334
+    },
+    {
+      "speed": 128,
+      "now": 4294967040,
+      "next_wait": 77
+    },
+    {
+      "speed": 128,
+      "now": 4294967295,
+      "next_wait": 332
+    },
+    {
+      "speed": 129,
+      "now": 0,
+      "next_wait": 333
+    },
+    {
+      "speed": 129,
+      "now": 1,
+      "next_wait": 334
+    },
+    {
+      "speed": 129,
+      "now": 4294967040,
+      "next_wait": 77
+    },
+    {
+      "speed": 129,
+      "now": 4294967295,
+      "next_wait": 332
+    },
+    {
+      "speed": 130,
+      "now": 0,
+      "next_wait": 333
+    },
+    {
+      "speed": 130,
+      "now": 1,
+      "next_wait": 334
+    },
+    {
+      "speed": 130,
+      "now": 4294967040,
+      "next_wait": 77
+    },
+    {
+      "speed": 130,
+      "now": 4294967295,
+      "next_wait": 332
+    },
+    {
+      "speed": 131,
+      "now": 0,
+      "next_wait": 333
+    },
+    {
+      "speed": 131,
+      "now": 1,
+      "next_wait": 334
+    },
+    {
+      "speed": 131,
+      "now": 4294967040,
+      "next_wait": 77
+    },
+    {
+      "speed": 131,
+      "now": 4294967295,
+      "next_wait": 332
+    },
+    {
+      "speed": 132,
+      "now": 0,
+      "next_wait": 333
+    },
+    {
+      "speed": 132,
+      "now": 1,
+      "next_wait": 334
+    },
+    {
+      "speed": 132,
+      "now": 4294967040,
+      "next_wait": 77
+    },
+    {
+      "speed": 132,
+      "now": 4294967295,
+      "next_wait": 332
+    },
+    {
+      "speed": 133,
+      "now": 0,
+      "next_wait": 333
+    },
+    {
+      "speed": 133,
+      "now": 1,
+      "next_wait": 334
+    },
+    {
+      "speed": 133,
+      "now": 4294967040,
+      "next_wait": 77
+    },
+    {
+      "speed": 133,
+      "now": 4294967295,
+      "next_wait": 332
+    },
+    {
+      "speed": 134,
+      "now": 0,
+      "next_wait": 333
+    },
+    {
+      "speed": 134,
+      "now": 1,
+      "next_wait": 334
+    },
+    {
+      "speed": 134,
+      "now": 4294967040,
+      "next_wait": 77
+    },
+    {
+      "speed": 134,
+      "now": 4294967295,
+      "next_wait": 332
+    },
+    {
+      "speed": 135,
+      "now": 0,
+      "next_wait": 300
+    },
+    {
+      "speed": 135,
+      "now": 1,
+      "next_wait": 301
+    },
+    {
+      "speed": 135,
+      "now": 4294967040,
+      "next_wait": 44
+    },
+    {
+      "speed": 135,
+      "now": 4294967295,
+      "next_wait": 299
+    },
+    {
+      "speed": 136,
+      "now": 0,
+      "next_wait": 300
+    },
+    {
+      "speed": 136,
+      "now": 1,
+      "next_wait": 301
+    },
+    {
+      "speed": 136,
+      "now": 4294967040,
+      "next_wait": 44
+    },
+    {
+      "speed": 136,
+      "now": 4294967295,
+      "next_wait": 299
+    },
+    {
+      "speed": 137,
+      "now": 0,
+      "next_wait": 300
+    },
+    {
+      "speed": 137,
+      "now": 1,
+      "next_wait": 301
+    },
+    {
+      "speed": 137,
+      "now": 4294967040,
+      "next_wait": 44
+    },
+    {
+      "speed": 137,
+      "now": 4294967295,
+      "next_wait": 299
+    },
+    {
+      "speed": 138,
+      "now": 0,
+      "next_wait": 300
+    },
+    {
+      "speed": 138,
+      "now": 1,
+      "next_wait": 301
+    },
+    {
+      "speed": 138,
+      "now": 4294967040,
+      "next_wait": 44
+    },
+    {
+      "speed": 138,
+      "now": 4294967295,
+      "next_wait": 299
+    },
+    {
+      "speed": 139,
+      "now": 0,
+      "next_wait": 300
+    },
+    {
+      "speed": 139,
+      "now": 1,
+      "next_wait": 301
+    },
+    {
+      "speed": 139,
+      "now": 4294967040,
+      "next_wait": 44
+    },
+    {
+      "speed": 139,
+      "now": 4294967295,
+      "next_wait": 299
+    },
+    {
+      "speed": 140,
+      "now": 0,
+      "next_wait": 300
+    },
+    {
+      "speed": 140,
+      "now": 1,
+      "next_wait": 301
+    },
+    {
+      "speed": 140,
+      "now": 4294967040,
+      "next_wait": 44
+    },
+    {
+      "speed": 140,
+      "now": 4294967295,
+      "next_wait": 299
+    },
+    {
+      "speed": 141,
+      "now": 0,
+      "next_wait": 300
+    },
+    {
+      "speed": 141,
+      "now": 1,
+      "next_wait": 301
+    },
+    {
+      "speed": 141,
+      "now": 4294967040,
+      "next_wait": 44
+    },
+    {
+      "speed": 141,
+      "now": 4294967295,
+      "next_wait": 299
+    },
+    {
+      "speed": 142,
+      "now": 0,
+      "next_wait": 300
+    },
+    {
+      "speed": 142,
+      "now": 1,
+      "next_wait": 301
+    },
+    {
+      "speed": 142,
+      "now": 4294967040,
+      "next_wait": 44
+    },
+    {
+      "speed": 142,
+      "now": 4294967295,
+      "next_wait": 299
+    },
+    {
+      "speed": 143,
+      "now": 0,
+      "next_wait": 300
+    },
+    {
+      "speed": 143,
+      "now": 1,
+      "next_wait": 301
+    },
+    {
+      "speed": 143,
+      "now": 4294967040,
+      "next_wait": 44
+    },
+    {
+      "speed": 143,
+      "now": 4294967295,
+      "next_wait": 299
+    },
+    {
+      "speed": 144,
+      "now": 0,
+      "next_wait": 300
+    },
+    {
+      "speed": 144,
+      "now": 1,
+      "next_wait": 301
+    },
+    {
+      "speed": 144,
+      "now": 4294967040,
+      "next_wait": 44
+    },
+    {
+      "speed": 144,
+      "now": 4294967295,
+      "next_wait": 299
+    },
+    {
+      "speed": 145,
+      "now": 0,
+      "next_wait": 300
+    },
+    {
+      "speed": 145,
+      "now": 1,
+      "next_wait": 301
+    },
+    {
+      "speed": 145,
+      "now": 4294967040,
+      "next_wait": 44
+    },
+    {
+      "speed": 145,
+      "now": 4294967295,
+      "next_wait": 299
+    },
+    {
+      "speed": 146,
+      "now": 0,
+      "next_wait": 300
+    },
+    {
+      "speed": 146,
+      "now": 1,
+      "next_wait": 301
+    },
+    {
+      "speed": 146,
+      "now": 4294967040,
+      "next_wait": 44
+    },
+    {
+      "speed": 146,
+      "now": 4294967295,
+      "next_wait": 299
+    },
+    {
+      "speed": 147,
+      "now": 0,
+      "next_wait": 300
+    },
+    {
+      "speed": 147,
+      "now": 1,
+      "next_wait": 301
+    },
+    {
+      "speed": 147,
+      "now": 4294967040,
+      "next_wait": 44
+    },
+    {
+      "speed": 147,
+      "now": 4294967295,
+      "next_wait": 299
+    },
+    {
+      "speed": 148,
+      "now": 0,
+      "next_wait": 300
+    },
+    {
+      "speed": 148,
+      "now": 1,
+      "next_wait": 301
+    },
+    {
+      "speed": 148,
+      "now": 4294967040,
+      "next_wait": 44
+    },
+    {
+      "speed": 148,
+      "now": 4294967295,
+      "next_wait": 299
+    },
+    {
+      "speed": 149,
+      "now": 0,
+      "next_wait": 300
+    },
+    {
+      "speed": 149,
+      "now": 1,
+      "next_wait": 301
+    },
+    {
+      "speed": 149,
+      "now": 4294967040,
+      "next_wait": 44
+    },
+    {
+      "speed": 149,
+      "now": 4294967295,
+      "next_wait": 299
+    },
+    {
+      "speed": 150,
+      "now": 0,
+      "next_wait": 272
+    },
+    {
+      "speed": 150,
+      "now": 1,
+      "next_wait": 273
+    },
+    {
+      "speed": 150,
+      "now": 4294967040,
+      "next_wait": 16
+    },
+    {
+      "speed": 150,
+      "now": 4294967295,
+      "next_wait": 271
+    },
+    {
+      "speed": 151,
+      "now": 0,
+      "next_wait": 272
+    },
+    {
+      "speed": 151,
+      "now": 1,
+      "next_wait": 273
+    },
+    {
+      "speed": 151,
+      "now": 4294967040,
+      "next_wait": 16
+    },
+    {
+      "speed": 151,
+      "now": 4294967295,
+      "next_wait": 271
+    },
+    {
+      "speed": 152,
+      "now": 0,
+      "next_wait": 272
+    },
+    {
+      "speed": 152,
+      "now": 1,
+      "next_wait": 273
+    },
+    {
+      "speed": 152,
+      "now": 4294967040,
+      "next_wait": 16
+    },
+    {
+      "speed": 152,
+      "now": 4294967295,
+      "next_wait": 271
+    },
+    {
+      "speed": 153,
+      "now": 0,
+      "next_wait": 272
+    },
+    {
+      "speed": 153,
+      "now": 1,
+      "next_wait": 273
+    },
+    {
+      "speed": 153,
+      "now": 4294967040,
+      "next_wait": 16
+    },
+    {
+      "speed": 153,
+      "now": 4294967295,
+      "next_wait": 271
+    },
+    {
+      "speed": 154,
+      "now": 0,
+      "next_wait": 272
+    },
+    {
+      "speed": 154,
+      "now": 1,
+      "next_wait": 273
+    },
+    {
+      "speed": 154,
+      "now": 4294967040,
+      "next_wait": 16
+    },
+    {
+      "speed": 154,
+      "now": 4294967295,
+      "next_wait": 271
+    },
+    {
+      "speed": 155,
+      "now": 0,
+      "next_wait": 272
+    },
+    {
+      "speed": 155,
+      "now": 1,
+      "next_wait": 273
+    },
+    {
+      "speed": 155,
+      "now": 4294967040,
+      "next_wait": 16
+    },
+    {
+      "speed": 155,
+      "now": 4294967295,
+      "next_wait": 271
+    },
+    {
+      "speed": 156,
+      "now": 0,
+      "next_wait": 272
+    },
+    {
+      "speed": 156,
+      "now": 1,
+      "next_wait": 273
+    },
+    {
+      "speed": 156,
+      "now": 4294967040,
+      "next_wait": 16
+    },
+    {
+      "speed": 156,
+      "now": 4294967295,
+      "next_wait": 271
+    },
+    {
+      "speed": 157,
+      "now": 0,
+      "next_wait": 272
+    },
+    {
+      "speed": 157,
+      "now": 1,
+      "next_wait": 273
+    },
+    {
+      "speed": 157,
+      "now": 4294967040,
+      "next_wait": 16
+    },
+    {
+      "speed": 157,
+      "now": 4294967295,
+      "next_wait": 271
+    },
+    {
+      "speed": 158,
+      "now": 0,
+      "next_wait": 272
+    },
+    {
+      "speed": 158,
+      "now": 1,
+      "next_wait": 273
+    },
+    {
+      "speed": 158,
+      "now": 4294967040,
+      "next_wait": 16
+    },
+    {
+      "speed": 158,
+      "now": 4294967295,
+      "next_wait": 271
+    },
+    {
+      "speed": 159,
+      "now": 0,
+      "next_wait": 272
+    },
+    {
+      "speed": 159,
+      "now": 1,
+      "next_wait": 273
+    },
+    {
+      "speed": 159,
+      "now": 4294967040,
+      "next_wait": 16
+    },
+    {
+      "speed": 159,
+      "now": 4294967295,
+      "next_wait": 271
+    },
+    {
+      "speed": 160,
+      "now": 0,
+      "next_wait": 272
+    },
+    {
+      "speed": 160,
+      "now": 1,
+      "next_wait": 273
+    },
+    {
+      "speed": 160,
+      "now": 4294967040,
+      "next_wait": 16
+    },
+    {
+      "speed": 160,
+      "now": 4294967295,
+      "next_wait": 271
+    },
+    {
+      "speed": 161,
+      "now": 0,
+      "next_wait": 272
+    },
+    {
+      "speed": 161,
+      "now": 1,
+      "next_wait": 273
+    },
+    {
+      "speed": 161,
+      "now": 4294967040,
+      "next_wait": 16
+    },
+    {
+      "speed": 161,
+      "now": 4294967295,
+      "next_wait": 271
+    },
+    {
+      "speed": 162,
+      "now": 0,
+      "next_wait": 272
+    },
+    {
+      "speed": 162,
+      "now": 1,
+      "next_wait": 273
+    },
+    {
+      "speed": 162,
+      "now": 4294967040,
+      "next_wait": 16
+    },
+    {
+      "speed": 162,
+      "now": 4294967295,
+      "next_wait": 271
+    },
+    {
+      "speed": 163,
+      "now": 0,
+      "next_wait": 272
+    },
+    {
+      "speed": 163,
+      "now": 1,
+      "next_wait": 273
+    },
+    {
+      "speed": 163,
+      "now": 4294967040,
+      "next_wait": 16
+    },
+    {
+      "speed": 163,
+      "now": 4294967295,
+      "next_wait": 271
+    },
+    {
+      "speed": 164,
+      "now": 0,
+      "next_wait": 272
+    },
+    {
+      "speed": 164,
+      "now": 1,
+      "next_wait": 273
+    },
+    {
+      "speed": 164,
+      "now": 4294967040,
+      "next_wait": 16
+    },
+    {
+      "speed": 164,
+      "now": 4294967295,
+      "next_wait": 271
+    },
+    {
+      "speed": 165,
+      "now": 0,
+      "next_wait": 250
+    },
+    {
+      "speed": 165,
+      "now": 1,
+      "next_wait": 251
+    },
+    {
+      "speed": 165,
+      "now": 4294967040,
+      "next_wait": 4294967290
+    },
+    {
+      "speed": 165,
+      "now": 4294967295,
+      "next_wait": 249
+    },
+    {
+      "speed": 166,
+      "now": 0,
+      "next_wait": 250
+    },
+    {
+      "speed": 166,
+      "now": 1,
+      "next_wait": 251
+    },
+    {
+      "speed": 166,
+      "now": 4294967040,
+      "next_wait": 4294967290
+    },
+    {
+      "speed": 166,
+      "now": 4294967295,
+      "next_wait": 249
+    },
+    {
+      "speed": 167,
+      "now": 0,
+      "next_wait": 250
+    },
+    {
+      "speed": 167,
+      "now": 1,
+      "next_wait": 251
+    },
+    {
+      "speed": 167,
+      "now": 4294967040,
+      "next_wait": 4294967290
+    },
+    {
+      "speed": 167,
+      "now": 4294967295,
+      "next_wait": 249
+    },
+    {
+      "speed": 168,
+      "now": 0,
+      "next_wait": 250
+    },
+    {
+      "speed": 168,
+      "now": 1,
+      "next_wait": 251
+    },
+    {
+      "speed": 168,
+      "now": 4294967040,
+      "next_wait": 4294967290
+    },
+    {
+      "speed": 168,
+      "now": 4294967295,
+      "next_wait": 249
+    },
+    {
+      "speed": 169,
+      "now": 0,
+      "next_wait": 250
+    },
+    {
+      "speed": 169,
+      "now": 1,
+      "next_wait": 251
+    },
+    {
+      "speed": 169,
+      "now": 4294967040,
+      "next_wait": 4294967290
+    },
+    {
+      "speed": 169,
+      "now": 4294967295,
+      "next_wait": 249
+    },
+    {
+      "speed": 170,
+      "now": 0,
+      "next_wait": 250
+    },
+    {
+      "speed": 170,
+      "now": 1,
+      "next_wait": 251
+    },
+    {
+      "speed": 170,
+      "now": 4294967040,
+      "next_wait": 4294967290
+    },
+    {
+      "speed": 170,
+      "now": 4294967295,
+      "next_wait": 249
+    },
+    {
+      "speed": 171,
+      "now": 0,
+      "next_wait": 250
+    },
+    {
+      "speed": 171,
+      "now": 1,
+      "next_wait": 251
+    },
+    {
+      "speed": 171,
+      "now": 4294967040,
+      "next_wait": 4294967290
+    },
+    {
+      "speed": 171,
+      "now": 4294967295,
+      "next_wait": 249
+    },
+    {
+      "speed": 172,
+      "now": 0,
+      "next_wait": 250
+    },
+    {
+      "speed": 172,
+      "now": 1,
+      "next_wait": 251
+    },
+    {
+      "speed": 172,
+      "now": 4294967040,
+      "next_wait": 4294967290
+    },
+    {
+      "speed": 172,
+      "now": 4294967295,
+      "next_wait": 249
+    },
+    {
+      "speed": 173,
+      "now": 0,
+      "next_wait": 250
+    },
+    {
+      "speed": 173,
+      "now": 1,
+      "next_wait": 251
+    },
+    {
+      "speed": 173,
+      "now": 4294967040,
+      "next_wait": 4294967290
+    },
+    {
+      "speed": 173,
+      "now": 4294967295,
+      "next_wait": 249
+    },
+    {
+      "speed": 174,
+      "now": 0,
+      "next_wait": 250
+    },
+    {
+      "speed": 174,
+      "now": 1,
+      "next_wait": 251
+    },
+    {
+      "speed": 174,
+      "now": 4294967040,
+      "next_wait": 4294967290
+    },
+    {
+      "speed": 174,
+      "now": 4294967295,
+      "next_wait": 249
+    },
+    {
+      "speed": 175,
+      "now": 0,
+      "next_wait": 250
+    },
+    {
+      "speed": 175,
+      "now": 1,
+      "next_wait": 251
+    },
+    {
+      "speed": 175,
+      "now": 4294967040,
+      "next_wait": 4294967290
+    },
+    {
+      "speed": 175,
+      "now": 4294967295,
+      "next_wait": 249
+    },
+    {
+      "speed": 176,
+      "now": 0,
+      "next_wait": 250
+    },
+    {
+      "speed": 176,
+      "now": 1,
+      "next_wait": 251
+    },
+    {
+      "speed": 176,
+      "now": 4294967040,
+      "next_wait": 4294967290
+    },
+    {
+      "speed": 176,
+      "now": 4294967295,
+      "next_wait": 249
+    },
+    {
+      "speed": 177,
+      "now": 0,
+      "next_wait": 250
+    },
+    {
+      "speed": 177,
+      "now": 1,
+      "next_wait": 251
+    },
+    {
+      "speed": 177,
+      "now": 4294967040,
+      "next_wait": 4294967290
+    },
+    {
+      "speed": 177,
+      "now": 4294967295,
+      "next_wait": 249
+    },
+    {
+      "speed": 178,
+      "now": 0,
+      "next_wait": 250
+    },
+    {
+      "speed": 178,
+      "now": 1,
+      "next_wait": 251
+    },
+    {
+      "speed": 178,
+      "now": 4294967040,
+      "next_wait": 4294967290
+    },
+    {
+      "speed": 178,
+      "now": 4294967295,
+      "next_wait": 249
+    },
+    {
+      "speed": 179,
+      "now": 0,
+      "next_wait": 250
+    },
+    {
+      "speed": 179,
+      "now": 1,
+      "next_wait": 251
+    },
+    {
+      "speed": 179,
+      "now": 4294967040,
+      "next_wait": 4294967290
+    },
+    {
+      "speed": 179,
+      "now": 4294967295,
+      "next_wait": 249
+    },
+    {
+      "speed": 180,
+      "now": 0,
+      "next_wait": 230
+    },
+    {
+      "speed": 180,
+      "now": 1,
+      "next_wait": 231
+    },
+    {
+      "speed": 180,
+      "now": 4294967040,
+      "next_wait": 4294967270
+    },
+    {
+      "speed": 180,
+      "now": 4294967295,
+      "next_wait": 229
+    },
+    {
+      "speed": 181,
+      "now": 0,
+      "next_wait": 230
+    },
+    {
+      "speed": 181,
+      "now": 1,
+      "next_wait": 231
+    },
+    {
+      "speed": 181,
+      "now": 4294967040,
+      "next_wait": 4294967270
+    },
+    {
+      "speed": 181,
+      "now": 4294967295,
+      "next_wait": 229
+    },
+    {
+      "speed": 182,
+      "now": 0,
+      "next_wait": 230
+    },
+    {
+      "speed": 182,
+      "now": 1,
+      "next_wait": 231
+    },
+    {
+      "speed": 182,
+      "now": 4294967040,
+      "next_wait": 4294967270
+    },
+    {
+      "speed": 182,
+      "now": 4294967295,
+      "next_wait": 229
+    },
+    {
+      "speed": 183,
+      "now": 0,
+      "next_wait": 230
+    },
+    {
+      "speed": 183,
+      "now": 1,
+      "next_wait": 231
+    },
+    {
+      "speed": 183,
+      "now": 4294967040,
+      "next_wait": 4294967270
+    },
+    {
+      "speed": 183,
+      "now": 4294967295,
+      "next_wait": 229
+    },
+    {
+      "speed": 184,
+      "now": 0,
+      "next_wait": 230
+    },
+    {
+      "speed": 184,
+      "now": 1,
+      "next_wait": 231
+    },
+    {
+      "speed": 184,
+      "now": 4294967040,
+      "next_wait": 4294967270
+    },
+    {
+      "speed": 184,
+      "now": 4294967295,
+      "next_wait": 229
+    },
+    {
+      "speed": 185,
+      "now": 0,
+      "next_wait": 230
+    },
+    {
+      "speed": 185,
+      "now": 1,
+      "next_wait": 231
+    },
+    {
+      "speed": 185,
+      "now": 4294967040,
+      "next_wait": 4294967270
+    },
+    {
+      "speed": 185,
+      "now": 4294967295,
+      "next_wait": 229
+    },
+    {
+      "speed": 186,
+      "now": 0,
+      "next_wait": 230
+    },
+    {
+      "speed": 186,
+      "now": 1,
+      "next_wait": 231
+    },
+    {
+      "speed": 186,
+      "now": 4294967040,
+      "next_wait": 4294967270
+    },
+    {
+      "speed": 186,
+      "now": 4294967295,
+      "next_wait": 229
+    },
+    {
+      "speed": 187,
+      "now": 0,
+      "next_wait": 230
+    },
+    {
+      "speed": 187,
+      "now": 1,
+      "next_wait": 231
+    },
+    {
+      "speed": 187,
+      "now": 4294967040,
+      "next_wait": 4294967270
+    },
+    {
+      "speed": 187,
+      "now": 4294967295,
+      "next_wait": 229
+    },
+    {
+      "speed": 188,
+      "now": 0,
+      "next_wait": 230
+    },
+    {
+      "speed": 188,
+      "now": 1,
+      "next_wait": 231
+    },
+    {
+      "speed": 188,
+      "now": 4294967040,
+      "next_wait": 4294967270
+    },
+    {
+      "speed": 188,
+      "now": 4294967295,
+      "next_wait": 229
+    },
+    {
+      "speed": 189,
+      "now": 0,
+      "next_wait": 230
+    },
+    {
+      "speed": 189,
+      "now": 1,
+      "next_wait": 231
+    },
+    {
+      "speed": 189,
+      "now": 4294967040,
+      "next_wait": 4294967270
+    },
+    {
+      "speed": 189,
+      "now": 4294967295,
+      "next_wait": 229
+    },
+    {
+      "speed": 190,
+      "now": 0,
+      "next_wait": 230
+    },
+    {
+      "speed": 190,
+      "now": 1,
+      "next_wait": 231
+    },
+    {
+      "speed": 190,
+      "now": 4294967040,
+      "next_wait": 4294967270
+    },
+    {
+      "speed": 190,
+      "now": 4294967295,
+      "next_wait": 229
+    },
+    {
+      "speed": 191,
+      "now": 0,
+      "next_wait": 230
+    },
+    {
+      "speed": 191,
+      "now": 1,
+      "next_wait": 231
+    },
+    {
+      "speed": 191,
+      "now": 4294967040,
+      "next_wait": 4294967270
+    },
+    {
+      "speed": 191,
+      "now": 4294967295,
+      "next_wait": 229
+    },
+    {
+      "speed": 192,
+      "now": 0,
+      "next_wait": 230
+    },
+    {
+      "speed": 192,
+      "now": 1,
+      "next_wait": 231
+    },
+    {
+      "speed": 192,
+      "now": 4294967040,
+      "next_wait": 4294967270
+    },
+    {
+      "speed": 192,
+      "now": 4294967295,
+      "next_wait": 229
+    },
+    {
+      "speed": 193,
+      "now": 0,
+      "next_wait": 230
+    },
+    {
+      "speed": 193,
+      "now": 1,
+      "next_wait": 231
+    },
+    {
+      "speed": 193,
+      "now": 4294967040,
+      "next_wait": 4294967270
+    },
+    {
+      "speed": 193,
+      "now": 4294967295,
+      "next_wait": 229
+    },
+    {
+      "speed": 194,
+      "now": 0,
+      "next_wait": 230
+    },
+    {
+      "speed": 194,
+      "now": 1,
+      "next_wait": 231
+    },
+    {
+      "speed": 194,
+      "now": 4294967040,
+      "next_wait": 4294967270
+    },
+    {
+      "speed": 194,
+      "now": 4294967295,
+      "next_wait": 229
+    },
+    {
+      "speed": 195,
+      "now": 0,
+      "next_wait": 214
+    },
+    {
+      "speed": 195,
+      "now": 1,
+      "next_wait": 215
+    },
+    {
+      "speed": 195,
+      "now": 4294967040,
+      "next_wait": 4294967254
+    },
+    {
+      "speed": 195,
+      "now": 4294967295,
+      "next_wait": 213
+    },
+    {
+      "speed": 196,
+      "now": 0,
+      "next_wait": 214
+    },
+    {
+      "speed": 196,
+      "now": 1,
+      "next_wait": 215
+    },
+    {
+      "speed": 196,
+      "now": 4294967040,
+      "next_wait": 4294967254
+    },
+    {
+      "speed": 196,
+      "now": 4294967295,
+      "next_wait": 213
+    },
+    {
+      "speed": 197,
+      "now": 0,
+      "next_wait": 214
+    },
+    {
+      "speed": 197,
+      "now": 1,
+      "next_wait": 215
+    },
+    {
+      "speed": 197,
+      "now": 4294967040,
+      "next_wait": 4294967254
+    },
+    {
+      "speed": 197,
+      "now": 4294967295,
+      "next_wait": 213
+    },
+    {
+      "speed": 198,
+      "now": 0,
+      "next_wait": 214
+    },
+    {
+      "speed": 198,
+      "now": 1,
+      "next_wait": 215
+    },
+    {
+      "speed": 198,
+      "now": 4294967040,
+      "next_wait": 4294967254
+    },
+    {
+      "speed": 198,
+      "now": 4294967295,
+      "next_wait": 213
+    },
+    {
+      "speed": 199,
+      "now": 0,
+      "next_wait": 214
+    },
+    {
+      "speed": 199,
+      "now": 1,
+      "next_wait": 215
+    },
+    {
+      "speed": 199,
+      "now": 4294967040,
+      "next_wait": 4294967254
+    },
+    {
+      "speed": 199,
+      "now": 4294967295,
+      "next_wait": 213
+    },
+    {
+      "speed": 200,
+      "now": 0,
+      "next_wait": 214
+    },
+    {
+      "speed": 200,
+      "now": 1,
+      "next_wait": 215
+    },
+    {
+      "speed": 200,
+      "now": 4294967040,
+      "next_wait": 4294967254
+    },
+    {
+      "speed": 200,
+      "now": 4294967295,
+      "next_wait": 213
+    },
+    {
+      "speed": 201,
+      "now": 0,
+      "next_wait": 214
+    },
+    {
+      "speed": 201,
+      "now": 1,
+      "next_wait": 215
+    },
+    {
+      "speed": 201,
+      "now": 4294967040,
+      "next_wait": 4294967254
+    },
+    {
+      "speed": 201,
+      "now": 4294967295,
+      "next_wait": 213
+    },
+    {
+      "speed": 202,
+      "now": 0,
+      "next_wait": 214
+    },
+    {
+      "speed": 202,
+      "now": 1,
+      "next_wait": 215
+    },
+    {
+      "speed": 202,
+      "now": 4294967040,
+      "next_wait": 4294967254
+    },
+    {
+      "speed": 202,
+      "now": 4294967295,
+      "next_wait": 213
+    },
+    {
+      "speed": 203,
+      "now": 0,
+      "next_wait": 214
+    },
+    {
+      "speed": 203,
+      "now": 1,
+      "next_wait": 215
+    },
+    {
+      "speed": 203,
+      "now": 4294967040,
+      "next_wait": 4294967254
+    },
+    {
+      "speed": 203,
+      "now": 4294967295,
+      "next_wait": 213
+    },
+    {
+      "speed": 204,
+      "now": 0,
+      "next_wait": 214
+    },
+    {
+      "speed": 204,
+      "now": 1,
+      "next_wait": 215
+    },
+    {
+      "speed": 204,
+      "now": 4294967040,
+      "next_wait": 4294967254
+    },
+    {
+      "speed": 204,
+      "now": 4294967295,
+      "next_wait": 213
+    },
+    {
+      "speed": 205,
+      "now": 0,
+      "next_wait": 214
+    },
+    {
+      "speed": 205,
+      "now": 1,
+      "next_wait": 215
+    },
+    {
+      "speed": 205,
+      "now": 4294967040,
+      "next_wait": 4294967254
+    },
+    {
+      "speed": 205,
+      "now": 4294967295,
+      "next_wait": 213
+    },
+    {
+      "speed": 206,
+      "now": 0,
+      "next_wait": 214
+    },
+    {
+      "speed": 206,
+      "now": 1,
+      "next_wait": 215
+    },
+    {
+      "speed": 206,
+      "now": 4294967040,
+      "next_wait": 4294967254
+    },
+    {
+      "speed": 206,
+      "now": 4294967295,
+      "next_wait": 213
+    },
+    {
+      "speed": 207,
+      "now": 0,
+      "next_wait": 214
+    },
+    {
+      "speed": 207,
+      "now": 1,
+      "next_wait": 215
+    },
+    {
+      "speed": 207,
+      "now": 4294967040,
+      "next_wait": 4294967254
+    },
+    {
+      "speed": 207,
+      "now": 4294967295,
+      "next_wait": 213
+    },
+    {
+      "speed": 208,
+      "now": 0,
+      "next_wait": 214
+    },
+    {
+      "speed": 208,
+      "now": 1,
+      "next_wait": 215
+    },
+    {
+      "speed": 208,
+      "now": 4294967040,
+      "next_wait": 4294967254
+    },
+    {
+      "speed": 208,
+      "now": 4294967295,
+      "next_wait": 213
+    },
+    {
+      "speed": 209,
+      "now": 0,
+      "next_wait": 214
+    },
+    {
+      "speed": 209,
+      "now": 1,
+      "next_wait": 215
+    },
+    {
+      "speed": 209,
+      "now": 4294967040,
+      "next_wait": 4294967254
+    },
+    {
+      "speed": 209,
+      "now": 4294967295,
+      "next_wait": 213
+    },
+    {
+      "speed": 210,
+      "now": 0,
+      "next_wait": 200
+    },
+    {
+      "speed": 210,
+      "now": 1,
+      "next_wait": 201
+    },
+    {
+      "speed": 210,
+      "now": 4294967040,
+      "next_wait": 4294967240
+    },
+    {
+      "speed": 210,
+      "now": 4294967295,
+      "next_wait": 199
+    },
+    {
+      "speed": 211,
+      "now": 0,
+      "next_wait": 200
+    },
+    {
+      "speed": 211,
+      "now": 1,
+      "next_wait": 201
+    },
+    {
+      "speed": 211,
+      "now": 4294967040,
+      "next_wait": 4294967240
+    },
+    {
+      "speed": 211,
+      "now": 4294967295,
+      "next_wait": 199
+    },
+    {
+      "speed": 212,
+      "now": 0,
+      "next_wait": 200
+    },
+    {
+      "speed": 212,
+      "now": 1,
+      "next_wait": 201
+    },
+    {
+      "speed": 212,
+      "now": 4294967040,
+      "next_wait": 4294967240
+    },
+    {
+      "speed": 212,
+      "now": 4294967295,
+      "next_wait": 199
+    },
+    {
+      "speed": 213,
+      "now": 0,
+      "next_wait": 200
+    },
+    {
+      "speed": 213,
+      "now": 1,
+      "next_wait": 201
+    },
+    {
+      "speed": 213,
+      "now": 4294967040,
+      "next_wait": 4294967240
+    },
+    {
+      "speed": 213,
+      "now": 4294967295,
+      "next_wait": 199
+    },
+    {
+      "speed": 214,
+      "now": 0,
+      "next_wait": 200
+    },
+    {
+      "speed": 214,
+      "now": 1,
+      "next_wait": 201
+    },
+    {
+      "speed": 214,
+      "now": 4294967040,
+      "next_wait": 4294967240
+    },
+    {
+      "speed": 214,
+      "now": 4294967295,
+      "next_wait": 199
+    },
+    {
+      "speed": 215,
+      "now": 0,
+      "next_wait": 200
+    },
+    {
+      "speed": 215,
+      "now": 1,
+      "next_wait": 201
+    },
+    {
+      "speed": 215,
+      "now": 4294967040,
+      "next_wait": 4294967240
+    },
+    {
+      "speed": 215,
+      "now": 4294967295,
+      "next_wait": 199
+    },
+    {
+      "speed": 216,
+      "now": 0,
+      "next_wait": 200
+    },
+    {
+      "speed": 216,
+      "now": 1,
+      "next_wait": 201
+    },
+    {
+      "speed": 216,
+      "now": 4294967040,
+      "next_wait": 4294967240
+    },
+    {
+      "speed": 216,
+      "now": 4294967295,
+      "next_wait": 199
+    },
+    {
+      "speed": 217,
+      "now": 0,
+      "next_wait": 200
+    },
+    {
+      "speed": 217,
+      "now": 1,
+      "next_wait": 201
+    },
+    {
+      "speed": 217,
+      "now": 4294967040,
+      "next_wait": 4294967240
+    },
+    {
+      "speed": 217,
+      "now": 4294967295,
+      "next_wait": 199
+    },
+    {
+      "speed": 218,
+      "now": 0,
+      "next_wait": 200
+    },
+    {
+      "speed": 218,
+      "now": 1,
+      "next_wait": 201
+    },
+    {
+      "speed": 218,
+      "now": 4294967040,
+      "next_wait": 4294967240
+    },
+    {
+      "speed": 218,
+      "now": 4294967295,
+      "next_wait": 199
+    },
+    {
+      "speed": 219,
+      "now": 0,
+      "next_wait": 200
+    },
+    {
+      "speed": 219,
+      "now": 1,
+      "next_wait": 201
+    },
+    {
+      "speed": 219,
+      "now": 4294967040,
+      "next_wait": 4294967240
+    },
+    {
+      "speed": 219,
+      "now": 4294967295,
+      "next_wait": 199
+    },
+    {
+      "speed": 220,
+      "now": 0,
+      "next_wait": 200
+    },
+    {
+      "speed": 220,
+      "now": 1,
+      "next_wait": 201
+    },
+    {
+      "speed": 220,
+      "now": 4294967040,
+      "next_wait": 4294967240
+    },
+    {
+      "speed": 220,
+      "now": 4294967295,
+      "next_wait": 199
+    },
+    {
+      "speed": 221,
+      "now": 0,
+      "next_wait": 200
+    },
+    {
+      "speed": 221,
+      "now": 1,
+      "next_wait": 201
+    },
+    {
+      "speed": 221,
+      "now": 4294967040,
+      "next_wait": 4294967240
+    },
+    {
+      "speed": 221,
+      "now": 4294967295,
+      "next_wait": 199
+    },
+    {
+      "speed": 222,
+      "now": 0,
+      "next_wait": 200
+    },
+    {
+      "speed": 222,
+      "now": 1,
+      "next_wait": 201
+    },
+    {
+      "speed": 222,
+      "now": 4294967040,
+      "next_wait": 4294967240
+    },
+    {
+      "speed": 222,
+      "now": 4294967295,
+      "next_wait": 199
+    },
+    {
+      "speed": 223,
+      "now": 0,
+      "next_wait": 200
+    },
+    {
+      "speed": 223,
+      "now": 1,
+      "next_wait": 201
+    },
+    {
+      "speed": 223,
+      "now": 4294967040,
+      "next_wait": 4294967240
+    },
+    {
+      "speed": 223,
+      "now": 4294967295,
+      "next_wait": 199
+    },
+    {
+      "speed": 224,
+      "now": 0,
+      "next_wait": 200
+    },
+    {
+      "speed": 224,
+      "now": 1,
+      "next_wait": 201
+    },
+    {
+      "speed": 224,
+      "now": 4294967040,
+      "next_wait": 4294967240
+    },
+    {
+      "speed": 224,
+      "now": 4294967295,
+      "next_wait": 199
+    },
+    {
+      "speed": 225,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 225,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 225,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 225,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 226,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 226,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 226,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 226,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 227,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 227,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 227,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 227,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 228,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 228,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 228,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 228,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 229,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 229,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 229,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 229,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 230,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 230,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 230,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 230,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 231,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 231,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 231,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 231,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 232,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 232,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 232,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 232,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 233,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 233,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 233,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 233,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 234,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 234,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 234,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 234,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 235,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 235,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 235,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 235,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 236,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 236,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 236,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 236,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 237,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 237,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 237,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 237,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 238,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 238,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 238,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 238,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 239,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 239,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 239,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 239,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 240,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 240,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 240,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 240,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 241,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 241,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 241,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 241,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 242,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 242,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 242,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 242,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 243,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 243,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 243,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 243,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 244,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 244,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 244,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 244,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 245,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 245,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 245,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 245,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 246,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 246,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 246,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 246,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 247,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 247,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 247,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 247,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 248,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 248,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 248,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 248,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 249,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 249,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 249,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 249,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 250,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 250,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 250,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 250,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 251,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 251,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 251,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 251,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 252,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 252,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 252,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 252,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 253,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 253,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 253,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 253,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 254,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 254,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 254,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 254,
+      "now": 4294967295,
+      "next_wait": 186
+    },
+    {
+      "speed": 255,
+      "now": 0,
+      "next_wait": 187
+    },
+    {
+      "speed": 255,
+      "now": 1,
+      "next_wait": 188
+    },
+    {
+      "speed": 255,
+      "now": 4294967040,
+      "next_wait": 4294967227
+    },
+    {
+      "speed": 255,
+      "now": 4294967295,
+      "next_wait": 186
+    }
+  ],
+  "boundary_policy": "Only original150d8..150fa arithmetic/store instructions execute; caller-supplied speed/config pointer, current uint32 timer and guarded wait RAM. No renderer dispatch, wait gate, init, RNG, HSV, LED state/IO, actual clock, IRQ or device execution."
+}

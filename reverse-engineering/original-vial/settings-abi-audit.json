@@ -1,0 +1,726 @@
+{
+  "original_uf2_sha256": "d5e680fa2507534b63b316a3e67a5d7457af4bdfa65189f464d4e1b029692431",
+  "original_payload_sha256": "9df2375a5dfc7d155c3320ea5df3f2cff6920686928ae6ff5c186de5bee453e4",
+  "reference": {
+    "revision": "dd43959ae5c08d8a28d38a1acf7b04e86b14a344",
+    "source_hashes": {
+      "qmk_settings.h": "d5846b5983b807c2bd44881d25e55671080018767193cea664ab3aa71d549c84",
+      "qmk_settings.c": "beecfd2c0980dc2d3043884b68a5c358e255ca53c29b5866ca127b4fbf68fa8b"
+    },
+    "source_urls": {
+      "qmk_settings.h": "https://raw.githubusercontent.com/vial-kb/vial-qmk/dd43959ae5c08d8a28d38a1acf7b04e86b14a344/quantum/qmk_settings.h",
+      "qmk_settings.c": "https://raw.githubusercontent.com/vial-kb/vial-qmk/dd43959ae5c08d8a28d38a1acf7b04e86b14a344/quantum/qmk_settings.c"
+    },
+    "profile": "QMK_SETTINGS enabled; MOUSEKEY_ENABLE enabled; MK_3_SPEED disabled; ARM32 prototype pointers",
+    "bytes": 40,
+    "fields": [
+      {
+        "name": "auto_shift_timeout",
+        "ctype": "uint16_t",
+        "offset": 0,
+        "size": 2
+      },
+      {
+        "name": "osk_timeout",
+        "ctype": "uint16_t",
+        "offset": 2,
+        "size": 2
+      },
+      {
+        "name": "mousekey_delay",
+        "ctype": "uint16_t",
+        "offset": 4,
+        "size": 2
+      },
+      {
+        "name": "mousekey_interval",
+        "ctype": "uint16_t",
+        "offset": 6,
+        "size": 2
+      },
+      {
+        "name": "mousekey_move_delta",
+        "ctype": "uint16_t",
+        "offset": 8,
+        "size": 2
+      },
+      {
+        "name": "mousekey_max_speed",
+        "ctype": "uint16_t",
+        "offset": 10,
+        "size": 2
+      },
+      {
+        "name": "mousekey_time_to_max",
+        "ctype": "uint16_t",
+        "offset": 12,
+        "size": 2
+      },
+      {
+        "name": "mousekey_wheel_delay",
+        "ctype": "uint16_t",
+        "offset": 14,
+        "size": 2
+      },
+      {
+        "name": "mousekey_wheel_interval",
+        "ctype": "uint16_t",
+        "offset": 16,
+        "size": 2
+      },
+      {
+        "name": "mousekey_wheel_max_speed",
+        "ctype": "uint16_t",
+        "offset": 18,
+        "size": 2
+      },
+      {
+        "name": "mousekey_wheel_time_to_max",
+        "ctype": "uint16_t",
+        "offset": 20,
+        "size": 2
+      },
+      {
+        "name": "combo_term",
+        "ctype": "uint16_t",
+        "offset": 22,
+        "size": 2
+      },
+      {
+        "name": "tapping_term",
+        "ctype": "uint16_t",
+        "offset": 24,
+        "size": 2
+      },
+      {
+        "name": "grave_esc_override",
+        "ctype": "uint8_t",
+        "offset": 26,
+        "size": 1
+      },
+      {
+        "name": "auto_shift",
+        "ctype": "uint8_t",
+        "offset": 27,
+        "size": 1
+      },
+      {
+        "name": "osk_tap_toggle",
+        "ctype": "uint8_t",
+        "offset": 28,
+        "size": 1
+      },
+      {
+        "name": "tapping_v2",
+        "ctype": "uint8_t",
+        "offset": 29,
+        "size": 1
+      },
+      {
+        "name": "tap_code_delay",
+        "ctype": "uint16_t",
+        "offset": 30,
+        "size": 2
+      },
+      {
+        "name": "tap_hold_caps_delay",
+        "ctype": "uint16_t",
+        "offset": 32,
+        "size": 2
+      },
+      {
+        "name": "tapping_toggle",
+        "ctype": "uint8_t",
+        "offset": 34,
+        "size": 1
+      },
+      {
+        "name": "unused",
+        "ctype": "uint8_t",
+        "offset": 35,
+        "size": 1
+      },
+      {
+        "name": "quick_tap_term",
+        "ctype": "uint16_t",
+        "offset": 36,
+        "size": 2
+      },
+      {
+        "name": "flow_tap_term",
+        "ctype": "uint16_t",
+        "offset": 38,
+        "size": 2
+      }
+    ],
+    "prototypes": [
+      {
+        "qsid": 1,
+        "kind": "scalar",
+        "field": "grave_esc_override",
+        "offset": 26,
+        "size": 1,
+        "bit": 0,
+        "notify": null
+      },
+      {
+        "qsid": 2,
+        "kind": "scalar",
+        "field": "combo_term",
+        "offset": 22,
+        "size": 2,
+        "bit": 0,
+        "notify": null
+      },
+      {
+        "qsid": 3,
+        "kind": "scalar",
+        "field": "auto_shift",
+        "offset": 27,
+        "size": 1,
+        "bit": 0,
+        "notify": null
+      },
+      {
+        "qsid": 4,
+        "kind": "scalar",
+        "field": "auto_shift_timeout",
+        "offset": 0,
+        "size": 2,
+        "bit": 0,
+        "notify": "auto_shift_timeout_apply"
+      },
+      {
+        "qsid": 5,
+        "kind": "scalar",
+        "field": "osk_tap_toggle",
+        "offset": 28,
+        "size": 1,
+        "bit": 0,
+        "notify": null
+      },
+      {
+        "qsid": 6,
+        "kind": "scalar",
+        "field": "osk_timeout",
+        "offset": 2,
+        "size": 2,
+        "bit": 0,
+        "notify": null
+      },
+      {
+        "qsid": 7,
+        "kind": "scalar",
+        "field": "tapping_term",
+        "offset": 24,
+        "size": 2,
+        "bit": 0,
+        "notify": null
+      },
+      {
+        "qsid": 9,
+        "kind": "scalar",
+        "field": "mousekey_delay",
+        "offset": 4,
+        "size": 2,
+        "bit": 0,
+        "notify": "mousekey_apply"
+      },
+      {
+        "qsid": 10,
+        "kind": "scalar",
+        "field": "mousekey_interval",
+        "offset": 6,
+        "size": 2,
+        "bit": 0,
+        "notify": "mousekey_apply"
+      },
+      {
+        "qsid": 11,
+        "kind": "scalar",
+        "field": "mousekey_move_delta",
+        "offset": 8,
+        "size": 2,
+        "bit": 0,
+        "notify": "mousekey_apply"
+      },
+      {
+        "qsid": 12,
+        "kind": "scalar",
+        "field": "mousekey_max_speed",
+        "offset": 10,
+        "size": 2,
+        "bit": 0,
+        "notify": "mousekey_apply"
+      },
+      {
+        "qsid": 13,
+        "kind": "scalar",
+        "field": "mousekey_time_to_max",
+        "offset": 12,
+        "size": 2,
+        "bit": 0,
+        "notify": "mousekey_apply"
+      },
+      {
+        "qsid": 14,
+        "kind": "scalar",
+        "field": "mousekey_wheel_delay",
+        "offset": 14,
+        "size": 2,
+        "bit": 0,
+        "notify": "mousekey_apply"
+      },
+      {
+        "qsid": 15,
+        "kind": "scalar",
+        "field": "mousekey_wheel_interval",
+        "offset": 16,
+        "size": 2,
+        "bit": 0,
+        "notify": "mousekey_apply"
+      },
+      {
+        "qsid": 16,
+        "kind": "scalar",
+        "field": "mousekey_wheel_max_speed",
+        "offset": 18,
+        "size": 2,
+        "bit": 0,
+        "notify": "mousekey_apply"
+      },
+      {
+        "qsid": 17,
+        "kind": "scalar",
+        "field": "mousekey_wheel_time_to_max",
+        "offset": 20,
+        "size": 2,
+        "bit": 0,
+        "notify": "mousekey_apply"
+      },
+      {
+        "qsid": 18,
+        "kind": "scalar",
+        "field": "tap_code_delay",
+        "offset": 30,
+        "size": 2,
+        "bit": 0,
+        "notify": null
+      },
+      {
+        "qsid": 19,
+        "kind": "scalar",
+        "field": "tap_hold_caps_delay",
+        "offset": 32,
+        "size": 2,
+        "bit": 0,
+        "notify": null
+      },
+      {
+        "qsid": 20,
+        "kind": "scalar",
+        "field": "tapping_toggle",
+        "offset": 34,
+        "size": 1,
+        "bit": 0,
+        "notify": null
+      },
+      {
+        "qsid": 21,
+        "kind": "custom",
+        "field": null,
+        "offset": null,
+        "size": 0,
+        "bit": 0,
+        "notify": null
+      },
+      {
+        "qsid": 22,
+        "kind": "bit",
+        "field": "tapping_v2",
+        "offset": 29,
+        "size": 1,
+        "bit": 0,
+        "notify": null
+      },
+      {
+        "qsid": 23,
+        "kind": "bit",
+        "field": "tapping_v2",
+        "offset": 29,
+        "size": 1,
+        "bit": 1,
+        "notify": null
+      },
+      {
+        "qsid": 24,
+        "kind": "bit",
+        "field": "tapping_v2",
+        "offset": 29,
+        "size": 1,
+        "bit": 2,
+        "notify": null
+      },
+      {
+        "qsid": 25,
+        "kind": "scalar",
+        "field": "quick_tap_term",
+        "offset": 36,
+        "size": 2,
+        "bit": 0,
+        "notify": null
+      },
+      {
+        "qsid": 26,
+        "kind": "bit",
+        "field": "tapping_v2",
+        "offset": 29,
+        "size": 1,
+        "bit": 3,
+        "notify": null
+      },
+      {
+        "qsid": 27,
+        "kind": "scalar",
+        "field": "flow_tap_term",
+        "offset": 38,
+        "size": 2,
+        "bit": 0,
+        "notify": null
+      }
+    ],
+    "reset_assignments": {
+      "grave_esc_override": "0",
+      "auto_shift": "0",
+      "auto_shift_timeout": "AUTO_SHIFT_TIMEOUT",
+      "osk_tap_toggle": "ONESHOT_TAP_TOGGLE",
+      "osk_timeout": "ONESHOT_TIMEOUT",
+      "mousekey_delay": "MOUSEKEY_DELAY",
+      "mousekey_interval": "MOUSEKEY_INTERVAL",
+      "mousekey_move_delta": "MOUSEKEY_MOVE_DELTA",
+      "mousekey_max_speed": "MOUSEKEY_MAX_SPEED",
+      "mousekey_time_to_max": "MOUSEKEY_TIME_TO_MAX",
+      "mousekey_wheel_delay": "MOUSEKEY_WHEEL_DELAY",
+      "mousekey_wheel_interval": "MOUSEKEY_WHEEL_INTERVAL",
+      "mousekey_wheel_max_speed": "MOUSEKEY_WHEEL_MAX_SPEED",
+      "mousekey_wheel_time_to_max": "MOUSEKEY_WHEEL_TIME_TO_MAX",
+      "combo_term": "COMBO_TERM",
+      "tapping_term": "TAPPING_TERM",
+      "tapping_v2": "0",
+      "quick_tap_term": "TAPPING_TERM",
+      "tap_code_delay": "TAP_CODE_DELAY",
+      "tap_hold_caps_delay": "TAP_HOLD_CAPS_DELAY",
+      "tapping_toggle": "TAPPING_TOGGLE",
+      "flow_tap_term": "0"
+    },
+    "header_macro_defaults": {
+      "TAP_CODE_DELAY": 10,
+      "TAP_HOLD_CAPS_DELAY": 80,
+      "ONESHOT_TAP_TOGGLE": 5,
+      "ONESHOT_TIMEOUT": 5000
+    }
+  },
+  "comparison": {
+    "scope": "40-byte QS struct + prototype shape/grouping + RAM-reset assignments only",
+    "structural_match": true,
+    "differences": [],
+    "fields": [
+      {
+        "name": "auto_shift_timeout",
+        "ctype": "uint16_t",
+        "offset": 0,
+        "size": 2,
+        "original_reset_value": 175,
+        "reference_assignment": "AUTO_SHIFT_TIMEOUT"
+      },
+      {
+        "name": "osk_timeout",
+        "ctype": "uint16_t",
+        "offset": 2,
+        "size": 2,
+        "original_reset_value": 5000,
+        "reference_assignment": "ONESHOT_TIMEOUT"
+      },
+      {
+        "name": "mousekey_delay",
+        "ctype": "uint16_t",
+        "offset": 4,
+        "size": 2,
+        "original_reset_value": 10,
+        "reference_assignment": "MOUSEKEY_DELAY"
+      },
+      {
+        "name": "mousekey_interval",
+        "ctype": "uint16_t",
+        "offset": 6,
+        "size": 2,
+        "original_reset_value": 20,
+        "reference_assignment": "MOUSEKEY_INTERVAL"
+      },
+      {
+        "name": "mousekey_move_delta",
+        "ctype": "uint16_t",
+        "offset": 8,
+        "size": 2,
+        "original_reset_value": 8,
+        "reference_assignment": "MOUSEKEY_MOVE_DELTA"
+      },
+      {
+        "name": "mousekey_max_speed",
+        "ctype": "uint16_t",
+        "offset": 10,
+        "size": 2,
+        "original_reset_value": 10,
+        "reference_assignment": "MOUSEKEY_MAX_SPEED"
+      },
+      {
+        "name": "mousekey_time_to_max",
+        "ctype": "uint16_t",
+        "offset": 12,
+        "size": 2,
+        "original_reset_value": 30,
+        "reference_assignment": "MOUSEKEY_TIME_TO_MAX"
+      },
+      {
+        "name": "mousekey_wheel_delay",
+        "ctype": "uint16_t",
+        "offset": 14,
+        "size": 2,
+        "original_reset_value": 10,
+        "reference_assignment": "MOUSEKEY_WHEEL_DELAY"
+      },
+      {
+        "name": "mousekey_wheel_interval",
+        "ctype": "uint16_t",
+        "offset": 16,
+        "size": 2,
+        "original_reset_value": 80,
+        "reference_assignment": "MOUSEKEY_WHEEL_INTERVAL"
+      },
+      {
+        "name": "mousekey_wheel_max_speed",
+        "ctype": "uint16_t",
+        "offset": 18,
+        "size": 2,
+        "original_reset_value": 8,
+        "reference_assignment": "MOUSEKEY_WHEEL_MAX_SPEED"
+      },
+      {
+        "name": "mousekey_wheel_time_to_max",
+        "ctype": "uint16_t",
+        "offset": 20,
+        "size": 2,
+        "original_reset_value": 40,
+        "reference_assignment": "MOUSEKEY_WHEEL_TIME_TO_MAX"
+      },
+      {
+        "name": "combo_term",
+        "ctype": "uint16_t",
+        "offset": 22,
+        "size": 2,
+        "original_reset_value": 50,
+        "reference_assignment": "COMBO_TERM"
+      },
+      {
+        "name": "tapping_term",
+        "ctype": "uint16_t",
+        "offset": 24,
+        "size": 2,
+        "original_reset_value": 200,
+        "reference_assignment": "TAPPING_TERM"
+      },
+      {
+        "name": "grave_esc_override",
+        "ctype": "uint8_t",
+        "offset": 26,
+        "size": 1,
+        "original_reset_value": 0,
+        "reference_assignment": "0"
+      },
+      {
+        "name": "auto_shift",
+        "ctype": "uint8_t",
+        "offset": 27,
+        "size": 1,
+        "original_reset_value": 0,
+        "reference_assignment": "0"
+      },
+      {
+        "name": "osk_tap_toggle",
+        "ctype": "uint8_t",
+        "offset": 28,
+        "size": 1,
+        "original_reset_value": 5,
+        "reference_assignment": "ONESHOT_TAP_TOGGLE"
+      },
+      {
+        "name": "tapping_v2",
+        "ctype": "uint8_t",
+        "offset": 29,
+        "size": 1,
+        "original_reset_value": 0,
+        "reference_assignment": "0"
+      },
+      {
+        "name": "tap_code_delay",
+        "ctype": "uint16_t",
+        "offset": 30,
+        "size": 2,
+        "original_reset_value": 0,
+        "reference_assignment": "TAP_CODE_DELAY"
+      },
+      {
+        "name": "tap_hold_caps_delay",
+        "ctype": "uint16_t",
+        "offset": 32,
+        "size": 2,
+        "original_reset_value": 80,
+        "reference_assignment": "TAP_HOLD_CAPS_DELAY"
+      },
+      {
+        "name": "tapping_toggle",
+        "ctype": "uint8_t",
+        "offset": 34,
+        "size": 1,
+        "original_reset_value": 5,
+        "reference_assignment": "TAPPING_TOGGLE"
+      },
+      {
+        "name": "unused",
+        "ctype": "uint8_t",
+        "offset": 35,
+        "size": 1,
+        "original_reset_value": null,
+        "reference_assignment": null
+      },
+      {
+        "name": "quick_tap_term",
+        "ctype": "uint16_t",
+        "offset": 36,
+        "size": 2,
+        "original_reset_value": 200,
+        "reference_assignment": "TAPPING_TERM"
+      },
+      {
+        "name": "flow_tap_term",
+        "ctype": "uint16_t",
+        "offset": 38,
+        "size": 2,
+        "original_reset_value": 0,
+        "reference_assignment": "0"
+      }
+    ],
+    "required_build_macros": {
+      "AUTO_SHIFT_TIMEOUT": {
+        "required_value_for_original": 175,
+        "reference_header_default": null,
+        "override_needed_with_this_header": null
+      },
+      "COMBO_TERM": {
+        "required_value_for_original": 50,
+        "reference_header_default": null,
+        "override_needed_with_this_header": null
+      },
+      "MOUSEKEY_DELAY": {
+        "required_value_for_original": 10,
+        "reference_header_default": null,
+        "override_needed_with_this_header": null
+      },
+      "MOUSEKEY_INTERVAL": {
+        "required_value_for_original": 20,
+        "reference_header_default": null,
+        "override_needed_with_this_header": null
+      },
+      "MOUSEKEY_MAX_SPEED": {
+        "required_value_for_original": 10,
+        "reference_header_default": null,
+        "override_needed_with_this_header": null
+      },
+      "MOUSEKEY_MOVE_DELTA": {
+        "required_value_for_original": 8,
+        "reference_header_default": null,
+        "override_needed_with_this_header": null
+      },
+      "MOUSEKEY_TIME_TO_MAX": {
+        "required_value_for_original": 30,
+        "reference_header_default": null,
+        "override_needed_with_this_header": null
+      },
+      "MOUSEKEY_WHEEL_DELAY": {
+        "required_value_for_original": 10,
+        "reference_header_default": null,
+        "override_needed_with_this_header": null
+      },
+      "MOUSEKEY_WHEEL_INTERVAL": {
+        "required_value_for_original": 80,
+        "reference_header_default": null,
+        "override_needed_with_this_header": null
+      },
+      "MOUSEKEY_WHEEL_MAX_SPEED": {
+        "required_value_for_original": 8,
+        "reference_header_default": null,
+        "override_needed_with_this_header": null
+      },
+      "MOUSEKEY_WHEEL_TIME_TO_MAX": {
+        "required_value_for_original": 40,
+        "reference_header_default": null,
+        "override_needed_with_this_header": null
+      },
+      "ONESHOT_TAP_TOGGLE": {
+        "required_value_for_original": 5,
+        "reference_header_default": 5,
+        "override_needed_with_this_header": false
+      },
+      "ONESHOT_TIMEOUT": {
+        "required_value_for_original": 5000,
+        "reference_header_default": 5000,
+        "override_needed_with_this_header": false
+      },
+      "TAPPING_TERM": {
+        "required_value_for_original": 200,
+        "reference_header_default": null,
+        "override_needed_with_this_header": null
+      },
+      "TAPPING_TOGGLE": {
+        "required_value_for_original": 5,
+        "reference_header_default": null,
+        "override_needed_with_this_header": null
+      },
+      "TAP_CODE_DELAY": {
+        "required_value_for_original": 0,
+        "reference_header_default": 10,
+        "override_needed_with_this_header": true
+      },
+      "TAP_HOLD_CAPS_DELAY": {
+        "required_value_for_original": 80,
+        "reference_header_default": 80,
+        "override_needed_with_this_header": false
+      }
+    },
+    "preserved_offsets": [
+      35
+    ],
+    "handler_groups": {
+      "scalar": {
+        "get": "0x8013895",
+        "set": "0x8014475"
+      },
+      "custom": {
+        "get": "0x80138e9",
+        "set": "0x8013f25"
+      },
+      "bit": {
+        "get": "0x80138b3",
+        "set": "0x8014493"
+      }
+    },
+    "notification_groups": {
+      "auto_shift_timeout_apply": "0x8013275",
+      "mousekey_apply": "0x8013289"
+    },
+    "callback_bodies_compared": false,
+    "exact_manufacturer_revision_identified": false,
+    "whole_eeprom_compatibility_proven": false,
+    "flash_ready": false
+  }
+}

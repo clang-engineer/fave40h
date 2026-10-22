@@ -21,3 +21,22 @@ bool original_vial_cadet_parameters(unsigned keycode, struct original_vial_cadet
     *output = parameters[keycode - 0x7E01];
     return true;
 }
+// Deliberately retain original last-edge behavior, including overlapping shifts.
+void original_vial_shift_edge(uint16_t keycode, bool pressed, uint8_t *last_shift_edge) {
+    if (keycode == 0xE1 || keycode == 0xE5) *last_shift_edge = pressed;
+}
+// Original checks this again on release, not a saved key from the press.
+uint16_t original_vial_bsdl_keycode(uint8_t last_shift_edge) {
+    return last_shift_edge ? 0x4C : 0x2A;
+}
+bool original_vial_rgb_control(uint16_t keycode, bool pressed, uint8_t enabled[2]) {
+    if (keycode < 0x7E10 || keycode > 0x7E15) return false;
+    if (!pressed) return true;
+    unsigned index = (keycode - 0x7E10) / 3;
+    switch ((keycode - 0x7E10) % 3) {
+        case 0: enabled[index] ^= 1; break;
+        case 1: enabled[index] = 1; break;
+        case 2: enabled[index] = 0; break;
+    }
+    return true;
+}

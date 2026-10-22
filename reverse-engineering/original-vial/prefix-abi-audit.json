@@ -1,0 +1,230 @@
+{
+  "original_uf2_sha256": "d5e680fa2507534b63b316a3e67a5d7457af4bdfa65189f464d4e1b029692431",
+  "original_payload_sha256": "9df2375a5dfc7d155c3320ea5df3f2cff6920686928ae6ff5c186de5bee453e4",
+  "reference": {
+    "revision": "dd43959ae5c08d8a28d38a1acf7b04e86b14a344",
+    "sources": {
+      "eeconfig.h": {
+        "sha256": "d5060211da78683a1a722c507c3fe018de08f87ba8d7bda9b433cf9dce0590f5",
+        "url": "https://raw.githubusercontent.com/vial-kb/vial-qmk/dd43959ae5c08d8a28d38a1acf7b04e86b14a344/quantum/eeconfig.h"
+      },
+      "via.h": {
+        "sha256": "82cfa43bbc57818509735c3c567fe1ea7ea28284ad9aebf1cfda3fe34206e8a9",
+        "url": "https://raw.githubusercontent.com/vial-kb/vial-qmk/dd43959ae5c08d8a28d38a1acf7b04e86b14a344/quantum/via.h"
+      },
+      "via.c": {
+        "sha256": "f8d0220363b944b8826cefee178a825422e369e5cdf4f233a45a846a4eb40f63",
+        "url": "https://raw.githubusercontent.com/vial-kb/vial-qmk/dd43959ae5c08d8a28d38a1acf7b04e86b14a344/quantum/via.c"
+      },
+      "nvm_eeprom_eeconfig_internal.h": {
+        "sha256": "d628b12f461f1b3889b4fa3f5578ecd10bfcbf6363a84d77a70bf1e4c3c3e746",
+        "url": "https://raw.githubusercontent.com/vial-kb/vial-qmk/dd43959ae5c08d8a28d38a1acf7b04e86b14a344/quantum/nvm/eeprom/nvm_eeprom_eeconfig_internal.h"
+      },
+      "nvm_eeprom_via_internal.h": {
+        "sha256": "0ac50614ec49a50f305e80ce7847d07db01515c2bacf7574c55b11b33fe97737",
+        "url": "https://raw.githubusercontent.com/vial-kb/vial-qmk/dd43959ae5c08d8a28d38a1acf7b04e86b14a344/quantum/nvm/eeprom/nvm_eeprom_via_internal.h"
+      }
+    },
+    "core": {
+      "bytes": 37,
+      "fields": [
+        {
+          "name": "magic",
+          "offset": 0,
+          "size": 2
+        },
+        {
+          "name": "debug",
+          "offset": 2,
+          "size": 1
+        },
+        {
+          "name": "default_layer",
+          "offset": 3,
+          "size": 1
+        },
+        {
+          "name": "keymap",
+          "offset": 4,
+          "size": 2
+        },
+        {
+          "name": "backlight",
+          "offset": 6,
+          "size": 1
+        },
+        {
+          "name": "audio",
+          "offset": 7,
+          "size": 1
+        },
+        {
+          "name": "rgblight",
+          "offset": 8,
+          "size": 4
+        },
+        {
+          "name": "unicode",
+          "offset": 12,
+          "size": 1
+        },
+        {
+          "name": "steno",
+          "offset": 13,
+          "size": 1
+        },
+        {
+          "name": "handedness",
+          "offset": 14,
+          "size": 1
+        },
+        {
+          "name": "keyboard",
+          "offset": 15,
+          "size": 4
+        },
+        {
+          "name": "user",
+          "offset": 19,
+          "size": 4
+        },
+        {
+          "name": "led_matrix",
+          "offset": 23,
+          "size": 4
+        },
+        {
+          "name": "rgb_matrix",
+          "offset": 23,
+          "size": 8
+        },
+        {
+          "name": "haptic",
+          "offset": 31,
+          "size": 4
+        },
+        {
+          "name": "rgblight_ext",
+          "offset": 35,
+          "size": 1
+        },
+        {
+          "name": "connection",
+          "offset": 36,
+          "size": 1
+        }
+      ],
+      "packed_declaration": "typedef struct PACKED {\n    uint16_t magic;\n    uint8_t  debug;\n    uint8_t  default_layer;\n    uint16_t keymap;\n    uint8_t  backlight;\n    uint8_t  audio;\n    uint32_t rgblight;\n    uint8_t  unicode;\n    uint8_t  steno;\n    uint8_t  handedness;\n    uint32_t keyboard;\n    uint32_t user;\n    union { \n        uint32_t led_matrix;\n        uint64_t rgb_matrix;\n    };\n    uint32_t haptic;\n    uint8_t  rgblight_ext;\n    uint8_t  connection;\n} eeprom_core_t;"
+    },
+    "default_profile": {
+      "EECONFIG_KB_DATA_SIZE": 0,
+      "EECONFIG_USER_DATA_SIZE": 0,
+      "VIA_EEPROM_LAYOUT_OPTIONS_SIZE": 1,
+      "VIA_EEPROM_LAYOUT_OPTIONS_DEFAULT": 0,
+      "VIA_EEPROM_CUSTOM_CONFIG_SIZE": 0
+    },
+    "prefix_formulas": {
+      "EECONFIG_BASE_SIZE": "((uint8_t)sizeof(eeprom_core_t))",
+      "EECONFIG_SIZE": "((EECONFIG_BASE_SIZE)+(EECONFIG_KB_DATA_SIZE)+(EECONFIG_USER_DATA_SIZE))",
+      "VIA_EEPROM_MAGIC_ADDR": "(EECONFIG_SIZE)",
+      "VIA_EEPROM_LAYOUT_OPTIONS_ADDR": "(VIA_EEPROM_MAGIC_ADDR+3)",
+      "VIA_EEPROM_CUSTOM_CONFIG_ADDR": "(VIA_EEPROM_LAYOUT_OPTIONS_ADDR+VIA_EEPROM_LAYOUT_OPTIONS_SIZE)",
+      "VIA_EEPROM_CONFIG_END": "(VIA_EEPROM_CUSTOM_CONFIG_ADDR+VIA_EEPROM_CUSTOM_CONFIG_SIZE)"
+    },
+    "vial_stamp_source": "low 24 bits of BUILD_ID, least-significant byte first; not the non-Vial build-date branch"
+  },
+  "comparison": {
+    "scope": "seven observed core field accesses + default reference prefix arithmetic + original gate predicates",
+    "prefix_profile_match": true,
+    "differences": [],
+    "reference_core_bytes": 37,
+    "reference_via_magic_start": 37,
+    "reference_layout_start": 40,
+    "reference_keymap_start": 41,
+    "original": {
+      "bytes_before_keymap": 41,
+      "observed_core_accesses": [
+        {
+          "reference_label": "magic",
+          "offset": 0,
+          "size": 2,
+          "address_instruction": "0x80143ee"
+        },
+        {
+          "reference_label": "debug",
+          "offset": 2,
+          "size": 1,
+          "address_instruction": "0x80143f6"
+        },
+        {
+          "reference_label": "default_layer",
+          "offset": 3,
+          "size": 1,
+          "address_instruction": "0x8014400"
+        },
+        {
+          "reference_label": "keymap",
+          "offset": 4,
+          "size": 2,
+          "address_instruction": "0x8013be8"
+        },
+        {
+          "reference_label": "keyboard",
+          "offset": 15,
+          "size": 4,
+          "address_instruction": "0x8014420"
+        },
+        {
+          "reference_label": "user",
+          "offset": 19,
+          "size": 4,
+          "address_instruction": "0x801442e"
+        },
+        {
+          "reference_label": "rgb_matrix",
+          "offset": 23,
+          "size": 8,
+          "address_instruction": "0x8013cde"
+        }
+      ],
+      "core_magic_u16": 65251,
+      "via_magic_start": 37,
+      "via_magic_bytes": [
+        75,
+        244,
+        41
+      ],
+      "build_id_low24": 2749515,
+      "build_id_high8_known": false,
+      "layout_options_start": 40,
+      "layout_options_bytes": 1,
+      "early_gate": "0x08018b5c..0x08018b66: invalid VIA stamp calls 0x0801ae2e",
+      "later_gate": "0x08018bbc..0x08018bce via 0x08018c22: invalid core magic OR invalid VIA stamp calls 0x080143e4",
+      "gates_are_isolated_not_a_full_boot_simulation": true,
+      "reset_or_flash_operations_executed": false,
+      "full_prefix_field_semantics_proven": false
+    },
+    "reference_core_fields_not_verified_against_original": [
+      "audio",
+      "backlight",
+      "connection",
+      "handedness",
+      "haptic",
+      "led_matrix",
+      "rgblight",
+      "rgblight_ext",
+      "steno",
+      "unicode"
+    ],
+    "required_build_id_low24_for_original_stamp": 2749515,
+    "build_id_high8_known": false,
+    "candidate_actual_generated_build_id_checked": false,
+    "warning": "A different BUILD_ID low24 can trigger original-style factory reset at startup. Do not preserve this stamp merely to bypass reset without proving full storage compatibility.",
+    "all_core_field_semantics_proven": false,
+    "reset_bodies_compared_or_executed": false,
+    "flash_backing_or_migration_proven": false,
+    "exact_manufacturer_revision_identified": false,
+    "whole_eeprom_compatibility_proven": false,
+    "flash_ready": false
+  }
+}

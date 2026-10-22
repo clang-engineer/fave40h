@@ -1,0 +1,498 @@
+{
+  "original_uf2_sha256": "d5e680fa2507534b63b316a3e67a5d7457af4bdfa65189f464d4e1b029692431",
+  "original_payload_sha256": "9df2375a5dfc7d155c3320ea5df3f2cff6920686928ae6ff5c186de5bee453e4",
+  "reference": {
+    "revision": "dd43959ae5c08d8a28d38a1acf7b04e86b14a344",
+    "sources": {
+      "vial.h": {
+        "sha256": "db5ea5a835ba98883302930d1035a9496e6bcbd73373f60fa793cee104c97284",
+        "url": "https://raw.githubusercontent.com/vial-kb/vial-qmk/dd43959ae5c08d8a28d38a1acf7b04e86b14a344/quantum/vial.h"
+      },
+      "nvm_dynamic_keymap.c": {
+        "sha256": "9e68535aca78744eb8c67d8d4bf8bcabff8231c058cb07d36bc4871934d6796b",
+        "url": "https://raw.githubusercontent.com/vial-kb/vial-qmk/dd43959ae5c08d8a28d38a1acf7b04e86b14a344/quantum/nvm/eeprom/nvm_dynamic_keymap.c"
+      }
+    },
+    "types": {
+      "vial_tap_dance_entry_t": {
+        "size": 10,
+        "fields": [
+          {
+            "name": "on_tap",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 0,
+            "size": 2
+          },
+          {
+            "name": "on_hold",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 2,
+            "size": 2
+          },
+          {
+            "name": "on_double_tap",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 4,
+            "size": 2
+          },
+          {
+            "name": "on_tap_hold",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 6,
+            "size": 2
+          },
+          {
+            "name": "custom_tapping_term",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 8,
+            "size": 2
+          }
+        ]
+      },
+      "vial_combo_entry_t": {
+        "size": 10,
+        "fields": [
+          {
+            "name": "input",
+            "ctype": "uint16_t",
+            "count": 4,
+            "offset": 0,
+            "size": 8
+          },
+          {
+            "name": "output",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 8,
+            "size": 2
+          }
+        ]
+      },
+      "vial_key_override_entry_t": {
+        "size": 10,
+        "fields": [
+          {
+            "name": "trigger",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 0,
+            "size": 2
+          },
+          {
+            "name": "replacement",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 2,
+            "size": 2
+          },
+          {
+            "name": "layers",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 4,
+            "size": 2
+          },
+          {
+            "name": "trigger_mods",
+            "ctype": "uint8_t",
+            "count": 1,
+            "offset": 6,
+            "size": 1
+          },
+          {
+            "name": "negative_mod_mask",
+            "ctype": "uint8_t",
+            "count": 1,
+            "offset": 7,
+            "size": 1
+          },
+          {
+            "name": "suppressed_mods",
+            "ctype": "uint8_t",
+            "count": 1,
+            "offset": 8,
+            "size": 1
+          },
+          {
+            "name": "options",
+            "ctype": "uint8_t",
+            "count": 1,
+            "offset": 9,
+            "size": 1
+          }
+        ]
+      },
+      "vial_alt_repeat_key_entry_t": {
+        "size": 6,
+        "fields": [
+          {
+            "name": "keycode",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 0,
+            "size": 2
+          },
+          {
+            "name": "alt_keycode",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 2,
+            "size": 2
+          },
+          {
+            "name": "allowed_mods",
+            "ctype": "uint8_t",
+            "count": 1,
+            "offset": 4,
+            "size": 1
+          },
+          {
+            "name": "options",
+            "ctype": "uint8_t",
+            "count": 1,
+            "offset": 5,
+            "size": 1
+          }
+        ]
+      }
+    },
+    "default_counts_at_4096_bytes": {
+      "tap_dance": 32,
+      "combo": 32,
+      "key_override": 32,
+      "alt_repeat": 32
+    },
+    "nvm_macros": {
+      "NUM_ENCODERS": "0",
+      "DYNAMIC_KEYMAP_EEPROM_START": "(VIA_EEPROM_CONFIG_END)",
+      "DYNAMIC_KEYMAP_EEPROM_MAX_ADDR": "(TOTAL_EEPROM_BYTE_COUNT - 1)",
+      "DYNAMIC_KEYMAP_EEPROM_ADDR": "DYNAMIC_KEYMAP_EEPROM_START",
+      "VIAL_ENCODERS_EEPROM_ADDR": "(DYNAMIC_KEYMAP_EEPROM_ADDR + (DYNAMIC_KEYMAP_LAYER_COUNT * MATRIX_ROWS * MATRIX_COLS * 2))",
+      "DYNAMIC_KEYMAP_ENCODER_EEPROM_ADDR": "VIAL_ENCODERS_EEPROM_ADDR",
+      "VIAL_ENCODERS_SIZE": "(NUM_ENCODERS * DYNAMIC_KEYMAP_LAYER_COUNT * 2 * 2)",
+      "VIAL_QMK_SETTINGS_EEPROM_ADDR": "(VIAL_ENCODERS_EEPROM_ADDR + VIAL_ENCODERS_SIZE)",
+      "VIAL_QMK_SETTINGS_SIZE": "(sizeof(qmk_settings_t))",
+      "VIAL_TAP_DANCE_EEPROM_ADDR": "(VIAL_QMK_SETTINGS_EEPROM_ADDR + VIAL_QMK_SETTINGS_SIZE)",
+      "VIAL_TAP_DANCE_SIZE": "(sizeof(vial_tap_dance_entry_t) * VIAL_TAP_DANCE_ENTRIES)",
+      "VIAL_COMBO_EEPROM_ADDR": "(VIAL_TAP_DANCE_EEPROM_ADDR + VIAL_TAP_DANCE_SIZE)",
+      "VIAL_COMBO_SIZE": "(sizeof(vial_combo_entry_t) * VIAL_COMBO_ENTRIES)",
+      "VIAL_KEY_OVERRIDE_EEPROM_ADDR": "(VIAL_COMBO_EEPROM_ADDR + VIAL_COMBO_SIZE)",
+      "VIAL_KEY_OVERRIDE_SIZE": "(sizeof(vial_key_override_entry_t) * VIAL_KEY_OVERRIDE_ENTRIES)",
+      "VIAL_ALT_REPEAT_KEY_EEPROM_ADDR": "(VIAL_KEY_OVERRIDE_EEPROM_ADDR + VIAL_KEY_OVERRIDE_SIZE)",
+      "VIAL_ALT_REPEAT_KEY_SIZE": "(sizeof(vial_alt_repeat_key_entry_t) * VIAL_ALT_REPEAT_KEY_ENTRIES)",
+      "DYNAMIC_KEYMAP_MACRO_EEPROM_ADDR": "(VIAL_ALT_REPEAT_KEY_EEPROM_ADDR + VIAL_ALT_REPEAT_KEY_SIZE)",
+      "DYNAMIC_KEYMAP_MACRO_EEPROM_SIZE": "(DYNAMIC_KEYMAP_EEPROM_MAX_ADDR - DYNAMIC_KEYMAP_MACRO_EEPROM_ADDR + 1)"
+    }
+  },
+  "comparison": {
+    "scope": "record sizes + enabled-feature logical-region arithmetic with explicit original base/counts; reference field interpretation only",
+    "size_and_region_match": true,
+    "differences": [],
+    "profile": {
+      "TOTAL_EEPROM_BYTE_COUNT": 4096,
+      "DYNAMIC_KEYMAP_EEPROM_ADDR": 41,
+      "DYNAMIC_KEYMAP_LAYER_COUNT": 4,
+      "MATRIX_ROWS": 4,
+      "MATRIX_COLS": 12,
+      "NUM_ENCODERS": 0,
+      "VIAL_TAP_DANCE_ENTRIES": 16,
+      "VIAL_COMBO_ENTRIES": 16,
+      "VIAL_KEY_OVERRIDE_ENTRIES": 16,
+      "VIAL_ALT_REPEAT_KEY_ENTRIES": 32
+    },
+    "records": [
+      {
+        "name": "tap_dance",
+        "start": 465,
+        "end_exclusive": 625,
+        "entries": 16,
+        "stride": 10,
+        "reset_bytes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          200,
+          0
+        ],
+        "initializer_range": [
+          "0x8015880",
+          "0x8015898"
+        ],
+        "reference_type": "vial_tap_dance_entry_t",
+        "reference_fields": [
+          {
+            "name": "on_tap",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 0,
+            "size": 2,
+            "original_template_interpreted_as_reference": 0
+          },
+          {
+            "name": "on_hold",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 2,
+            "size": 2,
+            "original_template_interpreted_as_reference": 0
+          },
+          {
+            "name": "on_double_tap",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 4,
+            "size": 2,
+            "original_template_interpreted_as_reference": 0
+          },
+          {
+            "name": "on_tap_hold",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 6,
+            "size": 2,
+            "original_template_interpreted_as_reference": 0
+          },
+          {
+            "name": "custom_tapping_term",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 8,
+            "size": 2,
+            "original_template_interpreted_as_reference": 200
+          }
+        ],
+        "reference_default_entries_at_4096_bytes": 32,
+        "explicit_count_override_for_this_profile": true
+      },
+      {
+        "name": "combo",
+        "start": 625,
+        "end_exclusive": 785,
+        "entries": 16,
+        "stride": 10,
+        "reset_bytes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "initializer_range": [
+          "0x80158b0",
+          "0x80158ba"
+        ],
+        "reference_type": "vial_combo_entry_t",
+        "reference_fields": [
+          {
+            "name": "input",
+            "ctype": "uint16_t",
+            "count": 4,
+            "offset": 0,
+            "size": 8,
+            "original_template_interpreted_as_reference": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "output",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 8,
+            "size": 2,
+            "original_template_interpreted_as_reference": 0
+          }
+        ],
+        "reference_default_entries_at_4096_bytes": 32,
+        "explicit_count_override_for_this_profile": true
+      },
+      {
+        "name": "key_override",
+        "start": 785,
+        "end_exclusive": 945,
+        "entries": 16,
+        "stride": 10,
+        "reset_bytes": [
+          0,
+          0,
+          0,
+          0,
+          255,
+          255,
+          0,
+          0,
+          0,
+          7
+        ],
+        "initializer_range": [
+          "0x80158ce",
+          "0x80158e6"
+        ],
+        "reference_type": "vial_key_override_entry_t",
+        "reference_fields": [
+          {
+            "name": "trigger",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 0,
+            "size": 2,
+            "original_template_interpreted_as_reference": 0
+          },
+          {
+            "name": "replacement",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 2,
+            "size": 2,
+            "original_template_interpreted_as_reference": 0
+          },
+          {
+            "name": "layers",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 4,
+            "size": 2,
+            "original_template_interpreted_as_reference": 65535
+          },
+          {
+            "name": "trigger_mods",
+            "ctype": "uint8_t",
+            "count": 1,
+            "offset": 6,
+            "size": 1,
+            "original_template_interpreted_as_reference": 0
+          },
+          {
+            "name": "negative_mod_mask",
+            "ctype": "uint8_t",
+            "count": 1,
+            "offset": 7,
+            "size": 1,
+            "original_template_interpreted_as_reference": 0
+          },
+          {
+            "name": "suppressed_mods",
+            "ctype": "uint8_t",
+            "count": 1,
+            "offset": 8,
+            "size": 1,
+            "original_template_interpreted_as_reference": 0
+          },
+          {
+            "name": "options",
+            "ctype": "uint8_t",
+            "count": 1,
+            "offset": 9,
+            "size": 1,
+            "original_template_interpreted_as_reference": 7
+          }
+        ],
+        "reference_default_entries_at_4096_bytes": 32,
+        "explicit_count_override_for_this_profile": true
+      },
+      {
+        "name": "alt_repeat",
+        "start": 945,
+        "end_exclusive": 1137,
+        "entries": 32,
+        "stride": 6,
+        "reset_bytes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "initializer_range": [
+          "0x80158fa",
+          "0x8015902"
+        ],
+        "reference_type": "vial_alt_repeat_key_entry_t",
+        "reference_fields": [
+          {
+            "name": "keycode",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 0,
+            "size": 2,
+            "original_template_interpreted_as_reference": 0
+          },
+          {
+            "name": "alt_keycode",
+            "ctype": "uint16_t",
+            "count": 1,
+            "offset": 2,
+            "size": 2,
+            "original_template_interpreted_as_reference": 0
+          },
+          {
+            "name": "allowed_mods",
+            "ctype": "uint8_t",
+            "count": 1,
+            "offset": 4,
+            "size": 1,
+            "original_template_interpreted_as_reference": 0
+          },
+          {
+            "name": "options",
+            "ctype": "uint8_t",
+            "count": 1,
+            "offset": 5,
+            "size": 1,
+            "original_template_interpreted_as_reference": 0
+          }
+        ],
+        "reference_default_entries_at_4096_bytes": 32,
+        "explicit_count_override_for_this_profile": false
+      }
+    ],
+    "reference_regions": {
+      "qmk_settings_start": 425,
+      "tap_dance": {
+        "start": 465,
+        "bytes": 160
+      },
+      "combo": {
+        "start": 625,
+        "bytes": 160
+      },
+      "key_override": {
+        "start": 785,
+        "bytes": 160
+      },
+      "alt_repeat": {
+        "start": 945,
+        "bytes": 192
+      },
+      "macro": {
+        "start": 1137,
+        "bytes": 2959
+      }
+    },
+    "dynamic_record_byte_order": "little-endian ARM stack templates; keymap keycodes use a separate big-endian format",
+    "prefix_default_origin_audited": false,
+    "original_runtime_field_semantics_proven": false,
+    "reference_reset_function_equivalence_proven": false,
+    "whole_eeprom_compatibility_proven": false,
+    "exact_manufacturer_revision_identified": false,
+    "flash_ready": false
+  }
+}

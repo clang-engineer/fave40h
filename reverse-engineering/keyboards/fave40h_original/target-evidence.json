@@ -1,0 +1,254 @@
+{
+  "status": "seed_only_build_blocked",
+  "complete_firmware": false,
+  "flash_ready": false,
+  "experimental_qmk_revision": "dd43959ae5c08d8a28d38a1acf7b04e86b14a344",
+  "reference_hashes": {
+    "quantum/vialrgb_effects.inc": "4bcd1426ce215d69891181c3a55202580fd47cecd5ba60140e641d55413e9ff8",
+    "quantum/rgb_matrix/animations/rgb_matrix_effects.inc": "879ff3e5ac88ee6432504032a04f9f5f09ba442b694890c35f918a7b7aa75132",
+    "quantum/rgb_matrix/post_config.h": "b9a369b11f5e9ccc1b76986e072c61da2de40ed854837936c72f6f45a9f7d51d",
+    "quantum/color.h": "d99ab54a015b653468e9059a8f44386a52c8d863858a3fa80b214ab5d3443240",
+    "quantum/process_keycode/process_space_cadet.c": "2aedf14a19bb41ce8d4fc0f8729788c768ff1ed4cebe1cf2a9da976b251e3454",
+    "quantum/process_keycode/process_space_cadet.h": "b3af491600d6526187cedffeadb307526e62bdeeb3704e16d2955c72a0b3d5c2",
+    "quantum/action_tapping.h": "5391e6db8111db0590b0e4add05b45b90ff356993c161a0f5ee0458ffa16e7e8",
+    "quantum/keycodes.h": "0a4cf54e4d2bd33fdbc12492fca88446545769abce7ab38bbd790c4aa019f523",
+    "quantum/keycode.h": "3e9adb1a27e9c9b6731a2c457fc0252fdf58867d2c31c59c89eba02e1ff0afc3",
+    "quantum/modifiers.h": "3bce36626836372e312b85f3d0f9f913f639e5c024dd4bda6b63f1ee1bd8ffb5",
+    "platforms/timer.h": "af69c274f3ceff8abb3b733b0a104ee8c3dbe31092d3cce91bb66549e9c930a2",
+    "quantum/quantum.c": "28cc489bccd93b6fb4cfc90cf8bf0d4b51ffe1928fb06bc309bf2449f5471b84",
+    "quantum/action.h": "9dca61922243734df3dcca6bf746645a3e33d9abcb6d11abe6857dd9979f021b",
+    "quantum/keyboard.h": "a8172bef9e6425327a584c7a5920d3416176bcaa6b03ce3e1106bf8e03cfe10a",
+    "tmk_core/protocol/host.h": "48c1d9dd4174d8a26d348cbb7f56f8cfe835b2d464a1198326ec43996f2d0023",
+    "quantum/rgb_matrix/rgb_matrix.c": "f1de3181f75adfe45435f5f479e22258d064ec3297cbebbeef301a911a11fd29",
+    "quantum/rgb_matrix/rgb_matrix.h": "6bae63310a4a74f2119dbf98e22fb73ca5de14d13b9cea25e5b6841c043168ca",
+    "quantum/eeconfig.c": "bd58a23aa7250d28314a6dc84286868dd403969b4cb865ffe80c6003675f8d4d",
+    "quantum/eeconfig.h": "d5060211da78683a1a722c507c3fe018de08f87ba8d7bda9b433cf9dce0590f5",
+    "quantum/keyboard.c": "b5a772541619667003090ba9ea686463457cbadfcc4f9148f17a3a12fbe32257",
+    "quantum/keymap_introspection.c": "5142cdfa1fef83a137a222270aadcd91008f6fd5c2188b4d9b0d668c51aa3b98",
+    "quantum/dynamic_keymap.c": "1a8fcded44060be269426234e2cf3412c82cf1bcf0de70568687924b9e6507d0",
+    "builddefs/build_vial.mk": "bd228ea3422351321b604be57d1b471d56aa710faaf07684825263bc5e13725c",
+    "platforms/chibios/boards/GENERIC_STM32_F411XE/configs/mcuconf.h": "6e68a8e6a3148cc6e494ac39576a8f18251e703508d15919f4ea585399a2d105",
+    "platforms/chibios/boards/GENERIC_STM32_F411XE/board/board.mk": "bf955284e503ca33a99235fee3586fa351b7106dcd47789ed501c1348c47247e",
+    "platforms/chibios/drivers/ws2812_pwm.c": "30ce49da04d3ac288243320f417b19609f50f31631b88ff25c5c247503c35c62",
+    "drivers/led/ws2812.h": "1a15cc52d602fb5af78e3b278abece1008e12afc72bed1d3c1112754c28be3c0",
+    "quantum/rgb_matrix/rgb_matrix_types.h": "59e08854c46e1161ae3b04af51730a6207321182120f26e274b218661614b6bc"
+  },
+  "compiled_factory_layers": 3,
+  "dynamic_layers": 4,
+  "default_layout_keys": 42,
+  "layout_scope": "embedded option 0 build metadata only; full Vial definition and its alternatives retained",
+  "serial": "vial:f64c2b3c",
+  "serial_source": "pinned builddefs/build_vial.mk literal, NOT a verified manufacturer Git revision",
+  "boot_profile": "candidate TinyUF2 application offset and request marker match; actual installed bootloader not identified",
+  "processor_scope": "software-compatible candidate only, physical MCU/capacity unverified",
+  "startup": {
+    "gpio_banks": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "H"
+    ],
+    "hse_hz_inferred": 16000000,
+    "hse_bypass": false,
+    "pllcfgr": "0x4413010",
+    "cfgr": "0x38881000",
+    "scope": "target overrides for pinned board initializer; clock procedure/hardware NOT executed or fully validated",
+    "hse_evidence_slice": "0x0801B0C4..0x0801B0D6",
+    "physical_clock_measured": false
+  },
+  "system_timer": {
+    "timer": "TIM5",
+    "irq": 50,
+    "handler": "0x0801B57C",
+    "base_literal": "0x0801B630 -> 0x40000C00",
+    "scope": "original IRQ50 vector and handler static inspection; no IRQ/kernel execution; avoids candidate default TIM2/PWM conflict"
+  },
+  "rgb_effect_profile": {
+    "enable_effects": [
+      "ALPHAS_MODS",
+      "BAND_PINWHEEL_SAT",
+      "BAND_PINWHEEL_VAL",
+      "BAND_SAT",
+      "BAND_SPIRAL_SAT",
+      "BAND_SPIRAL_VAL",
+      "BAND_VAL",
+      "BREATHING",
+      "CYCLE_ALL",
+      "CYCLE_LEFT_RIGHT",
+      "CYCLE_OUT_IN",
+      "CYCLE_OUT_IN_DUAL",
+      "CYCLE_PINWHEEL",
+      "CYCLE_SPIRAL",
+      "CYCLE_UP_DOWN",
+      "DIGITAL_RAIN",
+      "DUAL_BEACON",
+      "GRADIENT_LEFT_RIGHT",
+      "GRADIENT_UP_DOWN",
+      "HUE_BREATHING",
+      "HUE_PENDULUM",
+      "HUE_WAVE",
+      "JELLYBEAN_RAINDROPS",
+      "MULTISPLASH",
+      "PIXEL_FLOW",
+      "PIXEL_FRACTAL",
+      "PIXEL_RAIN",
+      "RAINBOW_BEACON",
+      "RAINBOW_MOVING_CHEVRON",
+      "RAINBOW_PINWHEELS",
+      "RAINDROPS",
+      "SOLID_MULTISPLASH",
+      "SOLID_REACTIVE",
+      "SOLID_REACTIVE_CROSS",
+      "SOLID_REACTIVE_MULTICROSS",
+      "SOLID_REACTIVE_MULTINEXUS",
+      "SOLID_REACTIVE_MULTIWIDE",
+      "SOLID_REACTIVE_NEXUS",
+      "SOLID_REACTIVE_SIMPLE",
+      "SOLID_REACTIVE_WIDE",
+      "SOLID_SPLASH",
+      "SPLASH",
+      "TYPING_HEATMAP"
+    ],
+    "vial_table_entries": 45,
+    "qmk_mode_limit": 46,
+    "unmapped_qmk_mode": 29,
+    "default_mode": 15,
+    "default_mode_binding": "RGB_MATRIX_RAINBOW_MOVING_CHEVRON",
+    "default_speed": 128,
+    "default_initialized_prefix_hex": "3d00ffff80ff",
+    "padding_bytes_untouched": [
+      6,
+      7
+    ],
+    "selected_effects_compared": [
+      15,
+      29
+    ],
+    "all_effect_bodies_verified": false,
+    "scope": "catalog/default config bindings to approved candidate; target-config native table/default checks and selected15/29 effect comparisons, NOT full RGB runtime/renderer/indicator/flush, persistence or physical output"
+  },
+  "rgb_key_events": {
+    "edge": "press",
+    "hit_capacity": 8,
+    "packed_hit_bytes": 41,
+    "original_buffer_ram": "0x20001AC6",
+    "scope": "electrical edge collector after action dispatch; guarded original Thumb incl memcpy and candidate switch-events/collector probes; no full scan/action/HID, aging, heatmap or renderer execution"
+  },
+  "rgb_chunks": {
+    "process_limit": 15,
+    "normal_spans": [
+      [
+        0,
+        15
+      ],
+      [
+        15,
+        30
+      ],
+      [
+        30,
+        45
+      ],
+      [
+        45,
+        60
+      ],
+      [
+        60,
+        72
+      ]
+    ],
+    "original_helper": "0x08014A7C..0x08014AA4",
+    "scope": "all uint8 helper inputs verified; normal renderer uses iter0..4 only",
+    "caps_filter_quirk": "active final chunk sets Caps LED22 white before filtering [60,72), so keylight-disabled state does not clear that white in this bounded slice; preserve, do not silently fix"
+  },
+  "rgb_group_lifecycle": {
+    "user_field_offset": "0x13",
+    "word_bytes": 4,
+    "reset_word": "0x00000101",
+    "original_state_ram": "0x20001EE4",
+    "reset_slice": "0x0801441E..0x08014434",
+    "load_slice": "0x08018C84..0x08018C98",
+    "target_hooks": [
+      "eeconfig_init_user",
+      "keyboard_post_init_user"
+    ],
+    "scope": "bounded reset/load and complete-read word preservation only; no physical EEPROM, complete reset, flush or migration validation; six group keys connected through user gate; complete persistence policy not established"
+  },
+  "rgb_transport": {
+    "source": "unmodified pinned ws2812_pwm.c",
+    "led_table_bytes": 264,
+    "pwm_pin": "PB10",
+    "timer": "TIM2",
+    "channel": 3,
+    "alternate_function": 1,
+    "dma_stream": "DMA1 stream1",
+    "dma_channel": 3,
+    "dma_cr": "0x06035540",
+    "tick_hz_conditional": 24000000,
+    "period_ticks": 30,
+    "zero_ticks": 8,
+    "one_ticks": 21,
+    "transfer_words": 1952,
+    "reset_words": 224,
+    "word_bits": 32,
+    "scope": "transport, LED map, Caps/basic/group filter and catalog/default bindings connected; full RGB runtime and remaining effects unverified; no physical DMA/PWM execution"
+  },
+  "rgb_indicators": {
+    "target_hooks": [
+      "rgb_matrix_indicators_user",
+      "rgb_matrix_indicators_advanced_user"
+    ],
+    "scope": "candidate RENDERING case and weak indicator delegation checked with controlled render/host/color inputs; whole effect engine and physical LEDs untested"
+  },
+  "space_cadet": {
+    "target_hook": "process_record_user",
+    "shared_candidate_helper": "perform_space_cadet",
+    "vendor_keycodes": [
+      "0x7E01",
+      "0x7E02",
+      "0x7E03",
+      "0x7E04",
+      "0x7E05",
+      "0x7E06",
+      "0x7E07",
+      "0x7E08",
+      "0x7E09",
+      "0x7E0A",
+      "0x7E0B",
+      "0x7E0C",
+      "0x7E0D",
+      "0x7E0E"
+    ],
+    "scope": "14 original argument triples, single upstream shared last/timer state with built-ins; selected module/KB and Space Cadet route only; timer/tapping term and HID/tap boundaries controlled, intervening features and full pipeline unverified"
+  },
+  "backspace_delete": {
+    "keycode": "0x7E00",
+    "selector_ram_original": "0x20001C40",
+    "scope": "last raw Shift press/release edge, not held-modifier union; key reselected on release; captured register/unregister intents only, not HID/USB or full pre/post-gate pipeline"
+  },
+  "rgb_controls": {
+    "keycodes": [
+      "0x7E10",
+      "0x7E11",
+      "0x7E12",
+      "0x7E13",
+      "0x7E14",
+      "0x7E15"
+    ],
+    "target_hook": "process_record_user",
+    "scope": "consume press/release before downstream core stages, byte XOR/force1/force0; no added EEPROM save; full pre-gate/post-event pipeline and persistence unverified"
+  },
+  "build_blockers": [
+    "complete RGB runtime pipeline and remaining effects conformance",
+    "destructive vendor reset",
+    "Vial unlock/security and feature pipeline integration"
+  ],
+  "flash_blockers": [
+    "complete storage/stamp/reset/migration compatibility",
+    "physical MCU/clock/recovery verification",
+    "explicit hardware-test permission"
+  ]
+}

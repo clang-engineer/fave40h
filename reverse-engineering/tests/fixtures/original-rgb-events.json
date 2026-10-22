@@ -1,0 +1,2600 @@
+{
+  "payload_sha256": "9df2375a5dfc7d155c3320ea5df3f2cff6920686928ae6ff5c186de5bee453e4",
+  "emulator": "Ghidra 12.1 P-code ARM:LE:32:Cortex",
+  "scope": "Original instructions, RAM-only routines/case slices; not full firmware or hardware emulation",
+  "rgb_key_events": [
+    {
+      "row": 0,
+      "col": 0,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 0,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 0,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 0,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "010d5d82a7ccf1163b0285aacff4193e6300add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 0,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1160d6085aacff4193e0288add2f71c416600b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 0,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b0d85aacff4193e6302add2f71c41668b00fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 0,
+      "col": 1,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 1,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 1,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 1,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "011f5d82a7ccf1163b0285aacff4193e6301add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 1,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1161f6085aacff4193e0288add2f71c416601b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 1,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b1f85aacff4193e6302add2f71c41668b01fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 0,
+      "col": 2,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 2,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 2,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 2,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01315d82a7ccf1163b0285aacff4193e6302add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 2,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116316085aacff4193e0288add2f71c416602b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 2,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b3185aacff4193e6302add2f71c41668b02fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 0,
+      "col": 3,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 3,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 3,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 3,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01435d82a7ccf1163b0285aacff4193e6303add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 3,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116436085aacff4193e0288add2f71c416603b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 3,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b4385aacff4193e6302add2f71c41668b03fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 0,
+      "col": 4,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 4,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 4,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 4,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01555d82a7ccf1163b0285aacff4193e6304add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 4,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116556085aacff4193e0288add2f71c416604b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 4,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b5585aacff4193e6302add2f71c41668b04fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 0,
+      "col": 5,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 5,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 5,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 5,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01675d82a7ccf1163b0285aacff4193e6305add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 5,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116676085aacff4193e0288add2f71c416605b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 5,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b6785aacff4193e6302add2f71c41668b05fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 0,
+      "col": 6,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 6,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 6,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 6,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01795d82a7ccf1163b0285aacff4193e6306add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 6,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116796085aacff4193e0288add2f71c416606b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 6,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b7985aacff4193e6302add2f71c41668b06fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 0,
+      "col": 7,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 7,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 7,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 7,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "018b5d82a7ccf1163b0285aacff4193e6307add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 7,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1168b6085aacff4193e0288add2f71c416607b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 7,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b8b85aacff4193e6302add2f71c41668b07fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 0,
+      "col": 8,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 8,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 8,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 8,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "019d5d82a7ccf1163b0285aacff4193e6308add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 8,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1169d6085aacff4193e0288add2f71c416608b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 8,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b9d85aacff4193e6302add2f71c41668b08fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 0,
+      "col": 9,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 9,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 9,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 9,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01af5d82a7ccf1163b0285aacff4193e6309add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 9,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116af6085aacff4193e0288add2f71c416609b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 9,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163baf85aacff4193e6302add2f71c41668b09fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 0,
+      "col": 10,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 10,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 10,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 10,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01c15d82a7ccf1163b0285aacff4193e630aadd2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 10,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116c16085aacff4193e0288add2f71c41660ab0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 10,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163bc185aacff4193e6302add2f71c41668b0afa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 0,
+      "col": 11,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 11,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 11,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 11,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01d35d82a7ccf1163b0285aacff4193e630badd2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 11,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116d36085aacff4193e0288add2f71c41660bb0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 0,
+      "col": 11,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163bd385aacff4193e6302add2f71c41668b0bfa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 1,
+      "col": 0,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 0,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 0,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 0,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "010d5d82a7ccf1163b1685aacff4193e6316add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 0,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1160d6085aacff4193e1688add2f71c416616b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 0,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b0d85aacff4193e6316add2f71c41668b16fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 1,
+      "col": 1,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 1,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 1,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 1,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "011f5d82a7ccf1163b1685aacff4193e6315add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 1,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1161f6085aacff4193e1688add2f71c416615b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 1,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b1f85aacff4193e6316add2f71c41668b15fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 1,
+      "col": 2,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 2,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 2,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 2,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01315d82a7ccf1163b1685aacff4193e6314add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 2,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116316085aacff4193e1688add2f71c416614b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 2,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b3185aacff4193e6316add2f71c41668b14fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 1,
+      "col": 3,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 3,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 3,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 3,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01435d82a7ccf1163b1685aacff4193e6313add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 3,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116436085aacff4193e1688add2f71c416613b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 3,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b4385aacff4193e6316add2f71c41668b13fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 1,
+      "col": 4,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 4,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 4,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 4,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01555d82a7ccf1163b1685aacff4193e6312add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 4,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116556085aacff4193e1688add2f71c416612b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 4,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b5585aacff4193e6316add2f71c41668b12fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 1,
+      "col": 5,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 5,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 5,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 5,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01675d82a7ccf1163b1685aacff4193e6311add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 5,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116676085aacff4193e1688add2f71c416611b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 5,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b6785aacff4193e6316add2f71c41668b11fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 1,
+      "col": 6,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 6,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 6,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 6,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01795d82a7ccf1163b1685aacff4193e6310add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 6,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116796085aacff4193e1688add2f71c416610b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 6,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b7985aacff4193e6316add2f71c41668b10fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 1,
+      "col": 7,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 7,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 7,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 7,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "018b5d82a7ccf1163b1685aacff4193e630fadd2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 7,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1168b6085aacff4193e1688add2f71c41660fb0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 7,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b8b85aacff4193e6316add2f71c41668b0ffa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 1,
+      "col": 8,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 8,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 8,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 8,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "019d5d82a7ccf1163b1685aacff4193e630eadd2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 8,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1169d6085aacff4193e1688add2f71c41660eb0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 8,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b9d85aacff4193e6316add2f71c41668b0efa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 1,
+      "col": 9,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 9,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 9,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 9,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01af5d82a7ccf1163b1685aacff4193e630dadd2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 9,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116af6085aacff4193e1688add2f71c41660db0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 9,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163baf85aacff4193e6316add2f71c41668b0dfa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 1,
+      "col": 10,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 10,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 10,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 10,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 10,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 10,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 11,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 11,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 11,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 11,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01d35d82a7ccf1163b1685aacff4193e630cadd2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 11,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116d36085aacff4193e1688add2f71c41660cb0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 1,
+      "col": 11,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163bd385aacff4193e6316add2f71c41668b0cfa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 2,
+      "col": 0,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 0,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 0,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 0,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "010d5d82a7ccf1163b2a85aacff4193e6317add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 0,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1160d6085aacff4193e2a88add2f71c416617b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 0,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b0d85aacff4193e632aadd2f71c41668b17fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 2,
+      "col": 1,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 1,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 1,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 1,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 1,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 1,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 2,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 2,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 2,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 2,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01315d82a7ccf1163b2a85aacff4193e6318add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 2,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116316085aacff4193e2a88add2f71c416618b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 2,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b3185aacff4193e632aadd2f71c41668b18fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 2,
+      "col": 3,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 3,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 3,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 3,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01435d82a7ccf1163b2a85aacff4193e6319add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 3,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116436085aacff4193e2a88add2f71c416619b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 3,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b4385aacff4193e632aadd2f71c41668b19fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 2,
+      "col": 4,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 4,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 4,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 4,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01555d82a7ccf1163b2a85aacff4193e631aadd2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 4,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116556085aacff4193e2a88add2f71c41661ab0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 4,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b5585aacff4193e632aadd2f71c41668b1afa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 2,
+      "col": 5,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 5,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 5,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 5,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01675d82a7ccf1163b2a85aacff4193e631badd2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 5,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116676085aacff4193e2a88add2f71c41661bb0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 5,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b6785aacff4193e632aadd2f71c41668b1bfa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 2,
+      "col": 6,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 6,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 6,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 6,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01795d82a7ccf1163b2a85aacff4193e631cadd2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 6,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116796085aacff4193e2a88add2f71c41661cb0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 6,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b7985aacff4193e632aadd2f71c41668b1cfa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 2,
+      "col": 7,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 7,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 7,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 7,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "018b5d82a7ccf1163b2a85aacff4193e631dadd2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 7,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1168b6085aacff4193e2a88add2f71c41661db0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 7,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b8b85aacff4193e632aadd2f71c41668b1dfa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 2,
+      "col": 8,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 8,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 8,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 8,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "019d5d82a7ccf1163b2a85aacff4193e631eadd2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 8,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1169d6085aacff4193e2a88add2f71c41661eb0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 8,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b9d85aacff4193e632aadd2f71c41668b1efa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 2,
+      "col": 9,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 9,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 9,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 9,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01af5d82a7ccf1163b2a85aacff4193e631fadd2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 9,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116af6085aacff4193e2a88add2f71c41661fb0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 9,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163baf85aacff4193e632aadd2f71c41668b1ffa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 2,
+      "col": 10,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 10,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 10,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 10,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01c15d82a7ccf1163b2a85aacff4193e6320add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 10,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116c16085aacff4193e2a88add2f71c416620b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 10,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163bc185aacff4193e632aadd2f71c41668b20fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 2,
+      "col": 11,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 11,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 11,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 11,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01d35d82a7ccf1163b2a85aacff4193e6321add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 11,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116d36085aacff4193e2a88add2f71c416621b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 2,
+      "col": 11,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163bd385aacff4193e632aadd2f71c41668b21fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 3,
+      "col": 0,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 0,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 0,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 0,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "010d5d82a7ccf1163b3e85aacff4193e6329add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 0,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1160d6085aacff4193e3e88add2f71c416629b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 0,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b0d85aacff4193e633eadd2f71c41668b29fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 3,
+      "col": 1,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 1,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 1,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 1,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 1,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 1,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 2,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 2,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 2,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 2,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01315d82a7ccf1163b3e85aacff4193e6328add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 2,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116316085aacff4193e3e88add2f71c416628b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 2,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b3185aacff4193e633eadd2f71c41668b28fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 3,
+      "col": 3,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 3,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 3,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 3,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01435d82a7ccf1163b3e85aacff4193e6327add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 3,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116436085aacff4193e3e88add2f71c416627b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 3,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b4385aacff4193e633eadd2f71c41668b27fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 3,
+      "col": 4,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 4,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 4,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 4,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01555d82a7ccf1163b3e85aacff4193e6326add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 4,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116556085aacff4193e3e88add2f71c416626b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 4,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b5585aacff4193e633eadd2f71c41668b26fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 3,
+      "col": 5,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 5,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 5,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 5,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 5,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 5,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 6,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 6,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 6,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 6,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 6,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 6,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 7,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 7,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 7,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 7,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 7,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 7,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 8,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 8,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 8,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 8,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "019d5d82a7ccf1163b3e85aacff4193e6325add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 8,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1169d6085aacff4193e3e88add2f71c416625b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 8,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163b9d85aacff4193e633eadd2f71c41668b25fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 3,
+      "col": 9,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 9,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 9,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 9,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01af5d82a7ccf1163b3e85aacff4193e6324add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 9,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116af6085aacff4193e3e88add2f71c416624b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 9,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163baf85aacff4193e633eadd2f71c41668b24fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 3,
+      "col": 10,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 10,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 10,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 10,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01c15d82a7ccf1163b3e85aacff4193e6323add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 10,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116c16085aacff4193e3e88add2f71c416623b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 10,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163bc185aacff4193e633eadd2f71c41668b23fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    },
+    {
+      "row": 3,
+      "col": 11,
+      "pressed": false,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 11,
+      "pressed": false,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 11,
+      "pressed": false,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 11,
+      "pressed": true,
+      "initial_count": 0,
+      "before_hex": "00385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "01d35d82a7ccf1163b3e85aacff4193e6322add2f71c41668b0000fa1f44698eb3d8fd22476c91b6db",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 11,
+      "pressed": true,
+      "initial_count": 7,
+      "before_hex": "07385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "08385d82a7ccf116d36085aacff4193e3e88add2f71c416622b0d5fa1f44698eb3d8fd22476c910000",
+      "original_memcpy_calls": 0
+    },
+    {
+      "row": 3,
+      "col": 11,
+      "pressed": true,
+      "initial_count": 8,
+      "before_hex": "08385d82a7ccf1163b6085aacff4193e6388add2f71c41668bb0d5fa1f44698eb3d8fd22476c91b6db",
+      "after_hex": "085d82a7ccf1163bd385aacff4193e633eadd2f71c41668b22fa1f44698eb3d8fd22476c91b6db0000",
+      "original_memcpy_calls": 4
+    }
+  ],
+  "boundary_policy": "Original 18efa..18f82/19212..19218/19294..192ca, stop before heatmap gate. Caller-supplied valid matrix-cell pointer and changed-edge pressed mask; guarded 41-byte buffer with counts0/7/8. Original Thumb memcpy11890..11abc executes; no replacement. No action/HID/matrix scan, heatmap, aging, renderer, timer, IRQ, MMIO or device execution."
+}

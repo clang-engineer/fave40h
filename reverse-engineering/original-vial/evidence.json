@@ -389,6 +389,488 @@
     "lighting": "vialrgb",
     "custom_keycode_count": 22
   },
+  "rgb": {
+    "driver": "WS2812-compatible PWM/DMA; exact LED part unverified",
+    "data_pin": "B10",
+    "pal_mode": "0x9a (AF1, push-pull, highest speed)",
+    "timer": "TIM2",
+    "timer_base": "0x40000000",
+    "channel_one_based": 3,
+    "tick_hz": 24000000,
+    "period_ticks": 30,
+    "zero_high_ticks": 8,
+    "one_high_ticks": 21,
+    "dma_controller": 1,
+    "dma_stream": 1,
+    "dma_channel": 3,
+    "dma_cr": "0x06035540",
+    "circular": true,
+    "dma_word_bits": 32,
+    "wire_order": "GRB, MSB first",
+    "led_count": 72,
+    "switch_led_count": 42,
+    "underglow_led_count": 30,
+    "color_words": 1728,
+    "reset_words": 224,
+    "transfer_words": 1952,
+    "reset_low_us_inferred": 280,
+    "buffer_address": "0x200031e0",
+    "grb_address": "0x20005064",
+    "configuration_table": "0x801dea0",
+    "matrix_to_led": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      [
+        22,
+        21,
+        20,
+        19,
+        18,
+        17,
+        16,
+        15,
+        14,
+        13,
+        255,
+        12
+      ],
+      [
+        23,
+        255,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      [
+        41,
+        255,
+        40,
+        39,
+        38,
+        255,
+        255,
+        255,
+        37,
+        36,
+        35,
+        34
+      ]
+    ],
+    "positions": [
+      [
+        13,
+        2
+      ],
+      [
+        31,
+        2
+      ],
+      [
+        49,
+        2
+      ],
+      [
+        67,
+        2
+      ],
+      [
+        85,
+        2
+      ],
+      [
+        103,
+        2
+      ],
+      [
+        121,
+        2
+      ],
+      [
+        139,
+        2
+      ],
+      [
+        157,
+        2
+      ],
+      [
+        175,
+        2
+      ],
+      [
+        193,
+        2
+      ],
+      [
+        211,
+        2
+      ],
+      [
+        211,
+        22
+      ],
+      [
+        175,
+        22
+      ],
+      [
+        157,
+        22
+      ],
+      [
+        139,
+        22
+      ],
+      [
+        121,
+        22
+      ],
+      [
+        103,
+        22
+      ],
+      [
+        85,
+        22
+      ],
+      [
+        67,
+        22
+      ],
+      [
+        49,
+        22
+      ],
+      [
+        31,
+        22
+      ],
+      [
+        13,
+        22
+      ],
+      [
+        13,
+        42
+      ],
+      [
+        49,
+        42
+      ],
+      [
+        67,
+        42
+      ],
+      [
+        85,
+        42
+      ],
+      [
+        103,
+        42
+      ],
+      [
+        121,
+        42
+      ],
+      [
+        139,
+        42
+      ],
+      [
+        157,
+        42
+      ],
+      [
+        175,
+        42
+      ],
+      [
+        193,
+        42
+      ],
+      [
+        211,
+        42
+      ],
+      [
+        211,
+        62
+      ],
+      [
+        193,
+        62
+      ],
+      [
+        175,
+        62
+      ],
+      [
+        157,
+        62
+      ],
+      [
+        85,
+        62
+      ],
+      [
+        67,
+        62
+      ],
+      [
+        49,
+        62
+      ],
+      [
+        13,
+        62
+      ],
+      [
+        0,
+        64
+      ],
+      [
+        0,
+        48
+      ],
+      [
+        0,
+        32
+      ],
+      [
+        0,
+        16
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        18,
+        0
+      ],
+      [
+        36,
+        0
+      ],
+      [
+        54,
+        0
+      ],
+      [
+        72,
+        0
+      ],
+      [
+        90,
+        0
+      ],
+      [
+        108,
+        0
+      ],
+      [
+        134,
+        0
+      ],
+      [
+        152,
+        0
+      ],
+      [
+        170,
+        0
+      ],
+      [
+        188,
+        0
+      ],
+      [
+        206,
+        0
+      ],
+      [
+        224,
+        0
+      ],
+      [
+        224,
+        16
+      ],
+      [
+        224,
+        32
+      ],
+      [
+        224,
+        48
+      ],
+      [
+        224,
+        64
+      ],
+      [
+        206,
+        64
+      ],
+      [
+        188,
+        64
+      ],
+      [
+        152,
+        64
+      ],
+      [
+        108,
+        64
+      ],
+      [
+        90,
+        64
+      ],
+      [
+        72,
+        64
+      ],
+      [
+        54,
+        64
+      ],
+      [
+        36,
+        64
+      ],
+      [
+        18,
+        64
+      ]
+    ],
+    "flags": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "physical_output_verified": false,
+    "filter_range": "half-open chunk; flag 4 is switch, flag 2 is underglow"
+  },
+  "vendor_controls": {
+    "backspace_delete": {
+      "keycode": "0x7e00",
+      "selector": "0x20001c40 last E1/E5 edge, NOT aggregate modifiers",
+      "unshifted": "0x2a",
+      "shifted": "0x4c",
+      "release_rechecks_current_selector": true
+    },
+    "rgb_keys": {
+      "switch_toggle": "0x7e10",
+      "switch_on": "0x7e11",
+      "switch_off": "0x7e12",
+      "underglow_toggle": "0x7e13",
+      "underglow_on": "0x7e14",
+      "underglow_off": "0x7e15",
+      "press_only": true,
+      "ram_address": "0x20001ee4",
+      "handler_writes_eeprom": false
+    },
+    "clear_and_reboot": {
+      "keycode": "0x7e0f",
+      "press_only": true,
+      "calls": [
+        "0x080143e4",
+        "0x08013ecc"
+      ],
+      "modeled": false
+    }
+  },
   "vendor_space_cadet": {
     "helper": "0x0801d4c8",
     "parameters": [
@@ -491,8 +973,764 @@
         "case_address": "0x8015fc4"
       }
     ],
-    "timing_state_machine_reconstructed": false
+    "builtin_parameters": [
+      {
+        "keycode": 31768,
+        "hold_modifier": 224,
+        "tap_modifier": 225,
+        "tap_keycode": 38,
+        "case_address": "0x80167be"
+      },
+      {
+        "keycode": 31769,
+        "hold_modifier": 228,
+        "tap_modifier": 229,
+        "tap_keycode": 39,
+        "case_address": "0x80167ce"
+      },
+      {
+        "keycode": 31770,
+        "hold_modifier": 225,
+        "tap_modifier": 225,
+        "tap_keycode": 38,
+        "case_address": "0x801679e"
+      },
+      {
+        "keycode": 31771,
+        "hold_modifier": 229,
+        "tap_modifier": 229,
+        "tap_keycode": 39,
+        "case_address": "0x80167ae"
+      },
+      {
+        "keycode": 31772,
+        "hold_modifier": 226,
+        "tap_modifier": 225,
+        "tap_keycode": 38,
+        "case_address": "0x80167de"
+      },
+      {
+        "keycode": 31773,
+        "hold_modifier": 230,
+        "tap_modifier": 229,
+        "tap_keycode": 39,
+        "case_address": "0x80167ee"
+      },
+      {
+        "keycode": 31774,
+        "hold_modifier": 229,
+        "tap_modifier": 1,
+        "tap_keycode": 40,
+        "case_address": "0x80167fe"
+      }
+    ],
+    "core_stage_entry": "0x08016646",
+    "core_default_press_exit": "0x08017350",
+    "core_default_release_exit": "0x080174d4",
+    "core_stage_modeled": true,
+    "verified_vendor_bypass_codes": [
+      32256,
+      32272,
+      32273,
+      32274,
+      32275,
+      32276,
+      32277
+    ],
+    "pipeline_before_core_modeled": false,
+    "helper_state_machine_reconstructed": true,
+    "timing_state_machine_reconstructed": false,
+    "dispatcher_interruption_routing_reconstructed": false,
+    "last_modifier_ram": "0x20001ced",
+    "pressed_at_u16_ram": "0x200051bc",
+    "vendor_term_source": "uint16 settings[+0x18] at 0x200011e0; custom codes do not enter tap-dance lookup",
+    "tap_condition": "last_modifier == hold_modifier && uint16(now - pressed_at) < tapping_term",
+    "release_clears_state": false,
+    "reset_primitive": "0x08017346..0x08017350 clears last modifier only",
+    "hid_and_timer_boundaries_executed": false
   },
+  "qmk_settings": {
+    "ram_base": "0x200011c8",
+    "logical_start": 425,
+    "logical_end_exclusive": 465,
+    "bytes": 40,
+    "prototype_table": "0x801e3d4",
+    "prototype_stride": 20,
+    "prototypes": [
+      {
+        "qsid": 1,
+        "size": 1,
+        "bit": 0,
+        "offset": 26,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x0"
+      },
+      {
+        "qsid": 2,
+        "size": 2,
+        "bit": 0,
+        "offset": 22,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x0"
+      },
+      {
+        "qsid": 3,
+        "size": 1,
+        "bit": 0,
+        "offset": 27,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x0"
+      },
+      {
+        "qsid": 4,
+        "size": 2,
+        "bit": 0,
+        "offset": 0,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x8013275"
+      },
+      {
+        "qsid": 5,
+        "size": 1,
+        "bit": 0,
+        "offset": 28,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x0"
+      },
+      {
+        "qsid": 6,
+        "size": 2,
+        "bit": 0,
+        "offset": 2,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x0"
+      },
+      {
+        "qsid": 7,
+        "size": 2,
+        "bit": 0,
+        "offset": 24,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x0"
+      },
+      {
+        "qsid": 9,
+        "size": 2,
+        "bit": 0,
+        "offset": 4,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x8013289"
+      },
+      {
+        "qsid": 10,
+        "size": 2,
+        "bit": 0,
+        "offset": 6,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x8013289"
+      },
+      {
+        "qsid": 11,
+        "size": 2,
+        "bit": 0,
+        "offset": 8,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x8013289"
+      },
+      {
+        "qsid": 12,
+        "size": 2,
+        "bit": 0,
+        "offset": 10,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x8013289"
+      },
+      {
+        "qsid": 13,
+        "size": 2,
+        "bit": 0,
+        "offset": 12,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x8013289"
+      },
+      {
+        "qsid": 14,
+        "size": 2,
+        "bit": 0,
+        "offset": 14,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x8013289"
+      },
+      {
+        "qsid": 15,
+        "size": 2,
+        "bit": 0,
+        "offset": 16,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x8013289"
+      },
+      {
+        "qsid": 16,
+        "size": 2,
+        "bit": 0,
+        "offset": 18,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x8013289"
+      },
+      {
+        "qsid": 17,
+        "size": 2,
+        "bit": 0,
+        "offset": 20,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x8013289"
+      },
+      {
+        "qsid": 18,
+        "size": 2,
+        "bit": 0,
+        "offset": 30,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x0"
+      },
+      {
+        "qsid": 19,
+        "size": 2,
+        "bit": 0,
+        "offset": 32,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x0"
+      },
+      {
+        "qsid": 20,
+        "size": 1,
+        "bit": 0,
+        "offset": 34,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x0"
+      },
+      {
+        "qsid": 21,
+        "size": 0,
+        "bit": 0,
+        "offset": null,
+        "get": "0x80138e9",
+        "set": "0x8013f25",
+        "notify": "0x0"
+      },
+      {
+        "qsid": 22,
+        "size": 1,
+        "bit": 0,
+        "offset": 29,
+        "get": "0x80138b3",
+        "set": "0x8014493",
+        "notify": "0x0"
+      },
+      {
+        "qsid": 23,
+        "size": 1,
+        "bit": 1,
+        "offset": 29,
+        "get": "0x80138b3",
+        "set": "0x8014493",
+        "notify": "0x0"
+      },
+      {
+        "qsid": 24,
+        "size": 1,
+        "bit": 2,
+        "offset": 29,
+        "get": "0x80138b3",
+        "set": "0x8014493",
+        "notify": "0x0"
+      },
+      {
+        "qsid": 25,
+        "size": 2,
+        "bit": 0,
+        "offset": 36,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x0"
+      },
+      {
+        "qsid": 26,
+        "size": 1,
+        "bit": 3,
+        "offset": 29,
+        "get": "0x80138b3",
+        "set": "0x8014493",
+        "notify": "0x0"
+      },
+      {
+        "qsid": 27,
+        "size": 2,
+        "bit": 0,
+        "offset": 38,
+        "get": "0x8013895",
+        "set": "0x8014475",
+        "notify": "0x0"
+      }
+    ],
+    "reset_prefix": "0x080144dc..0x08014524",
+    "reset_bytes": [
+      175,
+      0,
+      136,
+      19,
+      10,
+      0,
+      20,
+      0,
+      8,
+      0,
+      10,
+      0,
+      30,
+      0,
+      10,
+      0,
+      80,
+      0,
+      8,
+      0,
+      40,
+      0,
+      50,
+      0,
+      200,
+      0,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      80,
+      0,
+      5,
+      null,
+      200,
+      0,
+      0,
+      0
+    ],
+    "preserved_offsets": [
+      35
+    ],
+    "reset_eeprom_or_callbacks_executed": false,
+    "manufacturer_symbols_recovered": false
+  },
+  "tap_code": {
+    "wrapper": "0x08014188",
+    "delay_body": "0x08014148",
+    "settings_base": "0x200011c8",
+    "normal_delay_u16_offset": "0x1e",
+    "caps_delay_u16_offset": "0x20",
+    "caps_keycode": "0x39",
+    "software_tick_hz_constant": 100000,
+    "zero_delay_sleep_ticks": 1,
+    "nonzero_delay_sleep_ticks": "(uint64(delay_ms) * 100000 + 999) / 1000",
+    "ordered_calls": [
+      "0x08013f88 register_code",
+      "0x0801b464 sleep_ticks",
+      "0x080140aa unregister_code"
+    ],
+    "hid_reports_and_scheduler_executed": false,
+    "physical_tick_rate_verified": false
+  },
+  "backing_wrapper": {
+    "profiles": [
+      {
+        "descriptor": "0x801de24",
+        "attributes": 3,
+        "program_unit": 4,
+        "flash_base": "0x8000000",
+        "capacity": 131072,
+        "sectors": [
+          {
+            "offset": 0,
+            "size": 16384
+          },
+          {
+            "offset": 16384,
+            "size": 16384
+          },
+          {
+            "offset": 32768,
+            "size": 16384
+          },
+          {
+            "offset": 49152,
+            "size": 16384
+          },
+          {
+            "offset": 65536,
+            "size": 65536
+          }
+        ]
+      },
+      {
+        "descriptor": "0x801de40",
+        "attributes": 3,
+        "program_unit": 4,
+        "flash_base": "0x8000000",
+        "capacity": 262144,
+        "sectors": [
+          {
+            "offset": 0,
+            "size": 16384
+          },
+          {
+            "offset": 16384,
+            "size": 16384
+          },
+          {
+            "offset": 32768,
+            "size": 16384
+          },
+          {
+            "offset": 49152,
+            "size": 16384
+          },
+          {
+            "offset": 65536,
+            "size": 65536
+          },
+          {
+            "offset": 131072,
+            "size": 131072
+          }
+        ]
+      },
+      {
+        "descriptor": "0x801de5c",
+        "attributes": 3,
+        "program_unit": 4,
+        "flash_base": "0x8000000",
+        "capacity": 393216,
+        "sectors": [
+          {
+            "offset": 0,
+            "size": 16384
+          },
+          {
+            "offset": 16384,
+            "size": 16384
+          },
+          {
+            "offset": 32768,
+            "size": 16384
+          },
+          {
+            "offset": 49152,
+            "size": 16384
+          },
+          {
+            "offset": 65536,
+            "size": 65536
+          },
+          {
+            "offset": 131072,
+            "size": 131072
+          },
+          {
+            "offset": 262144,
+            "size": 131072
+          }
+        ]
+      },
+      {
+        "descriptor": "0x801de78",
+        "attributes": 3,
+        "program_unit": 4,
+        "flash_base": "0x8000000",
+        "capacity": 524288,
+        "sectors": [
+          {
+            "offset": 0,
+            "size": 16384
+          },
+          {
+            "offset": 16384,
+            "size": 16384
+          },
+          {
+            "offset": 32768,
+            "size": 16384
+          },
+          {
+            "offset": 49152,
+            "size": 16384
+          },
+          {
+            "offset": 65536,
+            "size": 65536
+          },
+          {
+            "offset": 131072,
+            "size": 131072
+          },
+          {
+            "offset": 262144,
+            "size": 131072
+          },
+          {
+            "offset": 393216,
+            "size": 131072
+          }
+        ]
+      }
+    ],
+    "physical_capacity_verified": false,
+    "base_offset_ram": "0x20000eb4",
+    "inversion_flag_ram": "0x200017a8",
+    "driver_pointer_ram": "0x200017a4",
+    "read_active_ram": "0x200018ee",
+    "read_error_ram": "0x20001791",
+    "startup_inversion": "descriptor attributes & 1; all four available profiles yield 1",
+    "word_codec": "any nonzero inversion byte complements the 32-bit word in both directions",
+    "program": "driver-relative offset = uint32(base + offset), size 4; driver status zero alone means success; wrapper has no bounds/alignment check",
+    "read": "descriptor memory base + driver-relative offset; observed final error byte nonzero gives zero output and false; stale error is cleared before check",
+    "read_guard_order": "physical word LDR at 0x08012860 precedes active=1 at 0x0801286A; do not infer physical fault safety from RAM probes",
+    "first_sector": 3,
+    "backing_budget": 8192,
+    "configured_backing_range": [
+      "0x800c000",
+      "0x800e000"
+    ],
+    "erase_sector_range": [
+      "0x800c000",
+      "0x8010000"
+    ],
+    "same_sector_tail": "0x0800E000..0x08010000 lies outside configured backing but shares erase sector; contents unknown",
+    "driver_program_erase_unlock_lock_executed": false,
+    "bus_fault_handler_validated": false,
+    "scope": "word transform and captured driver intents / RAM-backed read, not physical hardware or complete wear-leveling recovery"
+  },
+  "journal_entry": {
+    "scope": "one supplied first word, cache update and next cursor only",
+    "cache_ram": "0x200021d8",
+    "entry_type_bits": "first byte bits 6..7; only type 0 accepted in 4-byte backing profile",
+    "address": "((byte0 & 7) << 16) | (byte1 << 8) | byte2",
+    "length": "(byte0 >> 3) & 7",
+    "payload_start": 3,
+    "modeled_lengths": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "empty": "all-zero first word: no advance",
+    "one_word": "length 0 or 1: consume 4 bytes; nonzero length-0 header is accepted as no-op",
+    "two_words": "length 2..5: second word read, consume 8 bytes only if successful",
+    "bounds": "address + length <= 4096; length 0 at address 4096 is accepted",
+    "rejected_or_second_read_failed": "no cache copy; consumed first word advances cursor by 4; full loop later requests consolidation, NOT skip",
+    "lengths_6_7_modeled": false,
+    "lengths_6_7_note": "three-bit reader field permits these lengths; copy may read beyond eight-byte temporary. Model explicitly reports UNMODELED, not firmware rejection.",
+    "second_word_beyond_backing_budget_modeled": false,
+    "first_word_read_failure_modeled": false,
+    "full_replay_or_consolidation_modeled": false,
+    "physical_flash_executed": false,
+    "reference_scope": "same candidate wear_leveling.c as snapshot; 4-byte backing profile only"
+  },
+  "snapshot": {
+    "cache_ram": "0x200021d8",
+    "logical_bytes": 4096,
+    "backing_transfer_bytes": 4,
+    "checksum_start": 4096,
+    "checksum_bytes": 8,
+    "log_start": 4104,
+    "fnv_basis": "0xcbf29ce484222325",
+    "fnv_prime": "0x100000001b3",
+    "checksum_format": "little-endian FNV1a64 over 4096 translated logical bytes; NOT raw physical flash",
+    "read_slice": "0x08018758..0x08018816; data failure exits through 0x08019f96, stop before 0x08018896",
+    "match": "cache preserved, incoming write cursor unchanged; log playback follows outside model",
+    "mismatch": "cache zeroed, write cursor=0x1008; still proceeds to log playback, not immediate flash erase",
+    "data_read_failure": "cache zeroed, write cursor=0x1008; exits consolidated load before log playback",
+    "checksum_read_failures_modeled": false,
+    "log_playback_modeled": false,
+    "physical_flash_translation_verified": false,
+    "erase_write_or_migration_executed": false,
+    "reference_url": "https://raw.githubusercontent.com/vial-kb/vial-qmk/dd43959ae5c08d8a28d38a1acf7b04e86b14a344/quantum/wear_leveling/wear_leveling.c",
+    "reference_sha256": "a5480ffe8cc544414f5ef63d47f86c27c7f21e623c57021514d7dc9113d6542b",
+    "reference_scope": "candidate snapshot/FNV semantics only, not exact manufacturer revision or full backend compatibility"
+  },
+  "eeprom_prefix": {
+    "bytes_before_keymap": 41,
+    "observed_core_accesses": [
+      {
+        "reference_label": "magic",
+        "offset": 0,
+        "size": 2,
+        "address_instruction": "0x80143ee"
+      },
+      {
+        "reference_label": "debug",
+        "offset": 2,
+        "size": 1,
+        "address_instruction": "0x80143f6"
+      },
+      {
+        "reference_label": "default_layer",
+        "offset": 3,
+        "size": 1,
+        "address_instruction": "0x8014400"
+      },
+      {
+        "reference_label": "keymap",
+        "offset": 4,
+        "size": 2,
+        "address_instruction": "0x8013be8"
+      },
+      {
+        "reference_label": "keyboard",
+        "offset": 15,
+        "size": 4,
+        "address_instruction": "0x8014420"
+      },
+      {
+        "reference_label": "user",
+        "offset": 19,
+        "size": 4,
+        "address_instruction": "0x801442e"
+      },
+      {
+        "reference_label": "rgb_matrix",
+        "offset": 23,
+        "size": 8,
+        "address_instruction": "0x8013cde"
+      }
+    ],
+    "core_magic_u16": 65251,
+    "via_magic_start": 37,
+    "via_magic_bytes": [
+      75,
+      244,
+      41
+    ],
+    "build_id_low24": 2749515,
+    "build_id_high8_known": false,
+    "layout_options_start": 40,
+    "layout_options_bytes": 1,
+    "early_gate": "0x08018b5c..0x08018b66: invalid VIA stamp calls 0x0801ae2e",
+    "later_gate": "0x08018bbc..0x08018bce via 0x08018c22: invalid core magic OR invalid VIA stamp calls 0x080143e4",
+    "gates_are_isolated_not_a_full_boot_simulation": true,
+    "reset_or_flash_operations_executed": false,
+    "full_prefix_field_semantics_proven": false
+  },
+  "dynamic_records": [
+    {
+      "name": "tap_dance",
+      "start": 465,
+      "end_exclusive": 625,
+      "entries": 16,
+      "stride": 10,
+      "reset_bytes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        200,
+        0
+      ],
+      "initializer_range": [
+        "0x8015880",
+        "0x8015898"
+      ]
+    },
+    {
+      "name": "combo",
+      "start": 625,
+      "end_exclusive": 785,
+      "entries": 16,
+      "stride": 10,
+      "reset_bytes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "initializer_range": [
+        "0x80158b0",
+        "0x80158ba"
+      ]
+    },
+    {
+      "name": "key_override",
+      "start": 785,
+      "end_exclusive": 945,
+      "entries": 16,
+      "stride": 10,
+      "reset_bytes": [
+        0,
+        0,
+        0,
+        0,
+        255,
+        255,
+        0,
+        0,
+        0,
+        7
+      ],
+      "initializer_range": [
+        "0x80158ce",
+        "0x80158e6"
+      ]
+    },
+    {
+      "name": "alt_repeat",
+      "start": 945,
+      "end_exclusive": 1137,
+      "entries": 32,
+      "stride": 6,
+      "reset_bytes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "initializer_range": [
+        "0x80158fa",
+        "0x8015902"
+      ]
+    }
+  ],
   "storage": {
     "logical_bytes": 4096,
     "backing_bytes": 8192,
@@ -537,6 +1775,90 @@
     "factory_keymap_source_and_layer3_transparent": {
       "address": "0x8015844",
       "bytes": "032c18bf39f815300191eab208bf012358460135fef776fe0c2d0199f0d10136042e09f1180902d00025f1b2e8e70134042c"
+    },
+    "rgb_set_grb": {
+      "address": "0x80132ec",
+      "bytes": "30b5044d00eb40002c182a546170a37030bd00bf"
+    },
+    "rgb_encode_pwm": {
+      "address": "0x8013320",
+      "bytes": "f0b5174a174c102092f801c017789678214600234cfa03f515f0010f14bf152508250d6247fa03f515f0010f14bf1525082541f8045946fa03f515f0010f03f1010314bf15250825082b4d64e2d11830b0f5da6f02f1030204f16004d4d1f0bd"
+    },
+    "rgb_pin_and_buffer_init": {
+      "address": "0x8013924",
+      "bytes": "38b5534c0023224608210133b3f5d86f42f8041bf9d14ff4607200214d48fef7bbf84d489a224ff4806107f0cdff"
+    },
+    "rgb_dma_start": {
+      "address": "0x801399e",
+      "bytes": "002282f31188394bd96901f13c003649086337484c6388624ff4f460c862886a40f001008862"
+    },
+    "rgb_timer_start": {
+      "address": "0x8013a28",
+      "bytes": "01255060116255611061d16014b14ff4004151648521116002221a70002282f31188302181f31188d96841f00401d960db69da6382f3118838bd"
+    },
+    "pwm_object_tim2": {
+      "address": "0x80184b6",
+      "bytes": "754b754e7649764d042200244ff001081a744ff0804283f80080dc605c601c76da61"
+    },
+    "vendor_backspace_delete": {
+      "address": "0x8015eba",
+      "bytes": "3a4b1b7835b11bb14c20fef760f8d1e62a20fae71bb14c20fef7eaf8cae62a20fae7"
+    },
+    "shift_edge_tracking": {
+      "address": "0x8015ab6",
+      "bytes": "24f004039bb2e12b01d17c4b1d70"
+    },
+    "rgb_chunk_filter": {
+      "address": "0x80156f8",
+      "bytes": "3b78c4b2c0f307252bb9dff8a0802646f3b2ab4208d37b781bb9244ee3b2ab4210d303b0bde8f08308eb060393f8c0305a0705d500231a4619463046fff7a0f90136e5e7331993f8c0309b0705d500231a4619462046fff793f90134dee7"
+    },
+    "clear_settings_then_reboot_no_return": {
+      "address": "0x8015fd2",
+      "bytes": "002d3ff44baefef704fafdf776ff"
+    },
+    "cadet_term_lookup": {
+      "address": "0x801d4a0",
+      "bytes": "1fb5a0f5ae43ff2b09d801a9c0b2f8f757fa20b9bdf80c0005b05df804fb014b188bf9e7"
+    },
+    "cadet_helper_state_machine": {
+      "address": "0x801d4c8",
+      "bytes": "2de9f8431d469df82080254b8946144668b11a70fdf74aff224b04f0070418800120a040c0b2bde8f843f6f73fbd1e7896422ed11b4b1f88fdf738ffc71b4846fff7caffbfb2b84223d905f12004ae42e4b210d006f00700012606fa00f0c0b2f6f7b6fd072c06d805f0070006fa00f0c0b2f6f71bfd4046f6f722fe072c0dd805f007050120a840bde8f843c0b2f6f79fbd04f007040120a040f5e7bde8f883"
+    },
+    "cadet_reset_slice": {
+      "address": "0x8017346",
+      "bytes": "944b0022a4f5e0451a70"
+    },
+    "cadet_core_dispatch": {
+      "address": "0x8016646",
+      "bytes": "a4f5f843183b9af80500062b00f27386dfe803f0b2baa2aac2cad2"
+    },
+    "cadet_builtin_cases": {
+      "address": "0x801679e",
+      "bytes": "26230093e1231a4647f61a41fff79ebb27230093e5231a4647f61b41fff796bb26230093e022e12347f61841fff78ebb27230093e422e52347f61941fff786bb26230093e222e12347f61c41fff77ebb27230093e622e52347f61d41fff776bb28230093e522012347f61e41fff76ebb"
+    },
+    "cadet_core_default": {
+      "address": "0x801733c",
+      "bytes": "9af80510002900f0c780944b0022a4f5e0451a70"
+    },
+    "vendor_dispatch_table": {
+      "address": "0x8015e96",
+      "bytes": "a4f5fc44013c142c0cd8dfe804f01c262d343b424950575e65828990979ea7adb4bdc4"
+    },
+    "tap_code_delay_wrapper": {
+      "address": "0x8014188",
+      "bytes": "034b39280cbf198cd98bfff7d9bf"
+    },
+    "tap_code_delay_body": {
+      "address": "0x8014148",
+      "bytes": "38b50c460546fff71bffa4b10b4940f2e730a4fb014120184ff47a724ff0000341f10001fdf7f4fe07f078f92846bde83840fff796bf0120f6e7"
+    },
+    "qmk_settings_ram_reset": {
+      "address": "0x80144dc",
+      "bytes": "184baf2210b51a8041f288325a800a229a805a81da8128229a82c821142032229984d880da821983002205211e2098815a835020998308241c8118825c82da83188483f82210da84"
+    },
+    "qmk_settings_load_40_bytes": {
+      "address": "0x8014218",
+      "bytes": "70b50b4d40f2a91440f2d1162046fff7e8ff0134b44205f8010bf7d1054d1a242b6903b19847013c05f11405f8d170bd"
     },
     "four_layer_reply": {
       "address": "0x80198ba",
@@ -585,6 +1907,66 @@
     "boot_marker_and_reset": {
       "address": "0x8018c0a",
       "bytes": "684b684a1a6002f0fef9"
+    },
+    "backing_program_wrapper": {
+      "address": "0x801280c",
+      "bytes": "0b4b37b51c680b4b01911b7804440bb1c9430191084b186803680422dd68214601aba847b0fa80f0400903b030bd"
+    },
+    "backing_read_wrapper": {
+      "address": "0x8012848",
+      "bytes": "38b50f4b1d680f4b0544186803685b680c46984743690c485a590c4d0c492d780123037000230b7005b1d2430370087818b10b702360002038bd22600120fbe7"
+    },
+    "backing_startup_one": {
+      "address": "0x80184c2",
+      "bytes": "4ff00108"
+    },
+    "backing_attribute_flag": {
+      "address": "0x801863c",
+      "bytes": "037803ea08031370"
+    },
+    "backing_sector_three": {
+      "address": "0x801871c",
+      "bytes": "032102f0bdfe0a4b1860"
+    },
+    "journal_entry_decode_copy": {
+      "address": "0x8018824",
+      "bytes": "119b6bb313f0c00f04f104081493d9b241f0b5831d04c3f3074205f4e025154303f47f431d434fead10905ebd101b1f5805f01f2a48319f0060f00f0d98115a94046f9f7efff002801f0998308344a460df153017819f9f709f8"
+    },
+    "journal_one_word_cursor": {
+      "address": "0x8018c14",
+      "bytes": "44462ce6"
+    },
+    "journal_reject_exit": {
+      "address": "0x8019fa2",
+      "bytes": "44460020fef76ebc"
+    },
+    "snapshot_read_and_hash_init": {
+      "address": "0x8018758",
+      "bytes": "be4f4ff0000807eb08014046faf770f8002801f0148408f10408b8f5805ff2d1b74cb84db5480021"
+    },
+    "snapshot_checksum_compare": {
+      "address": "0x80187f0",
+      "bytes": "14a94ff48050faf727f820b115a941f20400faf721f8dde91423ab4208bfa24201d0fbf7f7fe"
+    },
+    "snapshot_ram_clear": {
+      "address": "0x8014604",
+      "bytes": "08b5064b4ff4805218460021fdf754fa00f5805341f208021a6008bd"
+    },
+    "via_prefix_validity": {
+      "address": "0x801ae04",
+      "bytes": "08b52520f9f7f7f94b2801d0002008bd2620f9f7f0f9f428f8d12720f9f7ebf9a0f1290358425841f1e7"
+    },
+    "early_via_gate": {
+      "address": "0x8018b5c",
+      "bytes": "02f052f908b902f064f9"
+    },
+    "core_prefix_gate": {
+      "address": "0x8018bbc",
+      "bytes": "2046faf7f3ff4ff6e36398422bd0fbf70bfc"
+    },
+    "core_gate_via_branch": {
+      "address": "0x8018c22",
+      "bytes": "02f0eff80028d1d1cee7"
     },
     "tap_dance_reset_region": {
       "address": "0x8015898",
