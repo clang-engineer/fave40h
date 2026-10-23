@@ -1,6 +1,6 @@
 // Execute ORIGINAL Thumb instructions with Ghidra 12.1's P-code emulator.
 // Pure-RAM routines / bounded case slices only. No USB, MMIO or device access.
-// args: [--rgb-events | --rgb-mode29-interval | --rgb-mode29-frames | --rgb-mode29-frames-real-hsv | --rgb-mode15 | --rgb-mode15-staging | --rgb-hsv] OUTPUT.json [--check]. Default refuses overwrite; --check is read-only.
+// args: [--rgb-events | --rgb-mode29-interval | --rgb-mode29-frames | --rgb-mode29-frames-real-hsv | --rgb-mode15 | --rgb-mode15-staging | --rgb-mode29-staging | --rgb-render-begin | --rgb-flush | --rgb-cycle | --rgb-start | --rgb-timers | --rgb-task-start | --rgb-task-cycle | --rgb-hsv] OUTPUT.json [--check]. Default refuses overwrite; --check is read-only.
 import ghidra.app.script.GhidraScript;
 import ghidra.pcode.emu.*;
 import ghidra.program.model.lang.RegisterValue;
@@ -614,16 +614,28 @@ public class EmulateOriginalVial extends GhidraScript {
     }
 
     private void rgbMode29Frames(JsonArray sequences,int speed,int seed,boolean realHsv) throws Exception {
+        rgbMode29Frames(sequences,speed,seed,realHsv,false,0,0,0);
+    }
+
+    private void rgbMode29Frames(JsonArray sequences,int speed,int seed,boolean realHsv,boolean staging,int caps,int keylight,int underglow) throws Exception {
+        long group=0xA5B60000L | keylight | (underglow<<8);
+        if(staging && !realHsv) throw new Exception("Staging requires actual HSV");
+        if(staging) {
+            byte[] groupGuard=new byte[12]; java.util.Arrays.fill(groupGuard,(byte)0xA5); put(FLAGS-4,groupGuard); putWord(FLAGS,group);
+            byte[] colorGuard=new byte[224]; java.util.Arrays.fill(colorGuard,(byte)0xA5); put(COLORS-4,colorGuard);
+        }
         long state=0x20001B55L,wait=0x20002180L,timer=0x200018E0L;
         byte[] guarded=new byte[224]; java.util.Arrays.fill(guarded,(byte)0xA5);
         java.util.Arrays.fill(guarded,4,220,(byte)0); put(state-4,guarded);
         byte[] waitGuard=new byte[12]; java.util.Arrays.fill(waitGuard,(byte)0xA5); put(wait-4,waitGuard); putWord(wait,0);
         byte[] globals=new byte[12]; java.util.Arrays.fill(globals,(byte)0xA5); put(0x20000EE4L,globals);
         put(0x20000EE6L,new byte[]{(byte)seed,(byte)(seed>>8)});
-        byte[] pixels=new byte[216]; java.util.Arrays.fill(pixels,(byte)0xA5); put(COLORS,pixels);
+        byte[] pixels=new byte[216]; java.util.Arrays.fill(pixels,(byte)0xA5); if(staging) pixels=ramp(); put(COLORS,pixels);
         int value=seed==0 ? 255 : 128;
         JsonObject sequence=new JsonObject(); sequence.addProperty("speed",speed); sequence.addProperty("initial_seed",seed);
-        sequence.addProperty("value",value); JsonArray steps=new JsonArray();
+        sequence.addProperty("value",value);
+        if(staging) { sequence.addProperty("caps",caps); sequence.addProperty("group_word",group); sequence.addProperty("initial_grb_hex",hex.formatHex(pixels)); }
+        JsonArray steps=new JsonArray();
         int[] iters={0,1,2,3,4,0,0,0,1,2,3,4,0,0,4,0};
         int[] flags={255,4,2,0,255,255,255,255,255,255,255,255,255,255,255,255};
         long[] times={0,0,0,0,0,1,1,3000,3000,3000,3000,3000,3001,6000,0xFFFFFF00L,0xFFFFFF01L};
@@ -668,14 +680,18 @@ public class EmulateOriginalVial extends GhidraScript {
                         event.add(1); event.add(register("r0"));
                         for(int reg=1;reg<4;reg++) event.add(register("r"+reg)&255);
                     }
-                    trace.add(event); thread.overrideCounter(toAddr(register("lr")&~1L)); return true;
+                    trace.add(event);
+                    if(!staging) { thread.overrideCounter(toAddr(register("lr")&~1L)); return true; }
+                    // Observe output API, then execute original RAM setters.
                 }
                 if(pc==0x08011890L) copies[0]++;
                 if(!((pc>=0x08014AA4L && pc<0x08014AE8L) || (pc>=0x08014B44L && pc<0x08014B50L) ||
                      (pc>=0x08014F58L && pc<0x08015054L) || (pc>=0x0801509CL && pc<0x0801513EL) ||
                      (pc>=0x08014A7CL && pc<0x08014AA4L) || (pc>=0x08014900L && pc<0x0801491EL) ||
                      (pc>=0x08014924L && pc<0x08014934L) || (pc>=0x08011890L && pc<0x08011ABCL) ||
-                     (realHsv && pc>=0x080147C0L && pc<0x08014868L)))
+                     (realHsv && pc>=0x080147C0L && pc<0x08014868L) ||
+                     (staging && ((pc>=0x08012FC8L && pc<0x08012FCCL) || (pc>=0x08014A78L && pc<0x08014A7CL) ||
+                                  (pc>=0x080132ECL && pc<0x08013300L) || (pc>=0x08013304L && pc<0x08013320L)))))
                     throw new Exception("Mode29 frame escaped selected dispatch/effect/RNG/memcpy slice: "+Long.toHexString(pc));
                 return false;
             },29);
@@ -685,7 +701,8 @@ public class EmulateOriginalVial extends GhidraScript {
             byte[] afterGlobals=get(0x20000EE4L,12);
             for(int index:new int[]{0,1,10,11}) if(afterGlobals[index]!=(byte)0xA5) throw new Exception("Mode29 globals guard changed");
             if(!java.util.Arrays.equals(config,get(0x20001CE0L,8)) || getWord(timer)!=times[step] ||
-               !java.util.Arrays.equals(pixels,get(COLORS,216))) throw new Exception("Mode29 modified input or uncaptured pixel output");
+               (!staging && !java.util.Arrays.equals(pixels,get(COLORS,216)))) throw new Exception("Mode29 modified input or uncaptured pixel output");
+            if(staging && (getWord(COLORS-4)!=0xA5A5A5A5L || getWord(COLORS+216)!=0xA5A5A5A5L)) throw new Exception("Mode29 staging guard changed");
             JsonObject row=new JsonObject(); row.addProperty("iter",iters[step]); row.addProperty("flags",flags[step]);
             row.addProperty("init",init); row.addProperty("now",times[step]); row.add("trace",trace);
             row.addProperty("rendering",(get(0x20000EEDL,1)[0]&255)==1);
@@ -693,7 +710,14 @@ public class EmulateOriginalVial extends GhidraScript {
             row.addProperty("seed_after",(get(0x20000EE6L,1)[0]&255)|((get(0x20000EE7L,1)[0]&255)<<8));
             row.addProperty("next_wait",getWord(wait)); row.addProperty("original_memcpy_calls",copies[0]);
             if(realHsv) row.addProperty("original_hsv_calls",hsvCalls[0]);
-            row.addProperty("led_state_rgb_hex",hex.formatHex(get(state,216))); steps.add(row);
+            row.addProperty("led_state_rgb_hex",hex.formatHex(get(state,216)));
+            if(staging) {
+                byte[] beforeCache=get(state,216),beforeWait=get(wait,4),beforeGlobals=get(0x20000EE4L,12);
+                rgbPostEffectStaging(row,29,caps,group);
+                if(!java.util.Arrays.equals(beforeCache,get(state,216)) || !java.util.Arrays.equals(beforeWait,get(wait,4)) ||
+                   !java.util.Arrays.equals(beforeGlobals,get(0x20000EE4L,12))) throw new Exception("Mode29 post pass changed effect state");
+            }
+            steps.add(row);
         }
         sequence.add("steps",steps); sequences.add(sequence);
     }
@@ -764,22 +788,338 @@ public class EmulateOriginalVial extends GhidraScript {
         JsonArray steps=new JsonArray();
         for(int iter=0;iter<5;iter++) {
             JsonObject row=rgbMode15Step(128,now,hsv,flags,iter,true);
-            row.addProperty("effect_grb_hex",hex.formatHex(get(COLORS,216)));
-            final int[] white={0};
-            executeHooked(0x080156CEL,0x0801571AL,pc -> {
-                if(pc==0x0801AE80L) {
-                    register("r0",caps); thread.overrideCounter(toAddr(register("lr")&~1L)); return true;
-                }
-                if(pc==0x08014A78L && register("r0")==22 && register("r1")==255 && register("r2")==255 && register("r3")==255) white[0]++;
-                if(!((pc>=0x080156CEL && pc<0x08015756L) || (pc>=0x08014A7CL && pc<0x08014AA4L) ||
-                     (pc>=0x08014A78L && pc<0x08014A7CL) || (pc>=0x080132ECL && pc<0x08013300L)))
-                    throw new Exception("Mode15 post-effect escaped indicator/filter/RAM setter slice");
-                return false;
-            },0,0,0,0,15,0,0x20000EEDL);
-            if(getWord(FLAGS)!=group || getWord(FLAGS-4)!=0xA5A5A5A5L || getWord(FLAGS+4)!=0xA5A5A5A5L ||
-               getWord(COLORS-4)!=0xA5A5A5A5L || getWord(COLORS+216)!=0xA5A5A5A5L)
-                throw new Exception("Mode15 post-effect group/staging guard changed");
-            row.addProperty("post_grb_hex",hex.formatHex(get(COLORS,216))); row.addProperty("caps_white_calls",white[0]); steps.add(row);
+            rgbPostEffectStaging(row,15,caps,group); steps.add(row);
+        }
+        sequence.add("steps",steps); sequences.add(sequence);
+    }
+
+    private void rgbPostEffectStaging(JsonObject row,int effect,int caps,long group) throws Exception {
+        row.addProperty("effect_grb_hex",hex.formatHex(get(COLORS,216)));
+        final int[] white={0};
+        executeHooked(0x080156CEL,0x0801571AL,pc -> {
+            if(pc==0x0801AE80L) {
+                register("r0",caps); thread.overrideCounter(toAddr(register("lr")&~1L)); return true;
+            }
+            if(pc==0x08014A78L && register("r0")==22 && register("r1")==255 && register("r2")==255 && register("r3")==255) white[0]++;
+            if(!((pc>=0x080156CEL && pc<0x08015756L) || (pc>=0x08014A7CL && pc<0x08014AA4L) ||
+                 (pc>=0x08014A78L && pc<0x08014A7CL) || (pc>=0x080132ECL && pc<0x08013300L)))
+                throw new Exception("Post-effect escaped indicator/filter/RAM setter slice");
+            return false;
+        },0,0,0,0,effect,0,0x20000EEDL);
+        if(getWord(FLAGS)!=group || getWord(FLAGS-4)!=0xA5A5A5A5L || getWord(FLAGS+4)!=0xA5A5A5A5L ||
+           getWord(COLORS-4)!=0xA5A5A5A5L || getWord(COLORS+216)!=0xA5A5A5A5L)
+            throw new Exception("Post-effect group/staging guard changed");
+        row.addProperty("post_grb_hex",hex.formatHex(get(COLORS,216))); row.addProperty("caps_white_calls",white[0]);
+    }
+
+    private void rgbRenderBegin(JsonArray cases,String grid,int effect,int lastEffect,int enable,int lastEnable,int oldFlags,int newFlags,int iter) throws Exception {
+        byte[] colorGuard=new byte[224]; java.util.Arrays.fill(colorGuard,(byte)0xA5); put(COLORS-4,colorGuard);
+        byte[] input=ramp(); put(COLORS,input);
+        byte[] configGuard=new byte[16]; java.util.Arrays.fill(configGuard,(byte)0xA5); put(0x20001CDCL,configGuard);
+        byte[] config={(byte)(60|enable),0,(byte)255,(byte)255,(byte)128,(byte)newFlags,(byte)0xA5,(byte)0xA5}; put(0x20001CE0L,config);
+        byte[] globals=new byte[12]; java.util.Arrays.fill(globals,(byte)0xA5);
+        globals[4]=(byte)iter; globals[5]=(byte)oldFlags; globals[7]=(byte)lastEffect; globals[8]=(byte)lastEnable;
+        put(0x20000EE4L,globals);
+        byte[] stack=new byte[264]; java.util.Arrays.fill(stack,(byte)0xA5); put(0x2000FEFCL,stack);
+        int[] clears={0};
+        executeHooked(0x08014AA4L,0x08014ADEL,pc -> {
+            if(pc==0x08012FC8L) {
+                if(register("r0")!=0 || register("r1")!=0 || register("r2")!=0) throw new Exception("Nonblack render-begin clear");
+                clears[0]++;
+            }
+            if(!((pc>=0x08014AA4L && pc<0x08014ADEL) || (pc>=0x08014B44L && pc<0x08014B48L) ||
+                 (pc>=0x08012FC8L && pc<0x08012FCCL) || (pc>=0x080132ECL && pc<0x08013300L) || (pc>=0x08013304L && pc<0x08013320L)))
+                throw new Exception("Render-begin escaped pre-dispatch/RAM setter slice");
+            return false;
+        },effect);
+        byte[] after=get(0x20000EE4L,12);
+        for(int index:new int[]{0,1,2,3,4,7,8,9,10,11}) if(after[index]!=globals[index]) throw new Exception("Render-begin changed unrelated globals");
+        if(!java.util.Arrays.equals(config,get(0x20001CE0L,8)) || getWord(0x20001CDCL)!=0xA5A5A5A5L ||
+           getWord(0x20001CE8L)!=0xA5A5A5A5L || getWord(COLORS-4)!=0xA5A5A5A5L || getWord(COLORS+216)!=0xA5A5A5A5L ||
+           getWord(0x2000FEFCL)!=0xA5A5A5A5L || getWord(0x20010000L)!=0xA5A5A5A5L || register("sp")!=0x2000FF90L)
+            throw new Exception("Render-begin input/frame/staging guard changed");
+        JsonObject row=new JsonObject(); row.addProperty("grid",grid); row.addProperty("effect",effect); row.addProperty("last_effect",lastEffect);
+        row.addProperty("enable",enable); row.addProperty("last_enable",lastEnable); row.addProperty("old_flags",oldFlags);
+        row.addProperty("new_flags",newFlags); row.addProperty("iter",iter); row.addProperty("params_after_hex",hex.formatHex(get(0x20000EE8L,3)));
+        row.addProperty("clear_calls",clears[0]); row.addProperty("grb_sha256",digest(get(COLORS,216))); cases.add(row);
+    }
+
+    private void rgbFlush(JsonArray cases,int effect,int enable,int oldEffect,int oldEnable,String pattern) throws Exception {
+        byte[] input=pattern.equals("ramp")?ramp():new byte[216];
+        if(pattern.equals("white")) java.util.Arrays.fill(input,(byte)255);
+        byte[] colorGuard=new byte[224]; java.util.Arrays.fill(colorGuard,(byte)0xA5); put(COLORS-4,colorGuard); put(COLORS,input);
+        byte[] pwmGuard=new byte[1952*4+8]; java.util.Arrays.fill(pwmGuard,(byte)0xA5); put(PWM-4,pwmGuard);
+        byte[] configGuard=new byte[16]; java.util.Arrays.fill(configGuard,(byte)0xA5); put(0x20001CDCL,configGuard);
+        byte[] config={(byte)(60|enable),0,(byte)255,(byte)255,(byte)128,(byte)255,(byte)0xA5,(byte)0xA5}; put(0x20001CE0L,config);
+        byte[] stack=new byte[264]; java.util.Arrays.fill(stack,(byte)0xA5); put(0x2000FEFCL,stack);
+        byte[] globals=new byte[12]; java.util.Arrays.fill(globals,(byte)0xA5);
+        globals[4]=4; globals[5]=(byte)255; globals[6]=0; globals[7]=(byte)oldEffect; globals[8]=(byte)oldEnable; globals[9]=2; put(0x20000EE4L,globals);
+        JsonArray observations=new JsonArray(); int[] encodes={0};
+        executeHooked(0x08012FCCL,0x08010000L,pc -> {
+            if(pc==0x08013320L || pc==0x08012FE2L) {
+                JsonObject event=new JsonObject(); event.addProperty("phase",pc==0x08013320L?"before":"after");
+                event.add("trackers_state",unsigned(get(0x20000EEBL,3))); event.addProperty("pwm_sha256",digest(get(PWM,1952*4))); observations.add(event);
+                if(pc==0x08013320L) encodes[0]++;
+            }
+            if(!((pc>=0x08012FCCL && pc<0x08012FECL) || (pc>=0x08013320L && pc<0x08013380L)))
+                throw new Exception("Flush escaped tracker/encoder/RAM state slices");
+            return false;
+        },effect);
+        byte[] after=get(0x20000EE4L,12);
+        for(int i:new int[]{0,1,2,3,4,5,6,10,11}) if(after[i]!=globals[i]) throw new Exception("Flush modified unrelated globals");
+        if(!java.util.Arrays.equals(config,get(0x20001CE0L,8)) || !java.util.Arrays.equals(input,get(COLORS,216)) ||
+           getWord(0x20001CDCL)!=0xA5A5A5A5L || getWord(0x20001CE8L)!=0xA5A5A5A5L ||
+           getWord(PWM-4)!=0xA5A5A5A5L || getWord(PWM+1952*4)!=0xA5A5A5A5L || getWord(COLORS+216)!=0xA5A5A5A5L ||
+           getWord(0x2000FEFCL)!=0xA5A5A5A5L || getWord(0x20010000L)!=0xA5A5A5A5L || register("sp")!=0x20010000L)
+            throw new Exception("Flush input/frame/PWM/GRB guard changed");
+        for(int reg=4;reg<12;reg++) if(register("r"+reg)!=0) throw new Exception("Flush clobbered saved register");
+        JsonObject row=new JsonObject(); row.addProperty("effect",effect); row.addProperty("enable",enable);
+        row.addProperty("old_effect",oldEffect); row.addProperty("old_enable",oldEnable); row.addProperty("pattern",pattern);
+        row.addProperty("input_grb_hex",hex.formatHex(input)); row.addProperty("encoder_calls",encodes[0]); row.add("observations",observations);
+        row.add("final_trackers_state",unsigned(get(0x20000EEBL,3))); row.addProperty("final_pwm_sha256",digest(get(PWM,1952*4))); cases.add(row);
+    }
+
+    private void rgbCycle(JsonArray sequences,int seed,int caps,int keylight,int underglow) throws Exception {
+        long group=0xA5B60000L|keylight|(underglow<<8);
+        byte[] guard=new byte[224]; java.util.Arrays.fill(guard,(byte)0xA5); put(COLORS-4,guard); put(COLORS,ramp());
+        byte[] pwm=new byte[1952*4+8]; java.util.Arrays.fill(pwm,(byte)0xA5); put(PWM-4,pwm);
+        byte[] groupGuard=new byte[12]; java.util.Arrays.fill(groupGuard,(byte)0xA5); put(FLAGS-4,groupGuard); putWord(FLAGS,group);
+        byte[] cacheGuard=new byte[224]; java.util.Arrays.fill(cacheGuard,(byte)0xA5); java.util.Arrays.fill(cacheGuard,4,220,(byte)0); put(0x20001B51L,cacheGuard);
+        byte[] waitGuard=new byte[12]; java.util.Arrays.fill(waitGuard,(byte)0xA5); put(0x2000217CL,waitGuard); putWord(0x20002180L,0);
+        byte[] globals=new byte[12]; java.util.Arrays.fill(globals,(byte)0xA5); globals[2]=(byte)seed; globals[3]=(byte)(seed>>8);
+        globals[4]=0; globals[5]=0; globals[6]=0; globals[7]=(byte)255; globals[8]=(byte)255; globals[9]=3; put(0x20000EE4L,globals);
+        JsonObject sequence=new JsonObject(); sequence.addProperty("initial_seed",seed); sequence.addProperty("value",seed==0?255:128);
+        sequence.addProperty("caps",caps); sequence.addProperty("group_word",group); sequence.addProperty("initial_grb_hex",hex.formatHex(ramp()));
+        JsonArray steps=new JsonArray();
+        int[][] frames={{15,0,255,0},{15,0,255,16},{15,1,255,32},{15,1,4,48},{29,1,255,1000},{29,1,255,1001},{29,2,255,1002},{29,2,255,5000},{29,0,255,5016},{29,0,255,5032}};
+        for(int frame=0;frame<frames.length;frame++) {
+            int[] f=frames[frame]; int effect=f[1]==0?0:f[0];
+            byte[] config={(byte)((f[0]<<2)|f[1]),(byte)(f[0]==29?17:0),(byte)(f[0]==29?254:255),(byte)(seed==0?255:128),(byte)128,(byte)f[2],(byte)0xA5,(byte)0xA5};
+            put(0x20001CE0L,config); putWord(0x200018E0L,f[3]); put(0x20000EE8L,new byte[]{0}); put(0x20000EEDL,new byte[]{1});
+            int chunk=0;
+            while((get(0x20000EEDL,1)[0]&255)==1) {
+                if(chunk>=5) throw new Exception("Selected cycle exceeded five chunks");
+                int iter=get(0x20000EE8L,1)[0]&255; JsonArray trace=new JsonArray(); int[] hsvCalls={0};
+                byte[] callGuard=new byte[584]; java.util.Arrays.fill(callGuard,(byte)0xA5); put(0x2000FDFCL,callGuard);
+                put(0x2000FE00L,new byte[576]); // Defined synthetic call-frame/HSV padding, as in existing effect probes.
+                executeHooked(0x08014AA4L,0x08010000L,pc -> {
+                    if(pc==0x080147C0L) hsvCalls[0]++;
+                    if(pc==0x08012FC8L || pc==0x08014A78L) {
+                        JsonArray event=new JsonArray(); event.add(pc==0x08012FC8L?0:1);
+                        if(pc==0x08014A78L) event.add(register("r0"));
+                        for(int reg=pc==0x08012FC8L?0:1;reg<(pc==0x08012FC8L?3:4);reg++) event.add(register("r"+reg)&255);
+                        trace.add(event); // Observation only; original RAM stores run.
+                    }
+                    if(!((pc>=0x08014AA4L && pc<0x08014AE8L) || (pc>=0x08014B44L && pc<0x08014B5CL) ||
+                         (pc>=0x08014D1AL && pc<0x08014D52L) || (pc>=0x08014F58L && pc<0x08015054L) ||
+                         (pc>=0x0801509CL && pc<0x0801513EL) || (pc>=0x0801BE34L && pc<0x0801BED0L) ||
+                         (pc>=0x08012B48L && pc<0x08012B98L) || (pc>=0x08014A78L && pc<0x08014AA4L) ||
+                         (pc>=0x080147C0L && pc<0x08014868L) || (pc>=0x08014900L && pc<0x0801491EL) ||
+                         (pc>=0x08014924L && pc<0x08014934L) || (pc>=0x08011890L && pc<0x08011ABCL) ||
+                         (pc>=0x08012FC8L && pc<0x08012FCCL) || (pc>=0x080132ECL && pc<0x08013300L) || (pc>=0x08013304L && pc<0x08013320L)))
+                        throw new Exception("Selected cycle renderer escaped: "+Long.toHexString(pc));
+                    return false;
+                },effect);
+                if(getWord(0x2000FDFCL)!=0xA5A5A5A5L || getWord(0x20010040L)!=0xA5A5A5A5L || register("sp")!=0x20010000L)
+                    throw new Exception("Selected cycle call-frame guard changed");
+                JsonObject row=new JsonObject(); row.addProperty("frame",frame); row.addProperty("chunk",chunk); row.addProperty("mode",f[0]); row.addProperty("enable",f[1]);
+                row.addProperty("flags",f[2]); row.addProperty("now",f[3]); row.addProperty("effect",effect); row.addProperty("iter_before",iter);
+                row.addProperty("params_after_hex",hex.formatHex(get(0x20000EE8L,3))); row.add("render_trace",trace); row.addProperty("hsv_calls",hsvCalls[0]);
+                row.addProperty("render_state",get(0x20000EEDL,1)[0]&255); row.add("last_before_flush",unsigned(get(0x20000EEBL,2)));
+                row.addProperty("seed_after",(get(0x20000EE6L,1)[0]&255)|((get(0x20000EE7L,1)[0]&255)<<8));
+                row.addProperty("next_wait",getWord(0x20002180L)); row.addProperty("cache_rgb_hex",hex.formatHex(get(0x20001B55L,216)));
+                if(effect!=0) rgbPostEffectStaging(row,effect,caps,group);
+                else { row.addProperty("effect_grb_hex",hex.formatHex(get(COLORS,216))); row.addProperty("post_grb_hex",hex.formatHex(get(COLORS,216))); row.addProperty("caps_white_calls",0); }
+                boolean flush=(get(0x20000EEDL,1)[0]&255)==2;
+                if(flush) executeHooked(0x08012FCCL,0x08010000L,pc -> {
+                    if(!((pc>=0x08012FCCL && pc<0x08012FECL) || (pc>=0x08013320L && pc<0x08013380L))) throw new Exception("Selected cycle flush escaped");
+                    return false;
+                },effect);
+                row.addProperty("did_flush",flush); row.add("final_trackers_state",unsigned(get(0x20000EEBL,3))); row.addProperty("pwm_sha256",digest(get(PWM,1952*4)));
+                if(get(0x20000EE4L,2)[0]!=(byte)0xA5 || get(0x20000EE4L,2)[1]!=(byte)0xA5 ||
+                   get(0x20000EEEL,2)[0]!=(byte)0xA5 || get(0x20000EEEL,2)[1]!=(byte)0xA5 ||
+                   !java.util.Arrays.equals(config,get(0x20001CE0L,8)) || getWord(FLAGS)!=group || getWord(FLAGS-4)!=0xA5A5A5A5L || getWord(FLAGS+4)!=0xA5A5A5A5L ||
+                   getWord(PWM-4)!=0xA5A5A5A5L || getWord(PWM+1952*4)!=0xA5A5A5A5L || getWord(COLORS+216)!=0xA5A5A5A5L ||
+                   getWord(0x20001B51L)!=0xA5A5A5A5L || getWord(0x20001C2DL)!=0xA5A5A5A5L ||
+                   getWord(0x2000217CL)!=0xA5A5A5A5L || getWord(0x20002184L)!=0xA5A5A5A5L)
+                    throw new Exception("Selected cycle input/cache/wait/staging guard changed");
+                steps.add(row); chunk++;
+            }
+        }
+        sequence.add("steps",steps); sequences.add(sequence);
+    }
+
+    private void rgbStart(JsonArray cases,long timer,int iter,int flags,int init,int pattern) throws Exception {
+        long source=0x20001AC6L,dest=0x20001886L,clock=0x20001CE8L,frame=0x200018E0L;
+        byte[] hits=new byte[41],old=new byte[41];
+        for(int i=0;i<41;i++) { hits[i]=(byte)(pattern==0?0:pattern==1?i*73+50:pattern==2?255:(i%2==0?0:255)); }
+        hits[0]=(byte)(pattern==0?0:pattern==1?1:pattern==2?8:255);
+        for(int i=0;i<41;i++) old[i]=(byte)~hits[i];
+        byte[] hitGuard=new byte[49]; java.util.Arrays.fill(hitGuard,(byte)0xA5); put(source-4,hitGuard); put(dest-4,hitGuard); put(source,hits); put(dest,old);
+        byte[] timerGuard=new byte[12]; java.util.Arrays.fill(timerGuard,(byte)0xA5); put(frame-4,timerGuard); put(clock-4,timerGuard);
+        putWord(frame,timer^0xFFFFFFFFL); putWord(clock,timer);
+        byte[] globals=new byte[12]; java.util.Arrays.fill(globals,(byte)0xA5); globals[2]=(byte)0xEF; globals[3]=(byte)0xBE;
+        globals[4]=(byte)iter; globals[5]=(byte)flags; globals[6]=(byte)init; globals[7]=29; globals[8]=2; globals[9]=0; put(0x20000EE4L,globals);
+        byte[] pixels=ramp(); put(COLORS,pixels); putWord(FLAGS,0xA5B6FF02L);
+        byte[] stack=new byte[584]; java.util.Arrays.fill(stack,(byte)0xA5); put(0x2000FDFCL,stack); put(0x2000FE00L,new byte[576]);
+        int[] copies={0};
+        executeHooked(0x080156AEL,0x0801571AL,pc -> {
+            if(pc==0x080156AEL) { register("r4",0x44556677L); register("r5",timer); register("r6",0x20000EEDL); register("sp",0x2000FFD8L); register("OV",0); } // Parent state0 CMP3 yields OV=0; define this active-frame CPU input.
+            if(pc==0x08011890L) {
+                if(register("r0")!=dest || register("r1")!=source || register("r2")!=41) throw new Exception("Start memcpy request differs");
+                copies[0]++;
+            }
+            if(!((pc>=0x080156AEL && pc<0x080156C8L) || (pc>=0x08011890L && pc<0x08011ABCL))) throw new Exception("Start escaped supplied active-frame slice");
+            return false; // Original memcpy executes, no API/instruction substitution.
+        });
+        if(register("sp")!=0x2000FFD8L || register("r4")!=0x44556677L || register("r5")!=timer || register("r6")!=0x20000EEDL || copies[0]!=1 ||
+           getWord(0x2000FDFCL)!=0xA5A5A5A5L || getWord(0x20010040L)!=0xA5A5A5A5L ||
+           getWord(source-4)!=0xA5A5A5A5L || getWord(source+41)!=0xA5A5A5A5L || getWord(dest-4)!=0xA5A5A5A5L || getWord(dest+41)!=0xA5A5A5A5L ||
+           getWord(frame-4)!=0xA5A5A5A5L || getWord(frame+4)!=0xA5A5A5A5L || getWord(clock+4)!=0xA5A5A5A5L || getWord(clock)!=timer ||
+           !java.util.Arrays.equals(hits,get(source,41)) || !java.util.Arrays.equals(pixels,get(COLORS,216)) || getWord(FLAGS)!=0xA5B6FF02L)
+            throw new Exception(String.format("Start guard: sp=%08x r4=%08x r5=%08x r6=%08x copies=%d hitGuards=%08x/%08x/%08x/%08x clock=%08x frameGuards=%08x/%08x/%08x stack=%08x/%08x",register("sp"),register("r4"),register("r5"),register("r6"),copies[0],getWord(source-4),getWord(source+41),getWord(dest-4),getWord(dest+41),getWord(clock),getWord(frame-4),getWord(frame+4),getWord(clock+4),getWord(0x2000FDFCL),getWord(0x20010040L)));
+        byte[] expected=globals.clone(); expected[4]=0; expected[9]=1;
+        if(!java.util.Arrays.equals(expected,get(0x20000EE4L,12))) throw new Exception("Start changed fields outside iter/state");
+        JsonObject row=new JsonObject(); row.addProperty("timer_buffer",timer); row.addProperty("old_frame_timer",timer^0xFFFFFFFFL);
+        row.addProperty("iter",iter); row.addProperty("flags",flags); row.addProperty("init",init); row.addProperty("pattern",pattern);
+        row.addProperty("input_hits_hex",hex.formatHex(hits)); row.addProperty("old_tracker_hex",hex.formatHex(old)); row.addProperty("tracker_after_hex",hex.formatHex(get(dest,41)));
+        row.addProperty("frame_timer_after",getWord(frame)); row.addProperty("params_after_hex",hex.formatHex(get(0x20000EE8L,3))); row.addProperty("task_state_after",get(0x20000EEDL,1)[0]&255);
+        row.addProperty("memcpy_calls",copies[0]); cases.add(row);
+    }
+
+    private void rgbTimers(JsonArray cases,long old,long delta,int skew,int count,int pattern) throws Exception {
+        long buffer=0x20001AC6L,clock=0x20001CE8L,frame=0x200018E0L,tracker=0x20001886L;
+        long first=(old+delta)&0xFFFFFFFFL,second=(first+skew)&0xFFFFFFFFL;
+        byte[] hits=new byte[41]; for(int i=0;i<41;i++) hits[i]=(byte)(i*73+19); hits[0]=(byte)count;
+        int[][] ticks={{0,0,0,0,0,0,0,0},{0,1,65534,65535,5,65530,7,65520},{65535,0,65534,1,65535,2,65530,3}};
+        for(int i=0;i<8;i++) { hits[25+2*i]=(byte)ticks[pattern][i]; hits[26+2*i]=(byte)(ticks[pattern][i]>>8); }
+        byte[] guard=new byte[49]; java.util.Arrays.fill(guard,(byte)0xA5); put(buffer-4,guard); put(buffer,hits); put(tracker-4,guard);
+        byte[] untouchedTracker=new byte[41]; java.util.Arrays.fill(untouchedTracker,(byte)0x5A); put(tracker,untouchedTracker);
+        byte[] timeGuard=new byte[12]; java.util.Arrays.fill(timeGuard,(byte)0xA5); put(clock-4,timeGuard); put(frame-4,timeGuard); putWord(clock,old); putWord(frame,old^0xFFFFFFFFL);
+        byte[] globals=new byte[12]; java.util.Arrays.fill(globals,(byte)0xA5); put(0x20000EE4L,globals);
+        byte[] pixels=ramp(); put(COLORS,pixels); putWord(FLAGS,0xA5B6FF02L);
+        byte[] stack=new byte[584]; java.util.Arrays.fill(stack,(byte)0xA5); put(0x2000FDFCL,stack); put(0x2000FE00L,new byte[576]);
+        int[] reads={0};
+        executeHooked(0x08015618L,0x08015658L,pc -> {
+            if(pc==0x0801B374L) {
+                if(reads[0]>=2) throw new Exception("Extra timer read"); register("r0",reads[0]++==0?first:second);
+                thread.overrideCounter(toAddr(register("lr")&~1L)); return true; // Clock getter only; no hardware clock executed.
+            }
+            if(!((pc>=0x08015618L && pc<0x08015658L) || (pc>=0x0801567AL && pc<0x080156AAL))) throw new Exception("Timers escaped clock/aging prefix");
+            return false;
+        });
+        if(reads[0]!=2 || register("sp")!=0x2000FFD8L || getWord(clock)!=second || getWord(frame)!=(old^0xFFFFFFFFL) ||
+           getWord(clock-4)!=0xA5A5A5A5L || getWord(clock+4)!=0xA5A5A5A5L || getWord(frame-4)!=0xA5A5A5A5L || getWord(frame+4)!=0xA5A5A5A5L ||
+           getWord(buffer-4)!=0xA5A5A5A5L || getWord(buffer+41)!=0xA5A5A5A5L || getWord(tracker-4)!=0xA5A5A5A5L || getWord(tracker+41)!=0xA5A5A5A5L ||
+           getWord(0x2000FDFCL)!=0xA5A5A5A5L || getWord(0x20010040L)!=0xA5A5A5A5L ||
+           !java.util.Arrays.equals(untouchedTracker,get(tracker,41)) || !java.util.Arrays.equals(globals,get(0x20000EE4L,12)) ||
+           !java.util.Arrays.equals(pixels,get(COLORS,216)) || getWord(FLAGS)!=0xA5B6FF02L)
+            throw new Exception("Timers changed frame/tracker/params/state/group/staging/guards");
+        JsonObject row=new JsonObject(); row.addProperty("old_timer",old); row.addProperty("delta",delta); row.addProperty("skew",skew); row.addProperty("count",count); row.addProperty("pattern",pattern);
+        row.addProperty("first_clock",first); row.addProperty("second_clock",second); row.addProperty("clock_reads",reads[0]); row.addProperty("timer_buffer_after",getWord(clock));
+        row.addProperty("input_hits_hex",hex.formatHex(hits)); row.addProperty("hits_after_hex",hex.formatHex(get(buffer,41))); cases.add(row);
+    }
+
+    private void rgbTaskStart(JsonArray cases,int mode,int enable,int suspend,long old,int count,int iter) throws Exception {
+        long first=(old+1)&0xFFFFFFFFL,second=(first+3)&0xFFFFFFFFL;
+        byte[] hits=new byte[41]; for(int i=0;i<41;i++) hits[i]=(byte)(i*73+19); hits[0]=(byte)count;
+        int[] ticks={65535,0,65534,1,65535,2,65530,3};
+        for(int i=0;i<8;i++) { hits[25+2*i]=(byte)ticks[i]; hits[26+2*i]=(byte)(ticks[i]>>8); }
+        byte[] guard=new byte[49]; java.util.Arrays.fill(guard,(byte)0xA5); put(0x20001AC2L,guard); put(0x20001882L,guard); put(0x20001AC6L,hits);
+        byte[] tracker=new byte[41]; java.util.Arrays.fill(tracker,(byte)0x5A); put(0x20001886L,tracker);
+        byte[] combined=new byte[20]; java.util.Arrays.fill(combined,(byte)0xA5); put(0x20001CDCL,combined);
+        byte[] cfg={(byte)((mode<<2)|enable),17,(byte)254,(byte)255,(byte)128,4,(byte)0xA5,(byte)0xA5}; put(0x20001CE0L,cfg); putWord(0x20001CE8L,old);
+        byte[] tiny=new byte[12]; java.util.Arrays.fill(tiny,(byte)0xA5); put(0x200018DCL,tiny); putWord(0x200018E0L,old^0xFFFFFFFFL);
+        byte[] suspendGuard=new byte[9]; java.util.Arrays.fill(suspendGuard,(byte)0xA5); put(0x20001CFDL,suspendGuard); put(0x20001D01L,new byte[]{(byte)suspend});
+        byte[] globals=new byte[12]; java.util.Arrays.fill(globals,(byte)0xA5); globals[2]=(byte)0xEF; globals[3]=(byte)0xBE;
+        globals[4]=(byte)iter; globals[5]=(byte)0xA5; globals[6]=1; globals[7]=29; globals[8]=2; globals[9]=0; put(0x20000EE4L,globals);
+        byte[] pixels=ramp(); put(COLORS,pixels); putWord(FLAGS,0xA5B6FF02L);
+        byte[] stack=new byte[584]; java.util.Arrays.fill(stack,(byte)0xA5); put(0x2000FDFCL,stack); put(0x2000FE00L,new byte[576]);
+        int[] reads={0},selected={-1},copies={0};
+        executeHooked(0x08015618L,0x08010000L,pc -> {
+            if(pc==0x0801B374L) { if(reads[0]>=2) throw new Exception("Extra task-start clock"); register("r0",reads[0]++==0?first:second); thread.overrideCounter(toAddr(register("lr")&~1L)); return true; }
+            if(pc==0x0801566AL) selected[0]=(int)register("r4");
+            if(pc==0x08011890L) { if(register("r0")!=0x20001886L || register("r1")!=0x20001AC6L || register("r2")!=41) throw new Exception("Task-start memcpy differs"); copies[0]++; }
+            if(!((pc>=0x08015618L && pc<0x080156C8L) || (pc>=0x0801571AL && pc<0x08015720L) || (pc>=0x08011890L && pc<0x08011ABCL))) throw new Exception("Task-start entered unsupported render/flush/sync");
+            return false;
+        });
+        byte[] expected=globals.clone(); expected[4]=0; expected[9]=1;
+        if(reads[0]!=2 || selected[0]<0 || copies[0]!=1 || register("sp")!=0x20010000L ||
+           !java.util.Arrays.equals(expected,get(0x20000EE4L,12)) || !java.util.Arrays.equals(cfg,get(0x20001CE0L,8)) ||
+           !java.util.Arrays.equals(get(0x20001AC6L,41),get(0x20001886L,41)) || getWord(0x20001CE8L)!=second || getWord(0x200018E0L)!=second ||
+           getWord(0x20001CDCL)!=0xA5A5A5A5L || getWord(0x20001CECL)!=0xA5A5A5A5L || getWord(0x200018DCL)!=0xA5A5A5A5L || getWord(0x200018E4L)!=0xA5A5A5A5L ||
+           getWord(0x20001AC2L)!=0xA5A5A5A5L || getWord(0x20001AEFL)!=0xA5A5A5A5L || getWord(0x20001882L)!=0xA5A5A5A5L || getWord(0x200018AFL)!=0xA5A5A5A5L ||
+           getWord(0x20001CFDL)!=0xA5A5A5A5L || getWord(0x20001D02L)!=0xA5A5A5A5L || (get(0x20001D01L,1)[0]&255)!=suspend ||
+           getWord(0x2000FDFCL)!=0xA5A5A5A5L || getWord(0x20010040L)!=0xA5A5A5A5L || !java.util.Arrays.equals(pixels,get(COLORS,216)) || getWord(FLAGS)!=0xA5B6FF02L)
+            throw new Exception("Whole task-start inputs/copy/timers/global/stack guards differ");
+        for(int i=4;i<=11;i++) if(register("r"+i)!=0) throw new Exception("Task-start did not preserve callee-saved register");
+        JsonObject row=new JsonObject(); row.addProperty("mode",mode); row.addProperty("enable",enable); row.addProperty("suspend",suspend); row.addProperty("old_timer",old); row.addProperty("count",count); row.addProperty("iter",iter);
+        row.addProperty("first_clock",first); row.addProperty("second_clock",second); row.addProperty("selected_effect",selected[0]); row.addProperty("clock_reads",reads[0]); row.addProperty("memcpy_calls",copies[0]);
+        row.addProperty("input_hits_hex",hex.formatHex(hits)); row.addProperty("aged_hits_hex",hex.formatHex(get(0x20001AC6L,41))); row.addProperty("tracker_after_hex",hex.formatHex(get(0x20001886L,41)));
+        row.addProperty("timer_buffer_after",getWord(0x20001CE8L)); row.addProperty("frame_timer_after",getWord(0x200018E0L)); row.addProperty("params_after_hex",hex.formatHex(get(0x20000EE8L,3))); row.addProperty("state_after",get(0x20000EEDL,1)[0]&255); cases.add(row);
+    }
+
+    private void rgbTaskCycle(JsonArray sequences,int seed,int caps,int enabledGroups) throws Exception {
+        long group=0xA5B60000L|(enabledGroups==0?0:0x101);
+        byte[] guarded=new byte[224]; java.util.Arrays.fill(guarded,(byte)0xA5); put(COLORS-4,guarded); put(COLORS,ramp());
+        byte[] pwm=new byte[1952*4+8]; java.util.Arrays.fill(pwm,(byte)0xA5); put(PWM-4,pwm);
+        byte[] groupGuard=new byte[12]; java.util.Arrays.fill(groupGuard,(byte)0xA5); put(FLAGS-4,groupGuard); putWord(FLAGS,group);
+        byte[] cacheGuard=new byte[224]; java.util.Arrays.fill(cacheGuard,(byte)0xA5); java.util.Arrays.fill(cacheGuard,4,220,(byte)0); put(0x20001B51L,cacheGuard);
+        byte[] tiny=new byte[12]; java.util.Arrays.fill(tiny,(byte)0xA5); put(0x2000217CL,tiny); putWord(0x20002180L,0); put(0x200018DCL,tiny); putWord(0x200018E0L,0);
+        byte[] hits=new byte[41]; for(int i=0;i<41;i++) hits[i]=(byte)(i*73+19); hits[0]=8;
+        int[] ticks={65535,0,65534,1,65535,2,65530,3}; for(int i=0;i<8;i++) { hits[25+2*i]=(byte)ticks[i]; hits[26+2*i]=(byte)(ticks[i]>>8); }
+        byte[] hitGuard=new byte[49]; java.util.Arrays.fill(hitGuard,(byte)0xA5); put(0x20001AC2L,hitGuard); put(0x20001882L,hitGuard); put(0x20001AC6L,hits); put(0x20001886L,new byte[41]);
+        byte[] combined=new byte[20]; java.util.Arrays.fill(combined,(byte)0xA5); put(0x20001CDCL,combined); putWord(0x20001CE8L,31);
+        byte[] sg=new byte[9]; java.util.Arrays.fill(sg,(byte)0xA5); put(0x20001CFDL,sg);
+        byte[] globals=new byte[12]; java.util.Arrays.fill(globals,(byte)0xA5); globals[2]=(byte)seed; globals[3]=(byte)(seed>>8); globals[4]=0; globals[5]=0; globals[6]=0; globals[7]=(byte)255; globals[8]=(byte)255; globals[9]=3; put(0x20000EE4L,globals);
+        JsonObject sequence=new JsonObject(); sequence.addProperty("initial_seed",seed); sequence.addProperty("value",seed==0?255:128); sequence.addProperty("caps",caps); sequence.addProperty("group_word",group); sequence.addProperty("initial_hits_hex",hex.formatHex(hits));
+        JsonArray steps=new JsonArray(); int[][] frames={{15,1,32},{29,1,1000},{29,2,2000},{29,2,2004},{15,0,3000},{15,1,4000},{29,3,5000}};
+        for(int frame=0;frame<frames.length;frame++) {
+            if((get(0x20000EEDL,1)[0]&255)!=3) throw new Exception("Task frame did not finish SYNCING");
+            put(0x20000EEDL,new byte[]{0}); int call=0;
+            do {
+                int before=get(0x20000EEDL,1)[0]&255,mode=frames[frame][0],enable=frames[frame][1],suspend=0,flags=frame==5&&call>=3?4:255;
+                if(before>2 || call>7) throw new Exception("Task cycle entered unsupported scheduling");
+                if(before==2) { if(frame==0) mode=29; if(frame==2) suspend=1; if(frame==3) {mode=15;enable=0;} if(frame==5) {mode=29;enable=3;} }
+                byte[] cfg={(byte)((mode<<2)|enable),(byte)(mode==29?17:0),(byte)(mode==29?254:255),(byte)(seed==0?255:128),(byte)128,(byte)flags,(byte)0xA5,(byte)0xA5};
+                put(0x20001CE0L,cfg); put(0x20001D01L,new byte[]{(byte)suspend}); long first=frames[frame][2]+call*4,second=first+1;
+                byte[] stack=new byte[584]; java.util.Arrays.fill(stack,(byte)0xA5); put(0x2000FDFCL,stack); put(0x2000FE00L,new byte[576]);
+                int[] reads={0},selected={-1},hsv={0},whites={0},flushes={0}; boolean[] rendering={false}; JsonArray trace=new JsonArray();
+                executeHooked(0x08015618L,0x08010000L,pc -> {
+                    if(pc==0x0801B374L) { if(reads[0]>=2) throw new Exception("Task cycle extra clock"); register("r0",reads[0]++==0?first:second); thread.overrideCounter(toAddr(register("lr")&~1L)); return true; }
+                    if(pc==0x0801AE80L) { register("r0",caps); thread.overrideCounter(toAddr(register("lr")&~1L)); return true; }
+                    if(pc==0x0801566AL) selected[0]=(int)register("r4");
+                    if(pc==0x08014AA4L) rendering[0]=true; if(pc==0x080156CEL) rendering[0]=false;
+                    if(pc==0x080147C0L) hsv[0]++;
+                    if(pc==0x08012FCCL) flushes[0]++;
+                    if(rendering[0] && (pc==0x08012FC8L || pc==0x08014A78L)) {
+                        JsonArray event=new JsonArray(); event.add(pc==0x08012FC8L?0:1); if(pc==0x08014A78L) event.add(register("r0"));
+                        for(int r=pc==0x08012FC8L?0:1;r<(pc==0x08012FC8L?3:4);r++) event.add(register("r"+r)&255); trace.add(event);
+                    }
+                    if(!rendering[0] && pc==0x08014A78L && register("r0")==22 && register("r1")==255 && register("r2")==255 && register("r3")==255) whites[0]++;
+                    if(!((pc>=0x08015618L && pc<0x08015762L) || (pc>=0x08014AA4L && pc<0x08014AE8L) || (pc>=0x08014B44L && pc<0x08014B5CL) ||
+                         (pc>=0x08014D1AL && pc<0x08014D52L) || (pc>=0x08014F58L && pc<0x08015054L) || (pc>=0x0801509CL && pc<0x0801513EL) ||
+                         (pc>=0x0801BE34L && pc<0x0801BED0L) || (pc>=0x08012B48L && pc<0x08012B98L) || (pc>=0x08014A78L && pc<0x08014AA4L) ||
+                         (pc>=0x080147C0L && pc<0x08014868L) || (pc>=0x08014900L && pc<0x0801491EL) || (pc>=0x08014924L && pc<0x08014934L) ||
+                         (pc>=0x08011890L && pc<0x08011ABCL) || (pc>=0x08012FC8L && pc<0x08012FECL) || (pc>=0x080132ECL && pc<0x08013300L) || (pc>=0x08013304L && pc<0x08013380L)))
+                        throw new Exception("Task cycle escaped selected caller/effect/flush: "+Long.toHexString(pc));
+                    return false;
+                });
+                if(reads[0]!=2 || selected[0]<0 || rendering[0] || register("sp")!=0x20010000L || !java.util.Arrays.equals(cfg,get(0x20001CE0L,8)) ||
+                   getWord(0x20001CFDL)!=0xA5A5A5A5L || getWord(0x20001D02L)!=0xA5A5A5A5L || (get(0x20001D01L,1)[0]&255)!=suspend ||
+                   get(0x20000EE4L,2)[0]!=(byte)0xA5 || get(0x20000EE4L,2)[1]!=(byte)0xA5 || get(0x20000EEEL,2)[0]!=(byte)0xA5 || get(0x20000EEEL,2)[1]!=(byte)0xA5 ||
+                   getWord(0x20001CDCL)!=0xA5A5A5A5L || getWord(0x20001CECL)!=0xA5A5A5A5L || getWord(FLAGS)!=group || getWord(FLAGS-4)!=0xA5A5A5A5L || getWord(FLAGS+4)!=0xA5A5A5A5L ||
+                   getWord(PWM-4)!=0xA5A5A5A5L || getWord(PWM+1952*4)!=0xA5A5A5A5L || getWord(COLORS+216)!=0xA5A5A5A5L ||
+                   getWord(0x20001B51L)!=0xA5A5A5A5L || getWord(0x20001C2DL)!=0xA5A5A5A5L || getWord(0x2000217CL)!=0xA5A5A5A5L || getWord(0x20002184L)!=0xA5A5A5A5L ||
+                   getWord(0x20001AC2L)!=0xA5A5A5A5L || getWord(0x20001AEFL)!=0xA5A5A5A5L || getWord(0x20001882L)!=0xA5A5A5A5L || getWord(0x200018AFL)!=0xA5A5A5A5L ||
+                   getWord(0x200018DCL)!=0xA5A5A5A5L || getWord(0x200018E4L)!=0xA5A5A5A5L || getWord(0x2000FDFCL)!=0xA5A5A5A5L || getWord(0x20010040L)!=0xA5A5A5A5L)
+                    throw new Exception("Task cycle guard/input/ABI changed");
+                for(int r=4;r<=11;r++) if(register("r"+r)!=0) throw new Exception("Task cycle callee saved changed");
+                JsonObject row=new JsonObject(); row.addProperty("frame",frame); row.addProperty("call",call); row.addProperty("state_before",before); row.addProperty("mode",mode); row.addProperty("enable",enable); row.addProperty("suspend",suspend); row.addProperty("flags",flags); row.addProperty("first_clock",first); row.addProperty("selected_effect",selected[0]); row.addProperty("clock_reads",reads[0]); row.addProperty("hsv_calls",hsv[0]); row.addProperty("caps_white_calls",whites[0]); row.addProperty("flush_calls",flushes[0]); row.add("render_trace",trace);
+                row.addProperty("params_after_hex",hex.formatHex(get(0x20000EE8L,3))); row.add("trackers_state",unsigned(get(0x20000EEBL,3))); row.addProperty("seed_after",(get(0x20000EE6L,1)[0]&255)|((get(0x20000EE7L,1)[0]&255)<<8));
+                row.addProperty("timer_buffer_after",getWord(0x20001CE8L)); row.addProperty("frame_timer_after",getWord(0x200018E0L)); row.addProperty("hits_after_hex",hex.formatHex(get(0x20001AC6L,41))); row.addProperty("hit_tracker_hex",hex.formatHex(get(0x20001886L,41)));
+                row.addProperty("grb_hex",hex.formatHex(get(COLORS,216))); row.addProperty("pwm_sha256",digest(get(PWM,1952*4))); row.addProperty("next_wait",getWord(0x20002180L)); steps.add(row); call++;
+            } while((get(0x20000EEDL,1)[0]&255)!=3);
         }
         sequence.add("steps",steps); sequences.add(sequence);
     }
@@ -808,10 +1148,18 @@ public class EmulateOriginalVial extends GhidraScript {
         boolean mode29IntervalOnly=args.length>0 && args[0].equals("--rgb-mode29-interval");
         boolean mode29FramesOnly=args.length>0 && args[0].equals("--rgb-mode29-frames");
         boolean realHsvFramesOnly=args.length>0 && args[0].equals("--rgb-mode29-frames-real-hsv");
+        boolean taskCycleOnly=args.length>0 && args[0].equals("--rgb-task-cycle");
+        boolean taskStartOnly=args.length>0 && args[0].equals("--rgb-task-start");
+        boolean timersOnly=args.length>0 && args[0].equals("--rgb-timers");
+        boolean startOnly=args.length>0 && args[0].equals("--rgb-start");
+        boolean cycleOnly=args.length>0 && args[0].equals("--rgb-cycle");
+        boolean flushOnly=args.length>0 && args[0].equals("--rgb-flush");
+        boolean renderBeginOnly=args.length>0 && args[0].equals("--rgb-render-begin");
+        boolean mode29StagingOnly=args.length>0 && args[0].equals("--rgb-mode29-staging");
         boolean mode15StagingOnly=args.length>0 && args[0].equals("--rgb-mode15-staging");
         boolean mode15Only=args.length>0 && args[0].equals("--rgb-mode15");
         boolean rgbHsvOnly=args.length>0 && args[0].equals("--rgb-hsv");
-        if(rgbEventsOnly || mode29IntervalOnly || mode29FramesOnly || realHsvFramesOnly || mode15Only || mode15StagingOnly || rgbHsvOnly) args=java.util.Arrays.copyOfRange(args,1,args.length);
+        if(rgbEventsOnly || mode29IntervalOnly || mode29FramesOnly || realHsvFramesOnly || mode15Only || mode15StagingOnly || mode29StagingOnly || renderBeginOnly || flushOnly || cycleOnly || startOnly || timersOnly || taskStartOnly || taskCycleOnly || rgbHsvOnly) args=java.util.Arrays.copyOfRange(args,1,args.length);
         if (args.length < 1 || args.length > 2 || (args.length == 2 && !args[1].equals("--check")))
             throw new Exception("Expected OUTPUT.json [--check]");
         emu = new PcodeEmulator(currentProgram.getLanguage());
@@ -821,6 +1169,107 @@ public class EmulateOriginalVial extends GhidraScript {
         result.addProperty("payload_sha256", SHA);
         result.addProperty("emulator", "Ghidra 12.1 P-code ARM:LE:32:Cortex");
         result.addProperty("scope", "Original instructions, RAM-only routines/case slices; not full firmware or hardware emulation");
+        if(taskCycleOnly) {
+            JsonArray sequences=new JsonArray(); for(int seed:new int[]{0,65535}) for(int caps:new int[]{0,2}) for(int groups:new int[]{0,1}) rgbTaskCycle(sequences,seed,caps,groups);
+            result.add("rgb_task_cycles",sequences);
+            result.addProperty("boundary_policy","8 persistent sequences, genuine original task calls for STARTING/RENDERING/following FLUSHING with real prologue/epilogue/post context and actual HSV/RNG/memcpy/setters/encoder. Only two clock values and host LEDs modeled. Seven frame starts supplied by state0 after state3; SYNCING branch15762+ NEVER executed, no EEPROM/save/scheduling/HAL/device. Flush recomputes effect from then-current config/suspend. Render-only API traces, final GRB/PWM compared; post setter ordering not claimed equal. Native remaining effects/cadet/SYNCING fail closed. No separate post/start entry or supplied r4/r5/r6 context.");
+            String json=new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create().toJson(result)+"\n"; Path output=Path.of(args[0]);
+            if(args.length==2) { if(!Files.readString(output).equals(json)) throw new Exception("Task cycle oracle mismatch"); }
+            else Files.writeString(output,json,StandardOpenOption.CREATE_NEW);
+            int calls=0; for(JsonElement seq:sequences) calls+=seq.getAsJsonObject().getAsJsonArray("steps").size(); println("ORIGINAL_RGB_TASK_CYCLE_COMPLETE sequences="+sequences.size()+" calls="+calls); return;
+        }
+        if(taskStartOnly) {
+            JsonArray cases=new JsonArray();
+            for(int mode:new int[]{0,15,29,45}) for(int enable=0;enable<4;enable++) for(int suspend:new int[]{0,1})
+                for(long old:new long[]{0,0xFFFFFFFFL}) for(int count:new int[]{0,8}) for(int iter:new int[]{0,4,255}) rgbTaskStart(cases,mode,enable,suspend,old,count,iter);
+            result.add("rgb_task_start",cases);
+            result.addProperty("boundary_policy","384 complete original task calls from15618 through genuine prologue/clock/aging/mode selection/STARTING/memcpy/epilogue and return. Only clock getter1b374 modeled; no supplied r5/r6/SP/OV or separately entered start. State0 only; mode0/15/29/45 is selection-only, no effect bodies/render/flush/SYNCING/EEPROM/HAL/device. Native actual rgb_matrix_task/timers/start/elapsed32 with unsupported paths trapped; observe selected effect without changing control. Native timeout derives from actual header/target. Source bytes age BEFORE copied to tracker.");
+            String json=new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create().toJson(result)+"\n"; Path output=Path.of(args[0]);
+            if(args.length==2) { if(!Files.readString(output).equals(json)) throw new Exception("Task-start oracle mismatch"); }
+            else Files.writeString(output,json,StandardOpenOption.CREATE_NEW);
+            println("ORIGINAL_RGB_TASK_START_COMPLETE cases="+cases.size()); return;
+        }
+        if(timersOnly) {
+            JsonArray cases=new JsonArray();
+            for(long old:new long[]{0,0xFFFFFFF0L}) for(long delta:new long[]{0,1,15,16,65534,65535,65536,65537,0xFFFFFFFFL})
+                for(int skew:new int[]{0,3}) for(int count:new int[]{0,1,4,8}) for(int pattern=0;pattern<3;pattern++) rgbTimers(cases,old,delta,skew,count,pattern);
+            result.add("rgb_timers",cases);
+            result.addProperty("boundary_policy","432 original clock/aging prefixes15618..15658 including original prologue and aging loop1567a..156aa; only clock getter1b374 replaced by two supplied uint32 values. No other instruction/API substitution. Stop before mode selection/task dispatch, no render/start/sync/EEPROM/HAL/device. Counts0/1/4/8 only; count255 NOT accepted here. Native actual SDK rgb_task_timers + nonsplit sync macros + actual timer_elapsed32/TIMER_DIFF_32 with getter-only model; uint32 underflow/tick wrap and non-compacting drops preserved, not repaired.");
+            String json=new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create().toJson(result)+"\n"; Path output=Path.of(args[0]);
+            if(args.length==2) { if(!Files.readString(output).equals(json)) throw new Exception("Timers oracle mismatch"); }
+            else Files.writeString(output,json,StandardOpenOption.CREATE_NEW);
+            println("ORIGINAL_RGB_TIMERS_COMPLETE cases="+cases.size()); return;
+        }
+        if(startOnly) {
+            JsonArray cases=new JsonArray();
+            for(long timer:new long[]{0,1,15,16,65535,0xFFFFFFFFL}) for(int iter:new int[]{0,4,255}) for(int flags:new int[]{0,4,255})
+                for(int init:new int[]{0,1}) for(int pattern=0;pattern<4;pattern++) rgbStart(cases,timer,iter,flags,init,pattern);
+            result.add("rgb_start",cases);
+            result.addProperty("boundary_policy","432 STARTING active-frame slices156ae..156c8 stopped at1571a; original41-byte memcpy executes without substitution. Supplied r5=timer-buffer snapshot,r6=task-state pointer,SP=2000ffd8,OV=0 matching state0 CMP3; parent prologue/timer reads/aging/selection/start dispatch not executed. Raw count255 is copy-only, NOT a valid reactive buffer for aging/collector. Native actual SDK rgb_task_start/types and actual target-derived reactive guard; no render/sync/task/HAL/EEPROM/device or physical output. Flags/init preserved; only iter/state/frame timer/tracker changed.");
+            String json=new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create().toJson(result)+"\n"; Path output=Path.of(args[0]);
+            if(args.length==2) { if(!Files.readString(output).equals(json)) throw new Exception("Start oracle mismatch"); }
+            else Files.writeString(output,json,StandardOpenOption.CREATE_NEW);
+            println("ORIGINAL_RGB_START_COMPLETE cases="+cases.size()); return;
+        }
+        if(cycleOnly) {
+            JsonArray sequences=new JsonArray();
+            for(int seed:new int[]{0,65535}) for(int caps:new int[]{0,2}) for(int[] group:new int[][]{{0,0},{0,1},{1,0},{1,1}})
+                rgbCycle(sequences,seed,caps,group[0],group[1]);
+            result.add("rgb_cycles",sequences);
+            result.addProperty("boundary_policy","16 persistent selected-mode0/15/29 render/post/flush sequences with ten supplied frame starts, fixed speed128 and last-trackers updated ONLY by actual flush. Actual renderer/HSV/RNG/memcpy/RAM setters, separately entered post slice, and actual flush/encoder execute; only host getter controlled. Mode/enable/flags/clock inputs and frame-start iter0/state1 supplied, not entire task/start/sync/scan/feature/HID/clock/DMA/HAL/device or physical output. Native unsupported effects must fail closed; all45-catalog-effect conformance/source provenance not established. Cache/wait native state remains indirectly observed. No target changes.");
+            String json=new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create().toJson(result)+"\n";
+            Path output=Path.of(args[0]);
+            if(args.length==2) {
+                if(!Files.readString(output).equals(json)) throw new Exception("Selected cycle oracle mismatch");
+            } else Files.writeString(output,json,StandardOpenOption.CREATE_NEW);
+            int calls=0; for(JsonElement seq:sequences) calls+=seq.getAsJsonObject().getAsJsonArray("steps").size();
+            println("ORIGINAL_RGB_CYCLE_COMPLETE sequences="+sequences.size()+" calls="+calls); return;
+        }
+        if(flushOnly) {
+            JsonArray cases=new JsonArray();
+            for(int effect:new int[]{0,15,29,45}) for(int enable=0;enable<4;enable++)
+                for(int[] old:new int[][]{{255,255},{15,1}}) for(String pattern:new String[]{"ramp","black","white"})
+                    rgbFlush(cases,effect,enable,old[0],old[1],pattern);
+            result.add("rgb_flush",cases);
+            result.addProperty("boundary_policy","96 independent full RAM flush-function cases: original12fcc..12fea updates last-effect/enable, calls actual encoder13320..13380, then sets task state3/SYNCING. No instruction/API replacement; before/after encoder observation only. Virtual GRB216bytes and PWM1952words including unchanged224-word reset tail, extra-word/leading/GRB/config/globals guards. Supplied cfg.mode15, effect/enable/old tracker inputs and initial task state2; no caller/start/render/post/sync scheduling, physical timer/DMA/HAL/device or source provenance claim. No target changes.");
+            String json=new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create().toJson(result)+"\n";
+            Path output=Path.of(args[0]);
+            if(args.length==2) {
+                if(!Files.readString(output).equals(json)) throw new Exception("Flush oracle mismatch");
+            } else Files.writeString(output,json,StandardOpenOption.CREATE_NEW);
+            println("ORIGINAL_RGB_FLUSH_COMPLETE cases="+cases.size()); return;
+        }
+        if(renderBeginOnly) {
+            JsonArray cases=new JsonArray();
+            for(int effect:new int[]{0,15,29,45}) for(int lastEffect:new int[]{0,15,29,45,255})
+                for(int enable=0;enable<4;enable++) for(int lastEnable:new int[]{0,1,2,3,255}) for(int iter:new int[]{0,4,255})
+                    rgbRenderBegin(cases,"init",effect,lastEffect,enable,lastEnable,255,255,iter);
+            for(int[] context:new int[][]{{15,15,1,1},{29,15,1,1},{15,15,2,1}})
+                for(int oldFlags:new int[]{0,1,2,4,128,255}) for(int newFlags:new int[]{0,1,2,4,128,255}) for(int iter:new int[]{0,4,255})
+                    rgbRenderBegin(cases,"flags",context[0],context[1],context[2],context[3],oldFlags,newFlags,iter);
+            result.add("rgb_render_begin",cases);
+            result.addProperty("boundary_policy","1524 independent pre-dispatch cases. Actual original14aa4..14ade and init branch14b44..14b48 execute, including real all/single RAM color setters; no call/API replacement. Init compares supplied effect/enable with raw last-effect/last-enable bytes. Config.mode remains15: caller effect selection is not executed. Iter255 is only byte-preservation probing, not a valid render chunk. Stops inside active function frame before effect switch: no effect execution, completion/last-state commit, post indicators, start/sync/task/clock/scan/flush/DMA/HAL/device or physical output. Input/globals/stack/staging guards checked; no target changes.");
+            String json=new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create().toJson(result)+"\n";
+            Path output=Path.of(args[0]);
+            if(args.length==2) {
+                if(!Files.readString(output).equals(json)) throw new Exception("Render-begin oracle mismatch");
+            } else Files.writeString(output,json,StandardOpenOption.CREATE_NEW);
+            println("ORIGINAL_RGB_RENDER_BEGIN_COMPLETE cases="+cases.size()); return;
+        }
+        if(mode29StagingOnly) {
+            JsonArray sequences=new JsonArray();
+            for(int speed:new int[]{0,128,255}) for(int seed:new int[]{0,65535}) for(int caps:new int[]{0,2})
+                for(int[] group:new int[][]{{0,0},{0,1},{1,0},{1,1},{2,255},{255,2}})
+                    rgbMode29Frames(sequences,speed,seed,true,true,caps,group[0],group[1]);
+            result.add("rgb_mode29_staging",sequences);
+            result.addProperty("boundary_policy","72 persistent sixteen-call mode29 sequences. Actual original selected dispatch/PixelFlow-shaped effect/HSV/RNG/memcpy and RAM single/all setters execute, followed by separately entered156ce..1571a Caps/group-filter slice with supplied active-effect/state-register context. Host getter alone controlled; no RGB setter replacement. Persistent216-byte GRB before/after snapshots and cache/wait/group/global/staging guards; native private state remains indirectly observed. Not full renderer caller/start/sync/flags-change-clear, scan, clock/scheduler, flush/DMA/HAL/device/physical output or manufacturer source provenance. No target changes.");
+            String json=new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create().toJson(result)+"\n";
+            Path output=Path.of(args[0]);
+            if(args.length==2) {
+                if(!Files.readString(output).equals(json)) throw new Exception("Mode29 staging oracle mismatch");
+            } else Files.writeString(output,json,StandardOpenOption.CREATE_NEW);
+            println("ORIGINAL_RGB_MODE29_STAGING_COMPLETE sequences="+sequences.size()+" calls=1152"); return;
+        }
         if(mode15StagingOnly) {
             JsonArray sequences=new JsonArray();
             for(int hsv:new int[]{0xFFFF00,0x8080FF}) for(long now:new long[]{0,256,0xFFFFFFFFL})

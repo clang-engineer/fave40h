@@ -30,6 +30,7 @@ public class InspectOriginalVial extends GhidraScript {
             {0x080192BCL, 0x0801933EL}, // Hit append and heatmap gate
             {0x08019772L, 0x080197BCL}, // VialRGB table literal load, stride4/count45 supported loop
             {0x08013CD8L, 0x08013D18L}, // RGB default reset / captured-storage boundary inspection
+            {0x08012FCCL, 0x08012FECL}, // Flush trackers -> RAM encoder -> SYNCING
             {0x080132ECL, 0x08013380L}, // GRB setter and PWM encoding
             {0x08013924L, 0x08013A74L}, // PB10, DMA and PWM initialization
             {0x080184B6L, 0x080184D8L}, // PWM object assigned TIM2 base
@@ -59,7 +60,7 @@ public class InspectOriginalVial extends GhidraScript {
             {0x08014D1AL, 0x08014D52L}, // Mode15 dispatch branch
             {0x08014AA4L, 0x08014B80L}, // Effect dispatch and jump-table inspection
             {0x08015618L, 0x080156CEL}, // Original renderer dispatch (static inspection only)
-            {0x080156CEL, 0x08015756L}, // Caps-before-chunk-filter composition
+            {0x080156CEL, 0x08015780L}, // Post/flush/sync boundaries (sync inspected, not executed)
             {0x0801441EL, 0x08014434L}, // RGB group reset: RAM and captured kb/user writes, before flush
             {0x08018C84L, 0x08018C98L}, // RGB group startup: zeroed temporary, complete controlled read
             {0x0801AA7EL, 0x0801AA9CL}, // GPIO seven-register writer (RAM-only oracle)
@@ -136,7 +137,7 @@ public class InspectOriginalVial extends GhidraScript {
         DecompInterface decompiler = new DecompInterface();
         try {
             if (!decompiler.openProgram(currentProgram)) throw new Exception(decompiler.getLastMessage());
-            for (long address : new long[] {0x08012B48L, 0x0801BE34L, 0x080147C0L, 0x08014900L, 0x08014924L, 0x08014AA4L, 0x08015618L, 0x08013CD8L, 0x08013CF4L, 0x080132ECL, 0x08013320L, 0x08013924L, 0x08014148L, 0x08014188L, 0x080144DCL, 0x08014604L, 0x080143E4L, 0x0801AE04L, 0x0801AE2EL, 0x0801AE74L, 0x08015824L, 0x08013ECCL, 0x0801B010L, 0x0801D4A0L, 0x0801D4C8L}) {
+            for (long address : new long[] {0x08012FCCL, 0x08012B48L, 0x0801BE34L, 0x080147C0L, 0x08014900L, 0x08014924L, 0x08014AA4L, 0x08015618L, 0x08013CD8L, 0x08013CF4L, 0x080132ECL, 0x08013320L, 0x08013924L, 0x08014148L, 0x08014188L, 0x080144DCL, 0x08014604L, 0x080143E4L, 0x0801AE04L, 0x0801AE2EL, 0x0801AE74L, 0x08015824L, 0x08013ECCL, 0x0801B010L, 0x0801D4A0L, 0x0801D4C8L}) {
                 Function f = getFunctionAt(toAddr(address));
                 if (f == null) f = createFunction(toAddr(address), null);
                 if (f == null) throw new Exception(String.format("Missing function for decompilation: %08x", address));

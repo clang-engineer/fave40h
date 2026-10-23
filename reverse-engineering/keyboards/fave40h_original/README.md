@@ -567,8 +567,385 @@ The audit also rechecks the actual target catalog/default profile and guard.
 
 This does **not** execute the intervening original renderer caller, startup,
 flags-change clearing, complete task scheduling/sync, flush/PWM encoding/DMA,
-HAL/physical output, or mode29 composition. Existing target files and the build
-blocker are unchanged; remaining RGB runtime work is still required.
+HAL/physical output. Mode29 composition is covered separately below. Existing
+target files and the build blocker are unchanged; remaining runtime work is required.
+
+## Mode29 wait/cache + Caps/filter + GRB — bounded RAM composition
+
+`EmulateOriginalVial.java --rgb-mode29-staging OUTPUT.json [--check]` adds
+**72 persistent sixteen-call sequences /1152 calls**: the previous six actual-HSV
+mode29 sequences, each with Caps off/on and six raw group-byte pairs. All original
+effect/HSV/RNG/memcpy/cache/wait observations remain identical to the separate
+96-call fixture. The single-color RAM setter is real, as is the all-color thunk
+`0x08012FC8` -> loop `0x08013304..0x08013320` -> setter `0x080132EC`.
+No RGB setter is replaced. A separately entered post-effect Caps/filter slice
+uses the controlled active-effect/state context; only the host getter is replaced.
+Private original cache/wait/global bytes stay unchanged by that post pass, with
+RAM and group/staging guards checked.
+
+```sh
+python3 reverse-engineering/tools/audit_original_rgb_mode29_staging.py \
+  firmware/origin/FAve40H_VIAL.uf2 --reference-dir /path/to/pinned/vial-qmk \
+  --target reverse-engineering/keyboards/fave40h_original
+```
+
+Native comparison uses the entire unmodified PixelFlow/HSV/CIE/RNG/limits source
+and a **fresh independently compiled hidden library for every sequence and
+counterfactual**. Private native cache/wait remain **indirectly observed**, not
+byte-read. Its RGB/all-color records join actual SDK WS2812 staging APIs; the
+existing completion-only renderer stub feeds actual SDK RENDERING delegates and
+target callbacks, not a single full renderer call. Both-O0/-O2 match1152 ordered
+trace/return/seed observations and **2304 before/after216-byte GRB snapshots per
+profile**; actual original HSV calls total5292, and all256 compiled CIE bytes match.
+Composition requests no EEPROM/HID/timer/DMA APIs and preserves raw group words.
+The actual target catalog/default/guard profile is also rechecked.
+
+Counterfactuals differ684 calls without the post pass,456 with premature basic
+Caps, and1100 with swapped red/green. Importantly, a **wait-before-init completion
+at iter0** still invokes basic Caps, although it does not render/change the effect
+cache or RNG seed: gating Caps only on iter4 would lose original behavior.
+The advanced group pass still filters the current chunk; Caps LED22 survives
+outside[0,15) even with keylight disabled.
+
+This is controlled RAM/API-boundary composition. It omits the intervening original
+renderer caller, automatic flags-change clearing, complete start/sync/task/clock,
+scan/feature routing, flush/encoder/DMA/HAL and physical LEDs. It does not establish
+manufacturer source provenance or all45 effects. No target generated code or build
+guard is changed by these comparisons.
+
+## Common renderer entry — init/enable/flags branches, before dispatch
+
+The earlier selected-effect probes already entered the original common renderer,
+but held last-enable equal to enable and supplied matching effect flags. A new
+`--rgb-render-begin OUTPUT.json [--check]` fixture isolates **1524 independent
+pre-dispatch cases** at `0x08014AA4..0x08014ADE`, including the init branch at
+`0x08014B44..0x08014B48` and **actual all/single RAM color setters**. No API is
+replaced. It stops inside the active call frame before effect dispatch; stack,
+configuration, unrelated globals and GRB staging have guards.
+
+```sh
+python3 reverse-engineering/tools/audit_original_rgb_render_begin.py \
+  firmware/origin/FAve40H_VIAL.uf2 --reference-dir /path/to/pinned/vial-qmk \
+  --target reverse-engineering/keyboards/fave40h_original
+```
+
+The1200-case init grid crosses effect0/15/29/45, five raw last-effect values,
+enable0..3 and last-enable0..3/255. The324-case flags grid crosses six byte values
+0/1/2/4/128/255 under unchanged, changed-effect and changed-enable contexts.
+Iter0/4/255 is preserved; **255 only probes byte preservation**, not a valid
+render chunk. Config.mode stays15; the caller's effect selection is not executed.
+Raw enable2/3 and sentinel255 are comparison inputs, not invented user controls
+or a claim about manufacturer boot-time last-state values.
+
+Actual unmodified SDK init/flags statements, packed config/params types and
+last-tracker declarations match all1524 cases at-O0/-O2. A nonsplit all-color
+adapter reaches the actual SDK WS2812 staging API. Init is true when effect **or
+raw enable** differs from its last tracker. Only an unequal flags byte clears
+all216 staging bytes, exactly once; init alone does **not** clear in this prefix
+(individual effects can clear on init). Params.iter
+and raw flags are retained. Group state stays unchanged; no EEPROM/HID/timer/DMA
+API is requested. The actual target catalog/default/build-guard profile is also
+rechecked; generated target files are unchanged.
+
+Ignoring enable changes differs300 cases, booleanizing enable differs216, and
+omitting the flags clear differs270; independent unit calculations agree.
+This still does not join these branches to a whole renderer/flush/task lifecycle.
+In particular, the candidate SDK updates last-effect/enable in `rgb_task_flush`,
+not in this prefix: caller sequencing and multi-chunk init lifetime remain work,
+along with effect/indicator/flush integration, storage/security and hardware.
+
+## Flush — actual last-tracker/driver/encoder/state chain in RAM
+
+A separate `--rgb-flush OUTPUT.json [--check]` fixture executes the **entire
+original flush function `0x08012FCC..0x08012FEA`** and actual encoder
+`0x08013320..0x08013380`, with no instruction/API replacement. Its96 cases cross
+four effect arguments, enable0..3, two old-tracker pairs and ramp/black/white GRB
+inputs. Config.mode remains15; this does not execute caller mode selection.
+
+```sh
+python3 reverse-engineering/tools/audit_original_rgb_flush.py \
+  firmware/origin/FAve40H_VIAL.uf2 --reference-dir /path/to/pinned/vial-qmk \
+  --target reverse-engineering/keyboards/fave40h_original
+```
+
+The native path executes unmodified **SDK `rgb_task_flush` →
+`rgb_matrix_update_pwm_buffers` → actual WS2812 driver vtable → actual
+`ws2812_flush` encoder**. The encoder's public name is redirected only for an
+entry/exit observation wrapper; its body/arithmetic is unchanged. Both-O0/-O2
+match96 cases. Last-effect/enable already contain new raw values at encoder entry
+and exit; task state stays FLUSHING2 during encoding and becomes SYNCING3 only
+after it. This confirms that last trackers commit in flush, not the render prefix.
+Moving tracker writes after encoding differs93 cases; premature SYNCING or
+omitting encoding differs96 each. Independent unit calculations agree.
+
+All1952 PWM words match an independent GRB/MSB-first model:1728 pulse words8/21
+and224 untouched reset-tail canary words. Initial PWM is deliberatelyA5, not
+hardware-initialized zeros; this checks which bytes flush leaves alone. Original
+leading/extra-word/GRB/config/globals/stack guards and saved registers are checked;
+native extra-word guard and unchanged config/params/GRB/group state are checked.
+The literal at `0x08013384` points to PWM base+28 (first G byte's last bit), not
+the buffer base: the original LSB-first loop writes backward to achieve MSB-first
+wire order. Pulse-word matching does not establish physical timer frequency.
+
+There are **no timer/DMA/EEPROM/HID API requests** in this RAM flush comparison.
+Driver init and physical circular-DMA operation are not invoked. Actual target
+profile/guard checks still run; no target generated source/config is changed.
+This does not validate concurrent DMA reads, whole task/start/sync scheduling,
+effect-to-flush caller routing, storage/security or physical output. The following
+selected-mode probe connects actual multi-chunk init lifetime rather than supplied
+completion/last-state values.
+
+## Selected actual render → post → flush cycles (RAM only)
+
+`--rgb-cycle OUTPUT.json [--check]` now executes **16 persistent sequences /
+416 original renderer calls**, including **4,800 actual HSV calls and128 flushes**.
+Ten supplied frame starts per sequence cover disabled mode0, Chevron15, PixelFlow29,
+a flags change, PixelFlow wait completions, raw enable1→2 during wait, a later
+ready frame, and return to disabled output. Speed128 is fixed; two seed/value
+profiles, Caps0/2 and four group-enable pairs vary. It is not an exhaustive
+mode/clock/config grid or complete task execution.
+
+```sh
+python3 reverse-engineering/tools/audit_original_rgb_cycle.py \
+  firmware/origin/FAve40H_VIAL.uf2 --reference-dir "$QMK_REFERENCE" \
+  --target reverse-engineering/keyboards/fave40h_original
+```
+
+Unlike the older independent effect-to-staging probes, this native harness removes
+its completion-only renderer and controlled-chunk helper. **Actual SDK
+`rgb_task_render`, None/Chevron/PixelFlow bodies, HSV/CIE/math/RNG, RENDERING case,
+weak indicator delegates, target Caps/group callbacks, actual SDK color wrappers,
+driver vtable, flush and PWM encoder execute in the same library.** Observer-only
+wrappers capture RGB API records and intermediate state; positive renderer/effect
+bodies and arithmetic remain unmodified. Other catalog effects and the factory
+LED-test entry trap if called. Unrelated Space Cadet entry points also trap in
+this RGB-only harness rather than pulling its timer declarations into the GNU
+translation unit; existing separate cadet tests are unchanged. No SDK source is
+patched and no new warning suppression is added.
+
+Each persistent sequence/counterfactual gets a fresh hidden library so function-local
+PixelFlow cache/wait cannot leak across cases. At-O0 and-O2, all416 calls match RGB
+API records, HSV call counts, RNG seed, init/flags/iter bytes, render state,
+last trackers before/after flush, before/after216-byte GRB buffers, Caps call count,
+and all1952 PWM words by digest. Native private cache/wait bytes are **not directly
+read**; original snapshots and later actual calls observe their consequences.
+Original cache/wait/config/global/stack/staging/PWM guards are checked; native
+config/group/extra PWM-word guard and zero EEPROM/HID/timer/DMA requests hold.
+The synthetic original call frame is initialized, including unused HSV padding;
+accepted runs contain no uninitialized-state warnings.
+
+This establishes two previously supplied-lifetime quirks rather than repairing them:
+
+- Last-effect/enable change **only in flush**, so initial mode15/29 init remains
+  true across all five chunks. PixelFlow clears all output and refills its cache
+  with fresh RNG on **each** initial chunk; its final effect output only retains
+  the final chunk before Caps/filtering. Do not impose iter0-only initialization.
+- On enable1→2 while PixelFlow is waiting, init is true but wait returns before
+  initialization. Flush still commits enable2. When time later reaches5000,
+  init is false: the old cache is used, not silently reinitialized. Basic Caps
+  also runs on iter0 wait completions; LED22 can survive disabled keylight.
+
+Independent Python RGB/post/PWM replays match all416 calls. Omitting post differs
+**279 calls**; booleanizing raw enable differs**16**. Full task mode selection,
+STARTING/SYNCING transitions, frame-timer copying, scheduler/scan/feature routing,
+remaining43 effects, storage/security and physical DMA/LED behavior are still
+unverified. The following bounded STARTING probe checks frame-copy/reset control
+before expanding to whole-task scheduling. The unconditional build guard stays.
+
+## Bounded STARTING frame copy/reset (RAM only)
+
+`--rgb-start OUTPUT.json [--check]` executes **432 original STARTING slices**:
+`0x080156AE..0x080156C6`, stopped before the parent epilogue at`0x0801571A`,
+including the **actual original41-byte memcpy**. Six unsigned timer snapshots
+(0/1/15/16/65535/FFFFFFFF), three iter bytes, three flags, both init values and
+four tracker byte patterns vary. Static switch/literal witnesses fix state0's
+TBB branch, buffer pointers and copy size. The active parent frame is supplied:
+`r5` equals the already-read timer-buffer snapshot,`r6` points to task state,
+SP=`0x2000FFD8`, and OV=0 matches the preceding state0 CMP3. The parent prologue,
+two clock reads, reactive-hit aging, mode selection and dispatch are **not executed**.
+
+```sh
+python3 reverse-engineering/tools/audit_original_rgb_start.py \
+  firmware/origin/FAve40H_VIAL.uf2 --reference-dir "$QMK_REFERENCE" \
+  --target reverse-engineering/keyboards/fave40h_original
+```
+
+At-O0/-O2 all432 match **unmodified SDK `rgb_task_start`**, actual packed
+`effect_params_t`/`last_hit_t` and the **actual target-derived reactive guard**.
+Only iter becomes0; flags/init remain unchanged. The full32-bit frame timer takes
+the snapshot, all41 tracker bytes copy even when count=0, and state becomes
+RENDERING1. Unused slots/tick tail are copied, not normalized or truncated to count.
+Original stack/callee-saved registers, source/destination/timer/global guards,
+source bytes, group and GRB are checked; native object guards/source/input-clock
+checks also hold. This standalone native function links no hardware APIs and
+needs no warning exceptions. The input/output patterns deliberately differ so
+skipping copy cannot pass. **108 count255 cases are raw copy-only tests, not valid
+inputs for aging, collector or a live reactive renderer.**
+
+Independent unit calculations agree with negative controls: missing iter reset
+**288**, stale frame timer**432**, missing tracker copy**432**. This does not yet
+replace the supplied frame starts in the preceding416-call cycle fixture or
+establish actual timer reads/aging, complete STARTING dispatch, SYNCING/save
+behavior, whole task/scan/feature routing, remaining effects, DMA or physical
+output. The following timer/aging probe resolves that preceding boundary before
+joining this actual start branch to the selected-cycle harness. Target
+source/config and the build guard are unchanged.
+
+## Actual clock/aging prefix (getter-only model)
+
+`--rgb-timers OUTPUT.json [--check]` executes **432 original prefixes** from
+`0x08015618` through the actual prologue/clock reads/aging loop, stopped at
+`0x08015658` before mode selection. Only clock getter`0x0801B374` is replaced:
+it returns two supplied unsigned32-bit snapshots. No hardware clock is read.
+Counts0/1/4/8, three tick patterns, two old-clock positions, nine elapsed deltas
+(including65535/65536/65537/FFFFFFFF) and same/different read snapshots vary.
+Count255 is excluded; XY/index bytes are opaque here, never used for LED lookup.
+
+```sh
+python3 reverse-engineering/tools/audit_original_rgb_timers.py \
+  firmware/origin/FAve40H_VIAL.uf2 --reference-dir "$QMK_REFERENCE" \
+  --target reverse-engineering/keyboards/fave40h_original
+```
+
+At-O0/-O2 all432 match **actual SDK `rgb_task_timers`**, actual nonsplit
+sync-timer macros and `timer_elapsed32`/`TIMER_DIFF_32`, using only a two-value
+`timer_read32` model. No elapsed arithmetic/aging loop is rewritten in the positive
+candidate. The existing target-derived reactive guard and packed tracker types
+remain in use. Original instruction/literal witnesses, stack/buffer/timer/global
+guards, untouched frame timer/last tracker/params/state/group/GRB, and native
+object guards/untouched state checks hold. Native compilation remains strict
+with no warning exceptions. These are opaque timer units, not physical-frequency
+or scheduler validation.
+
+The following original behaviors are now explicit and must not be repaired:
+
+- **First read determines delta; second read updates `rgb_timer_buffer`.** They
+  need not be equal; unsigned subtraction correctly covers a32-bit clock wrap.
+  `g_rgb_timer` does not change until STARTING copies the snapshot.
+- The loop uses its **initial count**, decrements stored count on expiration,
+  and does **not compact or clear expired entries**. Later original slots still
+  update even when the stored count has shrunk below their indices. XY/index and
+  inactive tick slots remain byte-identical.
+- When delta exceeds65535, unsigned`UINT16_MAX - delta` underflows: sampled large
+  deltas retain the count and add delta modulo65536 to tick bytes. Do not replace
+  this with saturation, clearing or automatic expiration.
+
+Independent byte-level replay agrees. Using the second read for delta differs
+**156 cases**, expiring all ages above65535 differs**108**, and zeroing expired
+ticks differs**100**. These are counterfactuals, not fixes applied to the target.
+This prefix is still separate from the416-call selected render/post/flush probe.
+The next section joins clock/aging to actual mode selection and STARTING;
+full render/flush caller routing, SYNCING/save/scheduling, all effects,
+storage/security and physical hardware remain unverified.
+
+## Genuine task entry → selection → STARTING → return
+
+`--rgb-task-start OUTPUT.json [--check]` now executes **384 complete original task
+invocations** at`0x08015618`, including actual prologue, two modeled clock reads,
+aging, mode/suspend selection, state0 dispatch, frame copy and genuine epilogue
+`0x0801571A..0x0801571C` through return. **No r5/r6/SP/OV context is supplied and
+STARTING is no longer separately entered in this probe.** Only the clock getter
+is controlled. Every case begins at STARTING0; render/flush/SYNCING are excluded.
+
+```sh
+python3 reverse-engineering/tools/audit_original_rgb_task_start.py \
+  firmware/origin/FAve40H_VIAL.uf2 --reference-dir "$QMK_REFERENCE" \
+  --target reverse-engineering/keyboards/fave40h_original
+```
+
+Modes0/15/29/45, raw enable0..3, supplied suspend0/1, normal/wrapping old clock,
+count0/8 and iter0/4/255 vary. Mode45 is **selection-only**, not effect equivalence.
+Suspend is an input flag, not execution of the suspend setter or a USB event.
+At-O0/-O2 actual SDK `rgb_matrix_task`, timers/elapsed32 and STARTING match384/384
+in one library. The only task-body addition observes selected effect before the
+switch; a start wrapper only counts the call and checks prior clock reads.
+Native timeout comes from the actual header/target and must be0. Unverified
+render/flush/sync/indicator entry points **trap**, never simulate completion.
+
+Effect selection is0 when suspended or disabled, otherwise the raw configured
+mode: enable2/3 remain enabled, not enable1-only. Even suspended/disabled calls
+age the source and copy the frame. The input ages **before** all41 bytes copy
+into the tracker; count8's mixed ticks become count6 without compaction and that
+aged byte array, not the stale input, is copied. Both timer buffer and frame timer
+take the second clock value. Flags/init remainA5/1; only iter resets and state
+becomes RENDERING1. Original config/suspend/source-destination/timer/global/stack
+and callee-saved-register checks, group/GRB preservation and native object/config
+checks hold. Native compilation has no warning exceptions; physical clock/HAL,
+EEPROM and linked firmware are not executed.
+
+Independent checks agree with counterfactuals: ignoring suspend**108**, accepting
+only enable1**72**, and copying the pre-aged tracker**192** differ. This connects
+the formerly separate timer/start boundaries for **STARTING calls only**. It does
+not yet connect the416-call effect/post/flush fixture to actual task dispatch.
+The next probe joins selected RENDERING and the **separate following FLUSHING
+invocation** while recomputing effect from then-current config/suspend. These
+older fixtures retain their own narrower boundaries.
+
+## Genuine task STARTING → RENDERING/post → following-call FLUSHING
+
+`--rgb-task-cycle OUTPUT.json [--check]` executes **8 persistent sequences /
+320 whole original task invocations** at`0x08015618`. The real prologue, two clock
+calls, aging, effect selection and state0/1/2 dispatch execute; the original post
+runs in its actual caller context and FLUSHING restores the caller's stack then
+tailcalls`0x08012FCC` at`0x0801575E`. No separate post/start entry or synthetic
+active-frame r4/r5/r6/SP/OV context is supplied (ordinary initial ABI/SP remains
+established). Only clock and host-LED getters are modeled. Actual RAM memcpy,
+None/Chevron/PixelFlow/HSV/CIE/RNG, RGB setters and PWM encoder execute unchanged.
+
+```sh
+python3 reverse-engineering/tools/audit_original_rgb_task_cycle.py \
+  firmware/origin/FAve40H_VIAL.uf2 --reference-dir "$QMK_REFERENCE" \
+  --target reverse-engineering/keyboards/fave40h_original
+```
+
+Native comparison executes actual SDK `rgb_matrix_task`, timers/elapsed32,
+STARTING, selected renderer, weak delegates/target indicators, color wrappers,
+flush/driver-vtable and encoder in one TU. At-O0/-O2 it matches **320/320 calls,
+2404 actual HSV calls and48 flushes**: selected effects, render-only API traces,
+Caps counts, params/init/state/last trackers/RNG, both timers, both41-byte hit
+objects, all216 GRB bytes and1952-word PWM digests. Original stack/RAM guards,
+callee-saved registers, raw config/group preservation and native object/config
+canaries hold; no hardware/storage IO is requested. Fresh hidden native libraries
+isolate each sequence and counterfactual (32 libraries total). Native private
+PixelFlow cache/wait bytes remain **indirectly observed**, not directly compared.
+
+The8 sequences pair seed0/value255 or seed65535/value128 with Caps0/2 and raw
+group low bytes0/0 or1/1 (upper wordA5B6). Each has seven supplied frame starts:
+
+| Render/config input | Separate next flush | Evidence retained |
+|---|---|---|
+| mode15,enable1 | mode29,enable1 | Last29 commits despite drawing15; first subsequent PixelFlow is init=false with zero BSS cache |
+| mode29,enable1 | unchanged | Five chunks, frame timer frozen; no forced iter0-only initialization |
+| mode29,enable2 | suspend=true | All initial chunks init=true; flush commits effect0/raw enable2 |
+| mode29,enable2 while waiting | mode15,enable0 | Wait exits before init; basic Caps still runs; next flush commits0/0 |
+| disabled mode15 (None) | **none** | Warm None directly enters SYNCING without encoding |
+| mode15,enable1; flags255→4 mid-frame | mode29,enable3 | Actual flags clear/filter; next effect/enable commits independently |
+| mode29,enable3 | unchanged | Last29/3 means init=false, prior cache lifetime retained |
+
+Every task call ages the buffered hits; only STARTING copies the second clock
+and full41-byte tracker into the active frame. Render and later flush clocks do
+not replace the frame snapshot. STARTING does not clear prior GRB/PWM. Independent
+byte replay reproduces aging/clock/state/flush trackers, post-filter output and
+persistent PWM. **Ignoring suspend differs40 calls; using live buffer time for
+all task states differs272**. The latter comprises264 wrong-clock non-STARTING
+calls plus8 subsequent STARTING calls inheriting changed Chevron GRB/PWM. This
+carryover is independently reconstructed from ROM geometry and separate scalar
+HSV fixtures, not an assumed immediate clear at a new frame.
+
+**Limits:** seven frame boundaries per sequence manually set state0 only after
+state3. The original SYNCING branch`0x08015762+`, EEPROM/save/elapsed flush gate,
+suspend setter/USB events, scheduler/scan/feature routing and physical timer/DMA/
+LEDs do not execute. Native unsupported43 effects, cadet APIs and SYNCING trap.
+Post **setter ordering** need not equal the original's two loops: only render
+traces and final post RAM are compared. The preserved A5 PWM reset-tail values
+are test canaries, not proof of physical reset initialization. No full firmware
+build/link, new ARM object, tool installation, commit, or flash is performed.
+The unconditional build guard and generated target sources/config stay unchanged.
+
+Next safe boundary: inspect SYNCING/save/time-gate paths before choosing any
+bounded RAM-only continuation; do not assume EEPROM writes are authorized or
+connect unverified persistence/destructive reset. Remaining43 effects, Vial
+security/storage and physical validation still block flash readiness.
 
 ## Intentionally unavailable
 

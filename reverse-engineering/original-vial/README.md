@@ -91,10 +91,81 @@ to SDK staging and actual target hooks, at-O0/-O2. The native RENDERING caller
 retains a completion-only effect stub: this is not a full linked renderer call.
 Missing post-pass, early Caps and red/green-swap controls differ696/720/888 chunks;
 final-chunk Caps white survives the disabled keylight filter as in the original.
-See `audit_original_rgb_mode15_staging.py` and the target README. Remaining effects,
-mode29 composition, full RGB runtime and storage/physical safety remain blockers.
-This adds288 edge,1024 interval and96 effect-call executions alongside the unchanged2372-case fixture;
-heatmap, aging, preceding action/HID and full scan/render routing remain untested. The target now has the original 264-byte LED map and PWM
+See `audit_original_rgb_mode15_staging.py` and the target README. Mode29 now has
+its own72-sequence/1152-call RAM/API composition with actual original single/all
+RAM setters,5292 actual HSV calls and2304 before/after GRB snapshots per-O0/-O2
+profile. Prior96-call effect/cache/wait observations remain identical; candidate
+private cache/wait remain indirectly observed in fresh hidden libraries. A wait
+completion at iter0 still calls basic Caps before the current chunk's group filter.
+Missing post/early Caps/R-G swap differ684/456/1100 calls. See
+`audit_original_rgb_mode29_staging.py`; neither composition executes a complete
+renderer caller/start/sync/flags-change-clear/flush. A separate pre-dispatch audit
+now covers1524 init/enable/flags cases: actual original prefix and RAM setters
+match unmodified SDK init/flags statements and actual staging at-O0/-O2. Init
+compares raw enable (not booleanized); flags inequality alone clears all216 bytes.
+Ignoring enable/booleanizing it/omitting clear differ300/216/270 cases. See
+`audit_original_rgb_render_begin.py`; this stops before effects and does not close
+the whole render/flush lifecycle. A separate96-case flush comparison now executes
+the entire original RAM flush+encoder and unmodified SDK flush/update helper/actual
+WS2812 vtable/encoder at-O0/-O2: last trackers update before encoding, FLUSHING2
+holds during encoding, then state becomes SYNCING3. All1952 words match an
+independent GRB/MSB-first model;224 reset-tail words remain unchanged. Tracker
+reordering/early SYNCING/missing encode differ93/96/96 cases. See
+`audit_original_rgb_flush.py`; no timer/DMA/HAL startup or physical output is
+executed. A subsequent16-sequence/416-call selected-cycle audit now joins actual
+SDK render/None/Chevron/PixelFlow/HSV/RNG, RENDERING/weak delegates/target callbacks,
+SDK color wrappers, driver vtable and flush/encoder in each persistent hidden
+library, replacing its completion-only stub. It matches4,800 original HSV calls,
+128 flushes, RGB API traces, init/flags/state/RNG, before/after GRB and full PWM
+buffers at-O0/-O2. Independent RGB/post/PWM replay agrees; missing post/booleanized
+enable differ279/16 calls. PixelFlow reinitializes all five initial chunks because
+last trackers only update on flush. An enable change during wait can be committed
+without effect initialization; the later ready frame then uses the old cache.
+See `audit_original_rgb_cycle.py` and the target README for exact boundaries.
+Unsupported effects/unrelated cadet calls trap; original post is still separately
+entered, frame starts/mode/clock supplied and native private cache/wait only
+indirectly observed. Remaining43 effects, actual whole task/start/sync scheduling,
+frame-timer control and storage/security/physical safety remain blockers.
+A separate432-case STARTING probe now matches the original active-frame slice and
+actual41-byte memcpy against unmodified SDK `rgb_task_start` at-O0/-O2: iter0,
+flags/init preserved, unsigned frame timer snapshot, whole reactive tracker copy
+and stateRENDERING1. Source/destination/global/timer/stack guards hold; native
+packed types/target-derived reactive guard and object guards agree. Missing iter
+reset/stale timer/skipped copy differ288/432/432 cases. See
+`audit_original_rgb_start.py`. Original r5 snapshot/r6 pointer/SP/OV are supplied;
+parent clock reads/aging/selection/dispatch are not executed, nor is start yet
+joined to the416-call cycle. Raw count255 cases only verify byte copying, not
+valid collector/aging input. A subsequent432-case timer/aging prefix now executes
+original prologue and loop, with only two clock-getter return values supplied,
+matching actual SDK timers/nonsplit sync macros/elapsed32 at-O0/-O2. Delta uses
+the first read while the buffer takes the second. Expiration decrements count
+without compacting/clearing entries; the initial-count loop still updates later
+slots. Large-delta unsigned underflow retains counts and wraps tick bytes.
+Independent byte replay agrees; second-read delta/saturated age/zeroed expired
+ticks differ156/108/100 cases. See `audit_original_rgb_timers.py`. This stops before
+mode selection/dispatch. A subsequent384-case task-STARTING probe now joins actual
+prologue/clock/aging/selection/start/epilogue/return against actual SDK task/timers/
+start at-O0/-O2: no supplied r5/r6/SP/OV or separate start entry. Selection honors
+suspend and raw enable2/3; even disabled calls age then copy all41 bytes. The
+actual zero-timeout target/header profile is checked. Unsupported render/flush/
+sync paths trap; mode45 is selection-only. Ignore-suspend/enable1-only/stale
+tracker differ108/72/192 cases. See `audit_original_rgb_task_start.py`. That fixture
+still begins at state0 only. A subsequent8-sequence/**320-call** genuine task
+fixture now joins actual STARTING, RENDERING/post and a **separate following
+FLUSHING** invocation, including the original flush tailcall. Actual SDK task/
+timers/start/renderer/indicators/flush/vtable/encoder match at-O0/-O2, including
+2404 actual HSV calls,48 flushes, render-only traces, clocks/aged tracker bytes,
+GRB and full PWM digests. Post no longer uses a separately supplied active-frame
+context in this probe. Mode/enable/suspend changes between calls **reselect** the
+flush effect: mode15 render can commit29; a suspended flush commits0/raw enable2.
+Warm None can end directly in SYNCING. Independent GRB/PWM/clock/aging replay
+agrees; ignore-suspend/live-frame-clock negatives differ40/272, including8
+following STARTING calls that retain changed prior GRB/PWM. See
+`audit_original_rgb_task_cycle.py`. Frame boundaries still supply state0 after3;
+SYNCING/save/time gate are never executed. Remaining43 effects, physical clock,
+EEPROM, whole scheduler/task routing and physical output remain unverified.
+These bounded fixtures supplement the unchanged2372-case fixture; heatmap,
+preceding action/HID and full scan routing remain untested. The target now has the original 264-byte LED map and PWM
 transport settings; the unmodified candidate PWM encoder matches all 51 existing
 original encoder cases with controlled hardware-API shims. Original IRQ50/TIM5
 static witnesses resolve its system-timer conflict with TIM2 PWM. No physical

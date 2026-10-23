@@ -1,0 +1,3368 @@
+{
+  "payload_sha256": "9df2375a5dfc7d155c3320ea5df3f2cff6920686928ae6ff5c186de5bee453e4",
+  "emulator": "Ghidra 12.1 P-code ARM:LE:32:Cortex",
+  "scope": "Original instructions, RAM-only routines/case slices; not full firmware or hardware emulation",
+  "rgb_flush": [
+    {
+      "effect": 0,
+      "enable": 0,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            0,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 0,
+      "enable": 0,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            0,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 0,
+      "enable": 0,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            0,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 0,
+      "enable": 0,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            0,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 0,
+      "enable": 0,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            0,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 0,
+      "enable": 0,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            0,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 0,
+      "enable": 1,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            1,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 0,
+      "enable": 1,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            1,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 0,
+      "enable": 1,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            1,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 0,
+      "enable": 1,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            1,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 0,
+      "enable": 1,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            1,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 0,
+      "enable": 1,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            1,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 0,
+      "enable": 2,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            2,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 0,
+      "enable": 2,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            2,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 0,
+      "enable": 2,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            2,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 0,
+      "enable": 2,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            2,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 0,
+      "enable": 2,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            2,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 0,
+      "enable": 2,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            2,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 0,
+      "enable": 3,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            3,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 0,
+      "enable": 3,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            3,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 0,
+      "enable": 3,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            3,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 0,
+      "enable": 3,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            3,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 0,
+      "enable": 3,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            3,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 0,
+      "enable": 3,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            0,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            0,
+            3,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        0,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 15,
+      "enable": 0,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            0,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 15,
+      "enable": 0,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            0,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 15,
+      "enable": 0,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            0,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 15,
+      "enable": 0,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            0,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 15,
+      "enable": 0,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            0,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 15,
+      "enable": 0,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            0,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 15,
+      "enable": 1,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            1,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 15,
+      "enable": 1,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            1,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 15,
+      "enable": 1,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            1,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 15,
+      "enable": 1,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            1,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 15,
+      "enable": 1,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            1,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 15,
+      "enable": 1,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            1,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 15,
+      "enable": 2,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            2,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 15,
+      "enable": 2,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            2,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 15,
+      "enable": 2,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            2,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 15,
+      "enable": 2,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            2,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 15,
+      "enable": 2,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            2,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 15,
+      "enable": 2,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            2,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 15,
+      "enable": 3,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            3,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 15,
+      "enable": 3,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            3,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 15,
+      "enable": 3,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            3,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 15,
+      "enable": 3,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            3,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 15,
+      "enable": 3,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            3,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 15,
+      "enable": 3,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            15,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            15,
+            3,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        15,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 29,
+      "enable": 0,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            0,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 29,
+      "enable": 0,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            0,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 29,
+      "enable": 0,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            0,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 29,
+      "enable": 0,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            0,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 29,
+      "enable": 0,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            0,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 29,
+      "enable": 0,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            0,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 29,
+      "enable": 1,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            1,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 29,
+      "enable": 1,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            1,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 29,
+      "enable": 1,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            1,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 29,
+      "enable": 1,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            1,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 29,
+      "enable": 1,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            1,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 29,
+      "enable": 1,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            1,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 29,
+      "enable": 2,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            2,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 29,
+      "enable": 2,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            2,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 29,
+      "enable": 2,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            2,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 29,
+      "enable": 2,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            2,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 29,
+      "enable": 2,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            2,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 29,
+      "enable": 2,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            2,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 29,
+      "enable": 3,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            3,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 29,
+      "enable": 3,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            3,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 29,
+      "enable": 3,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            3,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 29,
+      "enable": 3,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            3,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 29,
+      "enable": 3,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            3,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 29,
+      "enable": 3,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            29,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            29,
+            3,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        29,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 45,
+      "enable": 0,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            0,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 45,
+      "enable": 0,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            0,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 45,
+      "enable": 0,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            0,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 45,
+      "enable": 0,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            0,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 45,
+      "enable": 0,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            0,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 45,
+      "enable": 0,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            0,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            0,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        0,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 45,
+      "enable": 1,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            1,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 45,
+      "enable": 1,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            1,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 45,
+      "enable": 1,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            1,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 45,
+      "enable": 1,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            1,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 45,
+      "enable": 1,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            1,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 45,
+      "enable": 1,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            1,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            1,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        1,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 45,
+      "enable": 2,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            2,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 45,
+      "enable": 2,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            2,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 45,
+      "enable": 2,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            2,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 45,
+      "enable": 2,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            2,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 45,
+      "enable": 2,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            2,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 45,
+      "enable": 2,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            2,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            2,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        2,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 45,
+      "enable": 3,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            3,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 45,
+      "enable": 3,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            3,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 45,
+      "enable": 3,
+      "old_effect": 255,
+      "old_enable": 255,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            3,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    },
+    {
+      "effect": 45,
+      "enable": 3,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "ramp",
+      "input_grb_hex": "135ca5ee3780c9125ba4ed367fc8115aa3ec357ec71059a2eb347dc60f58a1ea337cc50e57a0e9327bc40d569fe8317ac30c559ee73079c20b549de62f78c10a539ce52e77c009529be42d76bf08519ae32c75be075099e22b74bd064f98e12a73bc054e97e02972bb044d96df2871ba034c95de2770b9024b94dd266fb8014a93dc256eb7004992db246db6ff4891da236cb5fe4790d9226bb4fd468fd8216ab3fc458ed72069b2fb448dd61f68b1fa438cd51e67b0f9428bd41d66aff8418ad31c65aef74089d21b64adf63f88d11a63acf53e87d01962",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            3,
+            2
+          ],
+          "pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "f2f52a17197614c84c96ae3a34babcd9475a6a8ba98c2b383273ded13ce2cf7b"
+    },
+    {
+      "effect": 45,
+      "enable": 3,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "black",
+      "input_grb_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            3,
+            2
+          ],
+          "pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "9ec0ee0c5179252760584920b1d72d9d5a7f632c372ac92bb937bcc2cc17b3c6"
+    },
+    {
+      "effect": 45,
+      "enable": 3,
+      "old_effect": 15,
+      "old_enable": 1,
+      "pattern": "white",
+      "input_grb_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "encoder_calls": 1,
+      "observations": [
+        {
+          "phase": "before",
+          "trackers_state": [
+            45,
+            3,
+            2
+          ],
+          "pwm_sha256": "bfe6a1de51ca411f32474d3ab9a0984200d0d91cf98b3090d0b707245b75f1d6"
+        },
+        {
+          "phase": "after",
+          "trackers_state": [
+            45,
+            3,
+            2
+          ],
+          "pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+        }
+      ],
+      "final_trackers_state": [
+        45,
+        3,
+        3
+      ],
+      "final_pwm_sha256": "11564d48408f903b103b7a1627f8b59632b0754e78d01e93e98d69286fe9a636"
+    }
+  ],
+  "boundary_policy": "96 independent full RAM flush-function cases: original12fcc..12fea updates last-effect/enable, calls actual encoder13320..13380, then sets task state3/SYNCING. No instruction/API replacement; before/after encoder observation only. Virtual GRB216bytes and PWM1952words including unchanged224-word reset tail, extra-word/leading/GRB/config/globals guards. Supplied cfg.mode15, effect/enable/old tracker inputs and initial task state2; no caller/start/render/post/sync scheduling, physical timer/DMA/HAL/device or source provenance claim. No target changes."
+}
